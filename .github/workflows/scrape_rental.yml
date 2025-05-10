@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scraper
-        run: python Clean/data/scrape_rental.py  # <-- Corrected file path
+        run: python data/scrape_rental.py  # <-- Corrected file path
 
       - name: Commit updated cache (optional)
         run: |
