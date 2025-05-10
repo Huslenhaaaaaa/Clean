@@ -58,8 +58,8 @@ st.markdown("""
 @st.cache_data(ttl=3600)
 def load_data():
     # Find matching files
-    rental_files = glob.glob("data/unegui_data_*.csv")
-    sales_files = glob.glob("data/unegui_sales_data_*.csv")
+    rental_files = glob.glob("unegui_data/unegui_rental_data.csv")
+    sales_files = glob.glob("unegui_data/unegui_sales_data.csv")
 
     def load_and_process(files, label):
         all_data = []
