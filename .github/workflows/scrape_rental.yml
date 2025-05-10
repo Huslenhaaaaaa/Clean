@@ -24,12 +24,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scraper
-        run: python scrape_rental.py  # replace with actual file name
+        run: python Clean/data/scrape_rental.py  # <-- Corrected file path
 
       - name: Commit updated cache (optional)
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add scraped_urls.json
+          git add Clean/data/scraped_urls.json  # <-- Also update path here if needed
           git commit -m "Update scraped URLs cache" || echo "No changes to commit"
           git push
