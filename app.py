@@ -67,7 +67,7 @@ def load_data():
             try:
                 df = pd.read_csv(f, encoding='utf-8-sig')
                 date_str = os.path.basename(f).split('_')[-1].split('.')[0]
-                df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                df['Нийтэлсэн'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
                 df['Type'] = label
                 all_data.append(df)
             except Exception as e:
