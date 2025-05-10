@@ -1,16 +1,20 @@
-name: Daily Unegui Scraper
+name: Run Scraper
 
 on:
+  push:
+    paths:
+      - Scraper.py
+      - requirements.txt
   schedule:
-    - cron: '0 1 * * *'  # Every day at 01:00 UTC
-  workflow_dispatch:     # Allow manual triggering
+    - cron: '0 6 * * *'  # Runs every day at 6:00 AM UTC
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -23,13 +27,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run scraper
-        run: python data/scrape_rental.py  # <-- Corrected file path
-
-      - name: Commit updated cache (optional)
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add Clean/data/scraped_urls.json  # <-- Also update path here if needed
-          git commit -m "Update scraped URLs cache" || echo "No changes to commit"
-          git push
+      - name: Run Scraper
+        run: python Scraper.py
