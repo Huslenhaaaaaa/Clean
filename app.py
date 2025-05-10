@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from datetime import datetime
+from datetime import datetime, date
 import os
 import glob
 
@@ -127,7 +127,9 @@ def load_data():
     df['Үнэ'] = pd.to_numeric(df['Үнэ'], errors='coerce')
     df['Rooms'] = df['ӨрөөнийТоо'].str.extract(r'(\d+)').astype(float)
     df['Area_m2'] = df['Талбай'].str.extract(r'(\d+(?:\.\d+)?)').astype(float)
-    df['Price_per_m2'] = df['Үнэ'] / df['Area_m2']
+    
+    # Calculate price per m2 safely (avoid division by zero)
+    df['Price_per_m2'] = np.where(df['Area_m2'] > 0, df['Үнэ'] / df['Area_m2'], np.nan)
 
     # Clean posted date
     def fix_posted_date(text):
@@ -145,24 +147,24 @@ def load_data():
     df['Fixed Posted Date'] = df['Нийтэлсэн'].apply(fix_posted_date)
 
     # Balcony and Garage detection
-    df['HasBalcony'] = df['Тагт'].apply(lambda x: 'Yes' if 'байгаа' in str(x).lower() else 'No')
-    df['HasGarage'] = df['Гараж'].apply(lambda x: 'Yes' if 'байгаа' in str(x).lower() else 'No')
+    df['HasBalcony'] = df['Тагт'].apply(lambda x: 'Yes' if isinstance(x, str) and 'байгаа' in x.lower() else 'No')
+    df['HasGarage'] = df['Гараж'].apply(lambda x: 'Yes' if isinstance(x, str) and 'байгаа' in x.lower() else 'No')
 
     # Parse location
     def extract_location_details(location):
         if pd.isna(location): return pd.Series([None, None])
-        parts = location.split(',')
+        parts = str(location).split(',')
         district = parts[0].strip() if parts else None
         subdistrict = parts[1].strip() if len(parts) > 1 else None
         return pd.Series([district, subdistrict])
 
     def extract_primary_district(location):
         if pd.isna(location): return None
-        return location.split(',')[0].strip()
+        return str(location).split(',')[0].strip()
 
     def clean_sub_district(location):
         if pd.isna(location): return None
-        parts = location.split(',')
+        parts = str(location).split(',')
         return parts[-1].strip() if len(parts) > 1 else None
 
     df[['District', 'Sub_District']] = df['Байршил'].apply(extract_location_details)
@@ -184,7 +186,12 @@ def main():
     with st.expander("Data Source Information"):
         st.info(f"Total listings loaded: {len(df)} (after removing duplicates)")
         if 'Scraped_date' in df.columns:
-            st.write(f"Data date range: {df['Scraped_date'].min().date()} to {df['Scraped_date'].max().date()}")
+            # Check if there are valid date values
+            valid_dates = df['Scraped_date'].dropna()
+            if not valid_dates.empty:
+                st.write(f"Data date range: {valid_dates.min().date()} to {valid_dates.max().date()}")
+            else:
+                st.warning("No valid dates found in the data.")
         if 'Type' in df.columns:
             type_counts = df['Type'].value_counts()
             st.write("Property Types:")
@@ -196,18 +203,25 @@ def main():
     
     # Add a date range filter if we have time-series data
     if 'Scraped_date' in df.columns:
-        min_date = df['Scraped_date'].min().date()
-        max_date = df['Scraped_date'].max().date()
-        date_range = st.sidebar.date_input(
-            "Date Range",
-            value=(min_date, max_date),
-            min_value=min_date,
-            max_value=max_date
-        )
-        if len(date_range) == 2:
-            start_date, end_date = date_range
-            df = df[(df['Scraped_date'].dt.date >= start_date) & 
-                    (df['Scraped_date'].dt.date <= end_date)]
+        # Get valid dates, ensure they're not NaT
+        valid_dates = df['Scraped_date'].dropna()
+        
+        if not valid_dates.empty:
+            min_date = valid_dates.min().date()
+            max_date = valid_dates.max().date()
+            
+            # Ensure we have valid dates before creating the date_input widget
+            if isinstance(min_date, date) and isinstance(max_date, date):
+                date_range = st.sidebar.date_input(
+                    "Date Range",
+                    value=(min_date, max_date),
+                    min_value=min_date,
+                    max_value=max_date
+                )
+                if len(date_range) == 2:
+                    start_date, end_date = date_range
+                    df = df[(df['Scraped_date'].dt.date >= start_date) & 
+                            (df['Scraped_date'].dt.date <= end_date)]
     
     # Property Type Filter
     property_types = ['All']
@@ -218,33 +232,39 @@ def main():
         df = df[df['Type'] == selected_type]
     
     # District Filter
-    districts = ['All'] + sorted([x for x in df['Primary_District'].unique() if isinstance(x, str)])
-    selected_district = st.sidebar.selectbox("District", districts)
-    if selected_district != 'All':
-        df = df[df['Primary_District'] == selected_district]
+    if 'Primary_District' in df.columns:
+        valid_districts = [x for x in df['Primary_District'].dropna().unique() if isinstance(x, str)]
+        districts = ['All'] + sorted(valid_districts)
+        selected_district = st.sidebar.selectbox("District", districts)
+        if selected_district != 'All':
+            df = df[df['Primary_District'] == selected_district]
     
     # Room Filter
     if 'Rooms' in df.columns:
-        room_options = ['All'] + sorted([str(int(x)) for x in df['Rooms'].dropna().unique() if x > 0 and x < 10])
-        selected_rooms = st.sidebar.multiselect("Number of Rooms", room_options, default=['All'])
-        
-        if 'All' not in selected_rooms and selected_rooms:
-            # Convert string selections to numeric for filtering
-            numeric_rooms = [float(x) for x in selected_rooms]
-            df = df[df['Rooms'].isin(numeric_rooms)]
+        valid_rooms = df['Rooms'].dropna()
+        if not valid_rooms.empty:
+            room_options = ['All'] + sorted([str(int(x)) for x in valid_rooms.unique() if pd.notna(x) and x > 0 and x < 10])
+            selected_rooms = st.sidebar.multiselect("Number of Rooms", room_options, default=['All'])
+            
+            if 'All' not in selected_rooms and selected_rooms:
+                # Convert string selections to numeric for filtering
+                numeric_rooms = [float(x) for x in selected_rooms]
+                df = df[df['Rooms'].isin(numeric_rooms)]
     
     # Price Range Filter
-    if 'Үнэ' in df.columns:
-        min_price = int(df['Үнэ'].min())
-        max_price = int(df['Үнэ'].max())
-        price_range = st.sidebar.slider(
-            "Price Range (₮)",
-            min_price,
-            max_price,
-            (min_price, max_price),
-            step=int((max_price - min_price) / 100)
-        )
-        df = df[(df['Үнэ'] >= price_range[0]) & (df['Үнэ'] <= price_range[1])]
+    if 'Үнэ' in df.columns and not df['Үнэ'].dropna().empty:
+        min_price = int(df['Үнэ'].dropna().min())
+        max_price = int(df['Үнэ'].dropna().max())
+        
+        if min_price < max_price:  # Ensure valid range
+            price_range = st.sidebar.slider(
+                "Price Range (₮)",
+                min_price,
+                max_price,
+                (min_price, max_price),
+                step=max(1, int((max_price - min_price) / 100))
+            )
+            df = df[(df['Үнэ'] >= price_range[0]) & (df['Үнэ'] <= price_range[1])]
     
     # Feature filters
     features_col1, features_col2 = st.sidebar.columns(2)
@@ -263,6 +283,11 @@ def main():
     # Display total counts after filtering
     st.sidebar.markdown("### Data Summary")
     st.sidebar.info(f"Total listings: {len(df)}")
+    
+    # Skip dashboard rendering if dataframe is empty after filtering
+    if df.empty:
+        st.warning("No data available with the current filters. Please adjust your filter criteria.")
+        return
     
     # Main dashboard layout with tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features"])
