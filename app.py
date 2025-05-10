@@ -57,7 +57,7 @@ st.markdown("""
 # Function to load data with duplicate URL checking
 @st.cache_data(ttl=3600)
 def load_data():
-    # Find matching files
+    # Find matching files - UPDATED FOR NEW FILE STRUCTURE
     rental_files = glob.glob("unegui_data/unegui_rental_data.csv")
     sales_files = glob.glob("unegui_data/unegui_sales_data.csv")
 
@@ -66,8 +66,23 @@ def load_data():
         for f in files:
             try:
                 df = pd.read_csv(f, encoding='utf-8-sig')
-                date_str = os.path.basename(f).split('_')[-1].split('.')[0]
-                df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                
+                # Extract date from filename or use file modification date if needed
+                try:
+                    # First try to get date from filename if it follows pattern
+                    filename = os.path.basename(f)
+                    if "_" in filename and filename.count("_") >= 2:
+                        # Try to extract date from filename if it has pattern like unegui_data_20240510.csv
+                        date_str = filename.split('_')[-1].split('.')[0]
+                        df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                    else:
+                        # If date pattern not in filename, use file modification time
+                        file_mtime = os.path.getmtime(f)
+                        df['Scraped_date'] = pd.to_datetime(datetime.fromtimestamp(file_mtime))
+                except:
+                    # If all else fails, use current date
+                    df['Scraped_date'] = pd.to_datetime('today')
+                    
                 df['Type'] = label
                 all_data.append(df)
             except Exception as e:
@@ -120,7 +135,7 @@ def load_data():
     elif not sales_df.empty:
         df = sales_df
     else:
-        st.error("❌ No rental or sales CSV files found.")
+        st.error("❌ No rental or sales CSV files found in unegui_data folder.")
         return None
 
     # Numeric conversions
