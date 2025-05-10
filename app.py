@@ -183,8 +183,8 @@ def main():
     # Add data summary in expander
     with st.expander("Data Source Information"):
         st.info(f"Total listings loaded: {len(df)} (after removing duplicates)")
-        if 'Scraped_date' in df.columns:
-            st.write(f"Data date range: {df['Scraped_date'].min().date()} to {df['Scraped_date'].max().date()}")
+        if 'Нийтэлсэн' in df.columns:
+            st.write(f"Data date range: {df['Нийтэлсэн'].min().date()} to {df['Нийтэлсэн'].max().date()}")
         if 'Type' in df.columns:
             type_counts = df['Type'].value_counts()
             st.write("Property Types:")
@@ -195,9 +195,9 @@ def main():
     st.sidebar.title("Filters")
     
     # Add a date range filter if we have time-series data
-    if 'Scraped_date' in df.columns:
-        min_date = df['Scraped_date'].min().date()
-        max_date = df['Scraped_date'].max().date()
+    if 'Нийтэлсэн' in df.columns:
+        min_date = df['Нийтэлсэн'].min().date()
+        max_date = df['Нийтэлсэн'].max().date()
         date_range = st.sidebar.date_input(
             "Date Range",
             value=(min_date, max_date),
@@ -206,8 +206,8 @@ def main():
         )
         if len(date_range) == 2:
             start_date, end_date = date_range
-            df = df[(df['Scraped_date'].dt.date >= start_date) & 
-                    (df['Scraped_date'].dt.date <= end_date)]
+            df = df[(df['Нийтэлсэн'].dt.date >= start_date) & 
+                    (df['Нийтэлсэн'].dt.date <= end_date)]
     
     # Property Type Filter
     property_types = ['All']
@@ -602,12 +602,12 @@ def main():
             st.plotly_chart(fig_floor, use_container_width=True)
     
     # Add data trends over time section if we have time-series data
-    if 'Scraped_date' in df.columns and df['Scraped_date'].nunique() > 1:
+    if 'Нийтэлсэн' in df.columns and df['Нийтэлсэн'].nunique() > 1:
         st.markdown("---")
         st.markdown('<div class="sub-header">Data Trends Over Time</div>', unsafe_allow_html=True)
         
         # Group by date and calculate daily averages
-        time_data = df.groupby(df['Scraped_date'].dt.date).agg({
+        time_data = df.groupby(df['Нийтэлсэн'].dt.date).agg({
             'Үнэ': 'mean',
             'ad_id': 'count',
             'Price_per_m2': 'mean'
@@ -619,7 +619,7 @@ def main():
         fig_trends = go.Figure()
         
         fig_trends.add_trace(go.Scatter(
-            x=time_data['Scraped_date'],
+            x=time_data['Нийтэлсэн'],
             y=time_data['Үнэ'],
             mode='lines+markers',
             name='Average Price (₮)',
@@ -640,7 +640,7 @@ def main():
         fig_volume = go.Figure()
         
         fig_volume.add_trace(go.Scatter(
-            x=time_data['Scraped_date'],
+            x=time_data['Нийтэлсэн'],
             y=time_data['ad_id'],
             mode='lines+markers',
             name='Number of Listings',
