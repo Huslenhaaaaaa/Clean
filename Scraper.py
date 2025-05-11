@@ -490,12 +490,12 @@ def main():
             {
                 "name": "sales",
                 "base_url": "https://www.unegui.mn/l-hdlh/l-hdlh-zarna/oron-suuts-zarna/",
-                "max_pages": 2
+                "max_pages": 200
             },
             {
                 "name": "rental",
                 "base_url": "https://www.unegui.mn/l-hdlh/l-hdlh-treesllne/oron-suuts/",
-                "max_pages": 2
+                "max_pages": 90
             }
         ]
         
