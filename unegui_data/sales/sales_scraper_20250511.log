@@ -1,0 +1,2784 @@
+2025-05-11 05:33:18,061 - INFO - Starting sales apartment scraper at 2025-05-11 05:33:18.061644
+2025-05-11 05:33:18,097 - INFO - Loaded existing data from unegui_data/unegui_sales_data.csv: 115 records
+2025-05-11 05:33:18,101 - INFO - Loaded 115 existing records
+2025-05-11 05:33:18,112 - INFO - Scraping page 1...
+2025-05-11 05:33:18,112 - INFO - Scraping page 2...
+2025-05-11 05:33:18,112 - INFO - Scraping page 3...
+2025-05-11 05:33:21,793 - INFO - Found 60 links on page 1
+2025-05-11 05:33:21,793 - INFO - Scraping page 4...
+2025-05-11 05:33:22,332 - INFO - Found 60 links on page 2
+2025-05-11 05:33:22,332 - INFO - Scraping page 5...
+2025-05-11 05:33:22,940 - INFO - Found 60 links on page 3
+2025-05-11 05:33:22,940 - INFO - Scraping page 6...
+2025-05-11 05:33:26,084 - INFO - Found 60 links on page 4
+2025-05-11 05:33:26,084 - INFO - Scraping page 7...
+2025-05-11 05:33:26,490 - INFO - Found 60 links on page 5
+2025-05-11 05:33:26,490 - INFO - Scraping page 8...
+2025-05-11 05:33:27,640 - INFO - Found 60 links on page 6
+2025-05-11 05:33:27,641 - INFO - Scraping page 9...
+2025-05-11 05:33:31,035 - INFO - Found 60 links on page 8
+2025-05-11 05:33:31,035 - INFO - Scraping page 10...
+2025-05-11 05:33:31,348 - INFO - Found 60 links on page 7
+2025-05-11 05:33:31,348 - INFO - Scraping page 11...
+2025-05-11 05:33:32,804 - INFO - Found 60 links on page 9
+2025-05-11 05:33:32,804 - INFO - Scraping page 12...
+2025-05-11 05:33:35,395 - INFO - Found 60 links on page 10
+2025-05-11 05:33:35,395 - INFO - Scraping page 13...
+2025-05-11 05:33:35,662 - INFO - Found 60 links on page 11
+2025-05-11 05:33:35,663 - INFO - Scraping page 14...
+2025-05-11 05:33:37,499 - INFO - Found 60 links on page 12
+2025-05-11 05:33:37,499 - INFO - Scraping page 15...
+2025-05-11 05:33:39,648 - INFO - Found 60 links on page 13
+2025-05-11 05:33:39,648 - INFO - Scraping page 16...
+2025-05-11 05:33:39,932 - INFO - Found 60 links on page 14
+2025-05-11 05:33:39,932 - INFO - Scraping page 17...
+2025-05-11 05:33:42,017 - INFO - Found 60 links on page 15
+2025-05-11 05:33:42,018 - INFO - Scraping page 18...
+2025-05-11 05:33:43,920 - INFO - Found 60 links on page 16
+2025-05-11 05:33:43,920 - INFO - Scraping page 19...
+2025-05-11 05:33:44,325 - INFO - Found 60 links on page 17
+2025-05-11 05:33:44,325 - INFO - Scraping page 20...
+2025-05-11 05:33:46,412 - INFO - Found 60 links on page 18
+2025-05-11 05:33:46,412 - INFO - Scraping page 21...
+2025-05-11 05:33:48,644 - INFO - Found 60 links on page 19
+2025-05-11 05:33:48,644 - INFO - Scraping page 22...
+2025-05-11 05:33:48,941 - INFO - Found 60 links on page 20
+2025-05-11 05:33:48,942 - INFO - Scraping page 23...
+2025-05-11 05:33:50,883 - INFO - Found 60 links on page 21
+2025-05-11 05:33:50,883 - INFO - Scraping page 24...
+2025-05-11 05:33:52,841 - INFO - Found 60 links on page 22
+2025-05-11 05:33:52,842 - INFO - Scraping page 25...
+2025-05-11 05:33:53,295 - INFO - Found 60 links on page 23
+2025-05-11 05:33:53,295 - INFO - Scraping page 26...
+2025-05-11 05:33:56,092 - INFO - Found 60 links on page 24
+2025-05-11 05:33:56,092 - INFO - Scraping page 27...
+2025-05-11 05:33:57,190 - INFO - Found 60 links on page 25
+2025-05-11 05:33:57,190 - INFO - Scraping page 28...
+2025-05-11 05:33:57,973 - INFO - Found 60 links on page 26
+2025-05-11 05:33:57,973 - INFO - Scraping page 29...
+2025-05-11 05:34:00,341 - INFO - Found 60 links on page 27
+2025-05-11 05:34:00,341 - INFO - Scraping page 30...
+2025-05-11 05:34:01,535 - INFO - Found 60 links on page 28
+2025-05-11 05:34:01,535 - INFO - Scraping page 31...
+2025-05-11 05:34:02,643 - INFO - Found 60 links on page 29
+2025-05-11 05:34:02,644 - INFO - Scraping page 32...
+2025-05-11 05:34:04,927 - INFO - Found 60 links on page 30
+2025-05-11 05:34:04,927 - INFO - Scraping page 33...
+2025-05-11 05:34:05,910 - INFO - Found 60 links on page 31
+2025-05-11 05:34:05,911 - INFO - Scraping page 34...
+2025-05-11 05:34:07,427 - INFO - Found 60 links on page 32
+2025-05-11 05:34:07,427 - INFO - Scraping page 35...
+2025-05-11 05:34:08,800 - INFO - Found 60 links on page 33
+2025-05-11 05:34:08,800 - INFO - Scraping page 36...
+2025-05-11 05:34:10,042 - INFO - Found 60 links on page 34
+2025-05-11 05:34:10,042 - INFO - Scraping page 37...
+2025-05-11 05:34:11,462 - INFO - Found 60 links on page 35
+2025-05-11 05:34:11,462 - INFO - Scraping page 38...
+2025-05-11 05:34:12,433 - INFO - Found 60 links on page 36
+2025-05-11 05:34:12,433 - INFO - Scraping page 39...
+2025-05-11 05:34:13,869 - INFO - Found 60 links on page 37
+2025-05-11 05:34:13,869 - INFO - Scraping page 40...
+2025-05-11 05:34:15,152 - INFO - Found 60 links on page 38
+2025-05-11 05:34:15,152 - INFO - Scraping page 41...
+2025-05-11 05:34:16,514 - INFO - Found 60 links on page 39
+2025-05-11 05:34:16,515 - INFO - Scraping page 42...
+2025-05-11 05:34:17,807 - INFO - Found 60 links on page 40
+2025-05-11 05:34:17,807 - INFO - Scraping page 43...
+2025-05-11 05:34:19,217 - INFO - Found 60 links on page 41
+2025-05-11 05:34:19,217 - INFO - Scraping page 44...
+2025-05-11 05:34:20,483 - INFO - Found 60 links on page 42
+2025-05-11 05:34:20,483 - INFO - Scraping page 45...
+2025-05-11 05:34:21,482 - INFO - Found 60 links on page 43
+2025-05-11 05:34:21,482 - INFO - Scraping page 46...
+2025-05-11 05:34:23,158 - INFO - Found 60 links on page 44
+2025-05-11 05:34:23,159 - INFO - Scraping page 47...
+2025-05-11 05:34:24,319 - INFO - Found 60 links on page 45
+2025-05-11 05:34:24,319 - INFO - Scraping page 48...
+2025-05-11 05:34:25,332 - INFO - Found 60 links on page 46
+2025-05-11 05:34:25,332 - INFO - Scraping page 49...
+2025-05-11 05:34:27,246 - INFO - Found 60 links on page 47
+2025-05-11 05:34:27,246 - INFO - Scraping page 50...
+2025-05-11 05:34:28,297 - INFO - Found 60 links on page 48
+2025-05-11 05:34:28,298 - INFO - Scraping page 51...
+2025-05-11 05:34:29,791 - INFO - Found 60 links on page 49
+2025-05-11 05:34:29,792 - INFO - Scraping page 52...
+2025-05-11 05:34:30,954 - INFO - Found 60 links on page 50
+2025-05-11 05:34:30,954 - INFO - Scraping page 53...
+2025-05-11 05:34:32,142 - INFO - Found 60 links on page 51
+2025-05-11 05:34:32,142 - INFO - Scraping page 54...
+2025-05-11 05:34:34,250 - INFO - Found 60 links on page 52
+2025-05-11 05:34:34,250 - INFO - Scraping page 55...
+2025-05-11 05:34:34,886 - INFO - Found 60 links on page 53
+2025-05-11 05:34:34,886 - INFO - Scraping page 56...
+2025-05-11 05:34:36,792 - INFO - Found 60 links on page 54
+2025-05-11 05:34:36,792 - INFO - Scraping page 57...
+2025-05-11 05:34:38,028 - INFO - Found 60 links on page 55
+2025-05-11 05:34:38,028 - INFO - Scraping page 58...
+2025-05-11 05:34:39,062 - INFO - Found 60 links on page 56
+2025-05-11 05:34:39,062 - INFO - Scraping page 59...
+2025-05-11 05:34:40,689 - INFO - Found 60 links on page 57
+2025-05-11 05:34:40,689 - INFO - Scraping page 60...
+2025-05-11 05:34:42,708 - INFO - Found 60 links on page 58
+2025-05-11 05:34:42,708 - INFO - Scraping page 61...
+2025-05-11 05:34:43,234 - INFO - Found 60 links on page 59
+2025-05-11 05:34:43,234 - INFO - Scraping page 62...
+2025-05-11 05:34:44,497 - INFO - Found 60 links on page 60
+2025-05-11 05:34:44,498 - INFO - Scraping page 63...
+2025-05-11 05:34:47,122 - INFO - Found 60 links on page 62
+2025-05-11 05:34:47,127 - INFO - Scraping page 64...
+2025-05-11 05:34:47,272 - INFO - Found 60 links on page 61
+2025-05-11 05:34:47,273 - INFO - Scraping page 65...
+2025-05-11 05:34:48,614 - INFO - Found 60 links on page 63
+2025-05-11 05:34:48,614 - INFO - Scraping page 66...
+2025-05-11 05:34:51,166 - INFO - Found 60 links on page 64
+2025-05-11 05:34:51,166 - INFO - Scraping page 67...
+2025-05-11 05:34:51,370 - INFO - Found 60 links on page 65
+2025-05-11 05:34:51,370 - INFO - Scraping page 68...
+2025-05-11 05:34:52,706 - INFO - Found 60 links on page 66
+2025-05-11 05:34:52,706 - INFO - Scraping page 69...
+2025-05-11 05:34:55,049 - INFO - Found 60 links on page 67
+2025-05-11 05:34:55,049 - INFO - Scraping page 70...
+2025-05-11 05:34:55,687 - INFO - Found 60 links on page 68
+2025-05-11 05:34:55,688 - INFO - Scraping page 71...
+2025-05-11 05:34:57,047 - INFO - Found 60 links on page 69
+2025-05-11 05:34:57,048 - INFO - Scraping page 72...
+2025-05-11 05:34:58,986 - INFO - Found 60 links on page 70
+2025-05-11 05:34:58,986 - INFO - Scraping page 73...
+2025-05-11 05:34:59,752 - INFO - Found 60 links on page 71
+2025-05-11 05:34:59,752 - INFO - Scraping page 74...
+2025-05-11 05:35:01,168 - INFO - Found 60 links on page 72
+2025-05-11 05:35:01,168 - INFO - Scraping page 75...
+2025-05-11 05:35:02,823 - INFO - Found 60 links on page 73
+2025-05-11 05:35:02,823 - INFO - Scraping page 76...
+2025-05-11 05:35:03,506 - INFO - Found 60 links on page 74
+2025-05-11 05:35:03,506 - INFO - Scraping page 77...
+2025-05-11 05:35:05,318 - INFO - Found 60 links on page 75
+2025-05-11 05:35:05,318 - INFO - Scraping page 78...
+2025-05-11 05:35:06,677 - INFO - Found 60 links on page 76
+2025-05-11 05:35:06,677 - INFO - Scraping page 79...
+2025-05-11 05:35:07,674 - INFO - Found 60 links on page 77
+2025-05-11 05:35:07,675 - INFO - Scraping page 80...
+2025-05-11 05:35:09,352 - INFO - Found 60 links on page 78
+2025-05-11 05:35:09,353 - INFO - Scraping page 81...
+2025-05-11 05:35:10,517 - INFO - Found 60 links on page 79
+2025-05-11 05:35:10,517 - INFO - Scraping page 82...
+2025-05-11 05:35:11,812 - INFO - Found 60 links on page 80
+2025-05-11 05:35:11,812 - INFO - Scraping page 83...
+2025-05-11 05:35:14,044 - INFO - Found 60 links on page 81
+2025-05-11 05:35:14,044 - INFO - Scraping page 84...
+2025-05-11 05:35:14,851 - INFO - Found 60 links on page 82
+2025-05-11 05:35:14,852 - INFO - Scraping page 85...
+2025-05-11 05:35:15,720 - INFO - Found 60 links on page 83
+2025-05-11 05:35:15,720 - INFO - Scraping page 86...
+2025-05-11 05:35:18,056 - INFO - Found 60 links on page 84
+2025-05-11 05:35:18,056 - INFO - Scraping page 87...
+2025-05-11 05:35:19,676 - INFO - Found 60 links on page 85
+2025-05-11 05:35:19,676 - INFO - Scraping page 88...
+2025-05-11 05:35:19,931 - INFO - Found 60 links on page 86
+2025-05-11 05:35:19,931 - INFO - Scraping page 89...
+2025-05-11 05:35:22,140 - INFO - Found 60 links on page 87
+2025-05-11 05:35:22,141 - INFO - Scraping page 90...
+2025-05-11 05:35:24,327 - INFO - Found 60 links on page 88
+2025-05-11 05:35:24,332 - INFO - Scraping page 91...
+2025-05-11 05:35:24,430 - INFO - Found 60 links on page 89
+2025-05-11 05:35:24,431 - INFO - Scraping page 92...
+2025-05-11 05:35:25,621 - INFO - Found 60 links on page 90
+2025-05-11 05:35:25,622 - INFO - Scraping page 93...
+2025-05-11 05:35:28,319 - INFO - Found 60 links on page 92
+2025-05-11 05:35:28,320 - INFO - Scraping page 94...
+2025-05-11 05:35:28,766 - INFO - Found 60 links on page 91
+2025-05-11 05:35:28,766 - INFO - Scraping page 95...
+2025-05-11 05:35:30,095 - INFO - Found 60 links on page 93
+2025-05-11 05:35:30,095 - INFO - Scraping page 96...
+2025-05-11 05:35:32,118 - INFO - Found 60 links on page 94
+2025-05-11 05:35:32,119 - INFO - Scraping page 97...
+2025-05-11 05:35:32,699 - INFO - Found 60 links on page 95
+2025-05-11 05:35:32,699 - INFO - Scraping page 98...
+2025-05-11 05:35:34,549 - INFO - Found 60 links on page 96
+2025-05-11 05:35:34,549 - INFO - Scraping page 99...
+2025-05-11 05:35:36,491 - INFO - Found 60 links on page 97
+2025-05-11 05:35:36,492 - INFO - Scraping page 100...
+2025-05-11 05:35:36,753 - INFO - Found 60 links on page 98
+2025-05-11 05:35:36,754 - INFO - Scraping page 101...
+2025-05-11 05:35:38,152 - INFO - Found 60 links on page 99
+2025-05-11 05:35:38,152 - INFO - Scraping page 102...
+2025-05-11 05:35:40,749 - INFO - Found 60 links on page 100
+2025-05-11 05:35:40,755 - INFO - Scraping page 103...
+2025-05-11 05:35:40,854 - INFO - Found 60 links on page 101
+2025-05-11 05:35:40,854 - INFO - Scraping page 104...
+2025-05-11 05:35:42,327 - INFO - Found 60 links on page 102
+2025-05-11 05:35:42,327 - INFO - Scraping page 105...
+2025-05-11 05:35:44,880 - INFO - Found 60 links on page 104
+2025-05-11 05:35:44,880 - INFO - Scraping page 106...
+2025-05-11 05:35:45,576 - INFO - Found 60 links on page 103
+2025-05-11 05:35:45,576 - INFO - Scraping page 107...
+2025-05-11 05:35:46,452 - INFO - Found 60 links on page 105
+2025-05-11 05:35:46,453 - INFO - Scraping page 108...
+2025-05-11 05:35:48,579 - INFO - Found 60 links on page 106
+2025-05-11 05:35:48,579 - INFO - Scraping page 109...
+2025-05-11 05:35:49,668 - INFO - Found 60 links on page 107
+2025-05-11 05:35:49,668 - INFO - Scraping page 110...
+2025-05-11 05:35:51,175 - INFO - Found 60 links on page 108
+2025-05-11 05:35:51,176 - INFO - Scraping page 111...
+2025-05-11 05:35:52,816 - INFO - Found 60 links on page 109
+2025-05-11 05:35:52,816 - INFO - Scraping page 112...
+2025-05-11 05:35:53,536 - INFO - Found 60 links on page 110
+2025-05-11 05:35:53,536 - INFO - Scraping page 113...
+2025-05-11 05:35:55,090 - INFO - Found 60 links on page 111
+2025-05-11 05:35:55,090 - INFO - Scraping page 114...
+2025-05-11 05:35:57,191 - INFO - Found 60 links on page 112
+2025-05-11 05:35:57,191 - INFO - Scraping page 115...
+2025-05-11 05:35:57,775 - INFO - Found 60 links on page 113
+2025-05-11 05:35:57,775 - INFO - Scraping page 116...
+2025-05-11 05:35:59,572 - INFO - Found 60 links on page 114
+2025-05-11 05:35:59,573 - INFO - Scraping page 117...
+2025-05-11 05:36:01,381 - INFO - Found 60 links on page 115
+2025-05-11 05:36:01,381 - INFO - Scraping page 118...
+2025-05-11 05:36:01,681 - INFO - Found 60 links on page 116
+2025-05-11 05:36:01,681 - INFO - Scraping page 119...
+2025-05-11 05:36:04,044 - INFO - Found 60 links on page 117
+2025-05-11 05:36:04,044 - INFO - Scraping page 120...
+2025-05-11 05:36:05,405 - INFO - Found 60 links on page 118
+2025-05-11 05:36:05,405 - INFO - Scraping page 121...
+2025-05-11 05:36:05,716 - INFO - Found 60 links on page 119
+2025-05-11 05:36:05,716 - INFO - Scraping page 122...
+2025-05-11 05:36:08,001 - INFO - Found 60 links on page 120
+2025-05-11 05:36:08,002 - INFO - Scraping page 123...
+2025-05-11 05:36:09,597 - INFO - Found 60 links on page 122
+2025-05-11 05:36:09,597 - INFO - Scraping page 124...
+2025-05-11 05:36:10,454 - INFO - Found 60 links on page 121
+2025-05-11 05:36:10,454 - INFO - Scraping page 125...
+2025-05-11 05:36:12,117 - INFO - Found 60 links on page 123
+2025-05-11 05:36:12,117 - INFO - Scraping page 126...
+2025-05-11 05:36:13,455 - INFO - Found 60 links on page 124
+2025-05-11 05:36:13,456 - INFO - Scraping page 127...
+2025-05-11 05:36:14,314 - INFO - Found 60 links on page 125
+2025-05-11 05:36:14,314 - INFO - Scraping page 128...
+2025-05-11 05:36:16,303 - INFO - Found 60 links on page 126
+2025-05-11 05:36:16,304 - INFO - Scraping page 129...
+2025-05-11 05:36:17,397 - INFO - Found 60 links on page 127
+2025-05-11 05:36:17,397 - INFO - Scraping page 130...
+2025-05-11 05:36:18,192 - INFO - Found 60 links on page 128
+2025-05-11 05:36:18,192 - INFO - Scraping page 131...
+2025-05-11 05:36:20,187 - INFO - Found 60 links on page 129
+2025-05-11 05:36:20,187 - INFO - Scraping page 132...
+2025-05-11 05:36:21,222 - INFO - Found 60 links on page 130
+2025-05-11 05:36:21,222 - INFO - Scraping page 133...
+2025-05-11 05:36:22,051 - INFO - Found 60 links on page 131
+2025-05-11 05:36:22,051 - INFO - Scraping page 134...
+2025-05-11 05:36:23,852 - INFO - Found 60 links on page 132
+2025-05-11 05:36:23,852 - INFO - Scraping page 135...
+2025-05-11 05:36:25,277 - INFO - Found 60 links on page 133
+2025-05-11 05:36:25,277 - INFO - Scraping page 136...
+2025-05-11 05:36:26,091 - INFO - Found 60 links on page 134
+2025-05-11 05:36:26,091 - INFO - Scraping page 137...
+2025-05-11 05:36:27,952 - INFO - Found 60 links on page 135
+2025-05-11 05:36:27,952 - INFO - Scraping page 138...
+2025-05-11 05:36:28,945 - INFO - Found 60 links on page 136
+2025-05-11 05:36:28,946 - INFO - Scraping page 139...
+2025-05-11 05:36:30,174 - INFO - Found 60 links on page 137
+2025-05-11 05:36:30,174 - INFO - Scraping page 140...
+2025-05-11 05:36:32,104 - INFO - Found 60 links on page 138
+2025-05-11 05:36:32,104 - INFO - Scraping page 141...
+2025-05-11 05:36:32,807 - INFO - Found 60 links on page 139
+2025-05-11 05:36:32,807 - INFO - Scraping page 142...
+2025-05-11 05:36:34,189 - INFO - Found 60 links on page 140
+2025-05-11 05:36:34,189 - INFO - Scraping page 143...
+2025-05-11 05:36:36,374 - INFO - Found 60 links on page 141
+2025-05-11 05:36:36,374 - INFO - Scraping page 144...
+2025-05-11 05:36:37,104 - INFO - Found 60 links on page 142
+2025-05-11 05:36:37,104 - INFO - Scraping page 145...
+2025-05-11 05:36:38,084 - INFO - Found 60 links on page 143
+2025-05-11 05:36:38,085 - INFO - Scraping page 146...
+2025-05-11 05:36:40,221 - INFO - Found 60 links on page 144
+2025-05-11 05:36:40,221 - INFO - Scraping page 147...
+2025-05-11 05:36:41,173 - INFO - Found 60 links on page 145
+2025-05-11 05:36:41,173 - INFO - Scraping page 148...
+2025-05-11 05:36:41,947 - INFO - Found 60 links on page 146
+2025-05-11 05:36:41,947 - INFO - Scraping page 149...
+2025-05-11 05:36:44,888 - INFO - Found 60 links on page 147
+2025-05-11 05:36:44,888 - INFO - Scraping page 150...
+2025-05-11 05:36:45,472 - INFO - Found 60 links on page 148
+2025-05-11 05:36:45,472 - INFO - Scraping page 151...
+2025-05-11 05:36:45,796 - INFO - Found 60 links on page 149
+2025-05-11 05:36:45,796 - INFO - Scraping page 152...
+2025-05-11 05:36:49,631 - INFO - Found 60 links on page 151
+2025-05-11 05:36:49,637 - INFO - Scraping page 153...
+2025-05-11 05:36:49,782 - INFO - Found 60 links on page 150
+2025-05-11 05:36:49,787 - INFO - Scraping page 154...
+2025-05-11 05:36:49,947 - INFO - Found 60 links on page 152
+2025-05-11 05:36:49,947 - INFO - Scraping page 155...
+2025-05-11 05:36:54,221 - INFO - Found 60 links on page 154
+2025-05-11 05:36:54,222 - INFO - Scraping page 156...
+2025-05-11 05:36:54,429 - INFO - Found 60 links on page 153
+2025-05-11 05:36:54,429 - INFO - Scraping page 157...
+2025-05-11 05:36:54,728 - INFO - Found 60 links on page 155
+2025-05-11 05:36:54,728 - INFO - Scraping page 158...
+2025-05-11 05:36:58,161 - INFO - Found 60 links on page 156
+2025-05-11 05:36:58,161 - INFO - Scraping page 159...
+2025-05-11 05:36:58,409 - INFO - Found 60 links on page 157
+2025-05-11 05:36:58,410 - INFO - Scraping page 160...
+2025-05-11 05:36:58,857 - INFO - Found 60 links on page 158
+2025-05-11 05:36:58,857 - INFO - Scraping page 161...
+2025-05-11 05:37:02,180 - INFO - Found 60 links on page 159
+2025-05-11 05:37:02,181 - INFO - Scraping page 162...
+2025-05-11 05:37:03,010 - INFO - Found 60 links on page 161
+2025-05-11 05:37:03,010 - INFO - Scraping page 163...
+2025-05-11 05:37:03,216 - INFO - Found 60 links on page 160
+2025-05-11 05:37:03,216 - INFO - Scraping page 164...
+2025-05-11 05:37:06,493 - INFO - Found 60 links on page 162
+2025-05-11 05:37:06,493 - INFO - Scraping page 165...
+2025-05-11 05:37:07,241 - INFO - Found 60 links on page 164
+2025-05-11 05:37:07,251 - INFO - Scraping page 166...
+2025-05-11 05:37:07,331 - INFO - Found 60 links on page 163
+2025-05-11 05:37:07,332 - INFO - Scraping page 167...
+2025-05-11 05:37:10,517 - INFO - Found 60 links on page 165
+2025-05-11 05:37:10,517 - INFO - Scraping page 168...
+2025-05-11 05:37:11,480 - INFO - Found 60 links on page 166
+2025-05-11 05:37:11,480 - INFO - Scraping page 169...
+2025-05-11 05:37:12,347 - INFO - Found 60 links on page 167
+2025-05-11 05:37:12,347 - INFO - Scraping page 170...
+2025-05-11 05:37:15,100 - INFO - Found 60 links on page 168
+2025-05-11 05:37:15,100 - INFO - Scraping page 171...
+2025-05-11 05:37:15,756 - INFO - Found 60 links on page 169
+2025-05-11 05:37:15,756 - INFO - Scraping page 172...
+2025-05-11 05:37:16,792 - INFO - Found 60 links on page 170
+2025-05-11 05:37:16,792 - INFO - Scraping page 173...
+2025-05-11 05:37:19,149 - INFO - Found 60 links on page 171
+2025-05-11 05:37:19,149 - INFO - Scraping page 174...
+2025-05-11 05:37:20,002 - INFO - Found 60 links on page 172
+2025-05-11 05:37:20,002 - INFO - Scraping page 175...
+2025-05-11 05:37:20,676 - INFO - Found 60 links on page 173
+2025-05-11 05:37:20,676 - INFO - Scraping page 176...
+2025-05-11 05:37:23,278 - INFO - Found 60 links on page 174
+2025-05-11 05:37:23,279 - INFO - Scraping page 177...
+2025-05-11 05:37:24,184 - INFO - Found 60 links on page 175
+2025-05-11 05:37:24,185 - INFO - Scraping page 178...
+2025-05-11 05:37:25,398 - INFO - Found 60 links on page 176
+2025-05-11 05:37:25,399 - INFO - Scraping page 179...
+2025-05-11 05:37:27,452 - INFO - Found 60 links on page 177
+2025-05-11 05:37:27,453 - INFO - Scraping page 180...
+2025-05-11 05:37:28,479 - INFO - Found 60 links on page 178
+2025-05-11 05:37:28,479 - INFO - Scraping page 181...
+2025-05-11 05:37:29,345 - INFO - Found 60 links on page 179
+2025-05-11 05:37:29,345 - INFO - Scraping page 182...
+2025-05-11 05:37:31,576 - INFO - Found 60 links on page 180
+2025-05-11 05:37:31,576 - INFO - Scraping page 183...
+2025-05-11 05:37:32,470 - INFO - Found 60 links on page 181
+2025-05-11 05:37:32,470 - INFO - Scraping page 184...
+2025-05-11 05:37:33,192 - INFO - Found 60 links on page 182
+2025-05-11 05:37:33,192 - INFO - Scraping page 185...
+2025-05-11 05:37:35,556 - INFO - Found 60 links on page 183
+2025-05-11 05:37:35,557 - INFO - Scraping page 186...
+2025-05-11 05:37:36,972 - INFO - Found 60 links on page 184
+2025-05-11 05:37:36,972 - INFO - Scraping page 187...
+2025-05-11 05:37:37,250 - INFO - Found 60 links on page 185
+2025-05-11 05:37:37,250 - INFO - Scraping page 188...
+2025-05-11 05:37:39,591 - INFO - Found 60 links on page 186
+2025-05-11 05:37:39,592 - INFO - Scraping page 189...
+2025-05-11 05:37:41,043 - INFO - Found 60 links on page 187
+2025-05-11 05:37:41,043 - INFO - Scraping page 190...
+2025-05-11 05:37:41,790 - INFO - Found 60 links on page 188
+2025-05-11 05:37:41,790 - INFO - Scraping page 191...
+2025-05-11 05:37:43,801 - INFO - Found 60 links on page 189
+2025-05-11 05:37:43,801 - INFO - Scraping page 192...
+2025-05-11 05:37:45,651 - INFO - Found 60 links on page 191
+2025-05-11 05:37:45,651 - INFO - Scraping page 193...
+2025-05-11 05:37:45,904 - INFO - Found 60 links on page 190
+2025-05-11 05:37:45,904 - INFO - Scraping page 194...
+2025-05-11 05:37:47,762 - INFO - Found 60 links on page 192
+2025-05-11 05:37:47,762 - INFO - Scraping page 195...
+2025-05-11 05:37:49,918 - INFO - Found 60 links on page 194
+2025-05-11 05:37:49,924 - INFO - Scraping page 196...
+2025-05-11 05:37:50,062 - INFO - Found 60 links on page 193
+2025-05-11 05:37:50,062 - INFO - Scraping page 197...
+2025-05-11 05:37:52,099 - INFO - Found 60 links on page 195
+2025-05-11 05:37:52,100 - INFO - Scraping page 198...
+2025-05-11 05:37:54,349 - INFO - Found 60 links on page 197
+2025-05-11 05:37:54,355 - INFO - Scraping page 199...
+2025-05-11 05:37:54,489 - INFO - Found 60 links on page 196
+2025-05-11 05:37:54,489 - INFO - Scraping page 200...
+2025-05-11 05:37:56,050 - INFO - Found 60 links on page 198
+2025-05-11 05:37:58,138 - INFO - Found 60 links on page 199
+2025-05-11 05:37:58,451 - INFO - Found 60 links on page 200
+2025-05-11 05:37:58,453 - INFO - Found 11884 new links to scrape out of 12000 total links
+2025-05-11 05:37:58,453 - INFO - Processing batch 1/238 (50 links)
+2025-05-11 05:38:04,487 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:38:10,327 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:38:15,988 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:38:21,041 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:38:25,620 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:38:25,623 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:38:25,626 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 165 records
+2025-05-11 05:38:25,632 - INFO - Cache saved with 170 URLs
+2025-05-11 05:38:25,632 - INFO - Saved batch data. Total records: 165
+2025-05-11 05:38:25,632 - INFO - Processing batch 2/238 (50 links)
+2025-05-11 05:38:31,473 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:38:36,408 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:38:42,060 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:38:47,766 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:38:53,028 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:38:53,031 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:38:53,034 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 215 records
+2025-05-11 05:38:53,042 - INFO - Cache saved with 220 URLs
+2025-05-11 05:38:53,042 - INFO - Saved batch data. Total records: 215
+2025-05-11 05:38:53,042 - INFO - Processing batch 3/238 (50 links)
+2025-05-11 05:38:59,251 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:39:04,691 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:39:09,919 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:39:14,967 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:39:20,808 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:39:20,811 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:39:20,815 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 264 records
+2025-05-11 05:39:20,825 - INFO - Cache saved with 270 URLs
+2025-05-11 05:39:20,825 - INFO - Saved batch data. Total records: 264
+2025-05-11 05:39:20,825 - INFO - Processing batch 4/238 (50 links)
+2025-05-11 05:39:26,722 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:39:32,935 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:39:38,071 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:39:43,499 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:39:48,702 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:39:48,705 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:39:48,710 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 314 records
+2025-05-11 05:39:48,722 - INFO - Cache saved with 320 URLs
+2025-05-11 05:39:48,722 - INFO - Saved batch data. Total records: 314
+2025-05-11 05:39:48,722 - INFO - Processing batch 5/238 (50 links)
+2025-05-11 05:39:53,962 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:39:59,168 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:40:04,802 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:40:09,875 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:40:15,047 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:40:15,050 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:40:15,056 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 362 records
+2025-05-11 05:40:15,069 - INFO - Cache saved with 370 URLs
+2025-05-11 05:40:15,069 - INFO - Saved batch data. Total records: 362
+2025-05-11 05:40:15,069 - INFO - Processing batch 6/238 (50 links)
+2025-05-11 05:40:20,978 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:40:26,024 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:40:31,070 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:40:36,587 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:40:42,054 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:40:42,058 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:40:42,064 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 412 records
+2025-05-11 05:40:42,079 - INFO - Cache saved with 420 URLs
+2025-05-11 05:40:42,079 - INFO - Saved batch data. Total records: 412
+2025-05-11 05:40:42,079 - INFO - Processing batch 7/238 (50 links)
+2025-05-11 05:40:47,488 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:40:52,690 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:40:58,408 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:41:03,820 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:41:08,926 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:41:08,930 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:41:08,937 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 462 records
+2025-05-11 05:41:08,953 - INFO - Cache saved with 470 URLs
+2025-05-11 05:41:08,954 - INFO - Saved batch data. Total records: 462
+2025-05-11 05:41:08,954 - INFO - Processing batch 8/238 (50 links)
+2025-05-11 05:41:14,345 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:41:20,218 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:41:25,099 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:41:30,317 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:41:35,613 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:41:35,617 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:41:35,625 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 512 records
+2025-05-11 05:41:35,642 - INFO - Cache saved with 520 URLs
+2025-05-11 05:41:35,642 - INFO - Saved batch data. Total records: 512
+2025-05-11 05:41:35,643 - INFO - Processing batch 9/238 (50 links)
+2025-05-11 05:41:41,678 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:41:46,734 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:41:52,374 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:41:57,727 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:42:02,687 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:42:02,692 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:42:02,700 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 561 records
+2025-05-11 05:42:02,719 - INFO - Cache saved with 570 URLs
+2025-05-11 05:42:02,719 - INFO - Saved batch data. Total records: 561
+2025-05-11 05:42:02,720 - INFO - Processing batch 10/238 (50 links)
+2025-05-11 05:42:08,137 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:42:13,437 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:42:18,429 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:42:23,776 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:42:29,550 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:42:29,554 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:42:29,564 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 611 records
+2025-05-11 05:42:29,585 - INFO - Cache saved with 620 URLs
+2025-05-11 05:42:29,585 - INFO - Saved batch data. Total records: 611
+2025-05-11 05:42:29,585 - INFO - Processing batch 11/238 (50 links)
+2025-05-11 05:42:35,140 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:42:40,391 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:42:45,279 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:42:51,085 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:42:56,149 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:42:56,154 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:42:56,164 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 661 records
+2025-05-11 05:42:56,186 - INFO - Cache saved with 670 URLs
+2025-05-11 05:42:56,186 - INFO - Saved batch data. Total records: 661
+2025-05-11 05:42:56,187 - INFO - Processing batch 12/238 (50 links)
+2025-05-11 05:43:01,850 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:43:06,695 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:43:11,893 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:43:16,798 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:43:21,789 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:43:21,794 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:43:21,805 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 711 records
+2025-05-11 05:43:21,829 - INFO - Cache saved with 720 URLs
+2025-05-11 05:43:21,829 - INFO - Saved batch data. Total records: 711
+2025-05-11 05:43:21,829 - INFO - Processing batch 13/238 (50 links)
+2025-05-11 05:43:27,376 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:43:32,696 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:43:37,805 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:43:43,301 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:43:48,391 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:43:48,396 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:43:48,408 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 761 records
+2025-05-11 05:43:48,434 - INFO - Cache saved with 770 URLs
+2025-05-11 05:43:48,434 - INFO - Saved batch data. Total records: 761
+2025-05-11 05:43:48,434 - INFO - Processing batch 14/238 (50 links)
+2025-05-11 05:43:53,908 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:43:59,768 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:44:05,645 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:44:10,531 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:44:16,129 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:44:16,135 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:44:16,147 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 810 records
+2025-05-11 05:44:16,175 - INFO - Cache saved with 820 URLs
+2025-05-11 05:44:16,175 - INFO - Saved batch data. Total records: 810
+2025-05-11 05:44:16,175 - INFO - Processing batch 15/238 (50 links)
+2025-05-11 05:44:22,043 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:44:27,185 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:44:33,112 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:44:38,017 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:44:42,854 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:44:42,860 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:44:42,873 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 860 records
+2025-05-11 05:44:42,903 - INFO - Cache saved with 870 URLs
+2025-05-11 05:44:42,903 - INFO - Saved batch data. Total records: 860
+2025-05-11 05:44:42,903 - INFO - Processing batch 16/238 (50 links)
+2025-05-11 05:44:48,269 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:44:53,492 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:44:59,078 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:45:04,390 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:45:09,736 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:45:09,742 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:45:09,755 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 910 records
+2025-05-11 05:45:09,787 - INFO - Cache saved with 920 URLs
+2025-05-11 05:45:09,787 - INFO - Saved batch data. Total records: 910
+2025-05-11 05:45:09,787 - INFO - Processing batch 17/238 (50 links)
+2025-05-11 05:45:15,498 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:45:20,533 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:45:25,635 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:45:30,690 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:45:35,647 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:45:35,653 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:45:35,668 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 960 records
+2025-05-11 05:45:35,702 - INFO - Cache saved with 970 URLs
+2025-05-11 05:45:35,702 - INFO - Saved batch data. Total records: 960
+2025-05-11 05:45:35,702 - INFO - Processing batch 18/238 (50 links)
+2025-05-11 05:45:41,534 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:45:46,894 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:45:52,003 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:45:57,224 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:46:02,625 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:46:02,631 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:46:02,646 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1010 records
+2025-05-11 05:46:02,681 - INFO - Cache saved with 1020 URLs
+2025-05-11 05:46:02,681 - INFO - Saved batch data. Total records: 1010
+2025-05-11 05:46:02,681 - INFO - Processing batch 19/238 (50 links)
+2025-05-11 05:46:08,053 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:46:13,530 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:46:19,316 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:46:24,379 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:46:29,611 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:46:29,617 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:46:29,632 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1060 records
+2025-05-11 05:46:29,668 - INFO - Cache saved with 1070 URLs
+2025-05-11 05:46:29,668 - INFO - Saved batch data. Total records: 1060
+2025-05-11 05:46:29,668 - INFO - Processing batch 20/238 (50 links)
+2025-05-11 05:46:35,101 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:46:40,742 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:46:46,253 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:46:51,508 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:46:57,307 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:46:57,314 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:46:57,330 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1108 records
+2025-05-11 05:46:57,367 - INFO - Cache saved with 1120 URLs
+2025-05-11 05:46:57,367 - INFO - Saved batch data. Total records: 1108
+2025-05-11 05:46:57,367 - INFO - Processing batch 21/238 (50 links)
+2025-05-11 05:47:02,971 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:47:08,551 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:47:14,080 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:47:19,229 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:47:24,778 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:47:24,785 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:47:24,802 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1151 records
+2025-05-11 05:47:24,840 - INFO - Cache saved with 1170 URLs
+2025-05-11 05:47:24,841 - INFO - Saved batch data. Total records: 1151
+2025-05-11 05:47:24,841 - INFO - Processing batch 22/238 (50 links)
+2025-05-11 05:47:30,152 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:47:35,394 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:47:40,459 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:47:45,769 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:47:51,638 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:47:51,645 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:47:51,663 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1201 records
+2025-05-11 05:47:51,703 - INFO - Cache saved with 1220 URLs
+2025-05-11 05:47:51,703 - INFO - Saved batch data. Total records: 1201
+2025-05-11 05:47:51,703 - INFO - Processing batch 23/238 (50 links)
+2025-05-11 05:47:57,479 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:48:02,855 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:48:07,715 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:48:12,650 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:48:18,302 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:48:18,309 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:48:18,327 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1251 records
+2025-05-11 05:48:18,372 - INFO - Cache saved with 1270 URLs
+2025-05-11 05:48:18,372 - INFO - Saved batch data. Total records: 1251
+2025-05-11 05:48:18,372 - INFO - Processing batch 24/238 (50 links)
+2025-05-11 05:48:23,798 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:48:28,958 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:48:34,277 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:48:39,552 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:48:44,753 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:48:44,760 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:48:44,779 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1301 records
+2025-05-11 05:48:44,823 - INFO - Cache saved with 1320 URLs
+2025-05-11 05:48:44,823 - INFO - Saved batch data. Total records: 1301
+2025-05-11 05:48:44,824 - INFO - Processing batch 25/238 (50 links)
+2025-05-11 05:48:50,361 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:48:55,337 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:49:00,656 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:49:05,669 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:49:11,014 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:49:11,023 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:49:11,043 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1350 records
+2025-05-11 05:49:11,089 - INFO - Cache saved with 1370 URLs
+2025-05-11 05:49:11,089 - INFO - Saved batch data. Total records: 1350
+2025-05-11 05:49:11,089 - INFO - Processing batch 26/238 (50 links)
+2025-05-11 05:49:16,323 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:49:22,026 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:49:26,926 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:49:31,825 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:49:36,538 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:49:36,547 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:49:36,568 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1400 records
+2025-05-11 05:49:36,616 - INFO - Cache saved with 1420 URLs
+2025-05-11 05:49:36,616 - INFO - Saved batch data. Total records: 1400
+2025-05-11 05:49:36,616 - INFO - Processing batch 27/238 (50 links)
+2025-05-11 05:49:42,463 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:49:47,651 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:49:52,745 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:49:57,830 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:50:02,793 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:50:02,802 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:50:02,823 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1450 records
+2025-05-11 05:50:02,872 - INFO - Cache saved with 1470 URLs
+2025-05-11 05:50:02,872 - INFO - Saved batch data. Total records: 1450
+2025-05-11 05:50:02,873 - INFO - Processing batch 28/238 (50 links)
+2025-05-11 05:50:08,723 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:50:13,966 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:50:19,142 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:50:24,009 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:50:29,738 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:50:29,747 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:50:29,769 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1500 records
+2025-05-11 05:50:29,820 - INFO - Cache saved with 1520 URLs
+2025-05-11 05:50:29,820 - INFO - Saved batch data. Total records: 1500
+2025-05-11 05:50:29,820 - INFO - Processing batch 29/238 (50 links)
+2025-05-11 05:50:35,272 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:50:40,325 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:50:46,728 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:50:51,601 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:50:56,931 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:50:56,939 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:50:56,962 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1549 records
+2025-05-11 05:50:57,013 - INFO - Cache saved with 1570 URLs
+2025-05-11 05:50:57,014 - INFO - Saved batch data. Total records: 1549
+2025-05-11 05:50:57,014 - INFO - Processing batch 30/238 (50 links)
+2025-05-11 05:51:02,513 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:51:07,821 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:51:13,319 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:51:18,329 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:51:24,121 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:51:24,130 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:51:24,153 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1597 records
+2025-05-11 05:51:24,207 - INFO - Cache saved with 1620 URLs
+2025-05-11 05:51:24,207 - INFO - Saved batch data. Total records: 1597
+2025-05-11 05:51:24,207 - INFO - Processing batch 31/238 (50 links)
+2025-05-11 05:51:29,605 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:51:34,692 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:51:39,641 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:51:44,968 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:51:50,510 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:51:50,519 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:51:50,543 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1646 records
+2025-05-11 05:51:50,598 - INFO - Cache saved with 1670 URLs
+2025-05-11 05:51:50,598 - INFO - Saved batch data. Total records: 1646
+2025-05-11 05:51:50,598 - INFO - Processing batch 32/238 (50 links)
+2025-05-11 05:51:55,972 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:52:01,063 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:52:06,572 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:52:11,758 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:52:17,205 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:52:17,215 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:52:17,240 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1696 records
+2025-05-11 05:52:17,297 - INFO - Cache saved with 1720 URLs
+2025-05-11 05:52:17,297 - INFO - Saved batch data. Total records: 1696
+2025-05-11 05:52:17,297 - INFO - Processing batch 33/238 (50 links)
+2025-05-11 05:52:22,697 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:52:27,921 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:52:33,341 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:52:38,981 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:52:44,038 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:52:44,048 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:52:44,073 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1746 records
+2025-05-11 05:52:44,134 - INFO - Cache saved with 1770 URLs
+2025-05-11 05:52:44,134 - INFO - Saved batch data. Total records: 1746
+2025-05-11 05:52:44,134 - INFO - Processing batch 34/238 (50 links)
+2025-05-11 05:52:49,456 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:52:54,668 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:52:59,712 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:53:05,462 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:53:10,649 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:53:10,658 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:53:10,684 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1795 records
+2025-05-11 05:53:10,744 - INFO - Cache saved with 1820 URLs
+2025-05-11 05:53:10,744 - INFO - Saved batch data. Total records: 1795
+2025-05-11 05:53:10,744 - INFO - Processing batch 35/238 (50 links)
+2025-05-11 05:53:16,396 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:53:21,922 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:53:26,715 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:53:31,645 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:53:36,735 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:53:36,746 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:53:36,772 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1845 records
+2025-05-11 05:53:36,835 - INFO - Cache saved with 1870 URLs
+2025-05-11 05:53:36,835 - INFO - Saved batch data. Total records: 1845
+2025-05-11 05:53:36,835 - INFO - Processing batch 36/238 (50 links)
+2025-05-11 05:53:42,414 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:53:47,556 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:53:52,613 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:53:58,721 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:54:03,539 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:54:03,549 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:54:03,576 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1894 records
+2025-05-11 05:54:03,640 - INFO - Cache saved with 1920 URLs
+2025-05-11 05:54:03,640 - INFO - Saved batch data. Total records: 1894
+2025-05-11 05:54:03,640 - INFO - Processing batch 37/238 (50 links)
+2025-05-11 05:54:09,281 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:54:14,488 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:54:19,919 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:54:25,007 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:54:30,171 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:54:30,182 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:54:30,210 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1944 records
+2025-05-11 05:54:30,277 - INFO - Cache saved with 1970 URLs
+2025-05-11 05:54:30,277 - INFO - Saved batch data. Total records: 1944
+2025-05-11 05:54:30,277 - INFO - Processing batch 38/238 (50 links)
+2025-05-11 05:54:35,746 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:54:41,651 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:54:46,923 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:54:51,822 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:54:56,811 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:54:56,821 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:54:56,851 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 1989 records
+2025-05-11 05:54:56,919 - INFO - Cache saved with 2020 URLs
+2025-05-11 05:54:56,919 - INFO - Saved batch data. Total records: 1989
+2025-05-11 05:54:56,919 - INFO - Processing batch 39/238 (50 links)
+2025-05-11 05:55:02,821 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:55:07,735 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:55:12,699 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:55:17,758 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:55:23,338 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:55:23,349 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:55:23,379 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2039 records
+2025-05-11 05:55:23,448 - INFO - Cache saved with 2070 URLs
+2025-05-11 05:55:23,449 - INFO - Saved batch data. Total records: 2039
+2025-05-11 05:55:23,449 - INFO - Processing batch 40/238 (50 links)
+2025-05-11 05:55:29,443 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:55:34,194 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:55:39,377 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:55:44,141 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:55:49,486 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:55:49,497 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:55:49,530 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2086 records
+2025-05-11 05:55:49,600 - INFO - Cache saved with 2120 URLs
+2025-05-11 05:55:49,600 - INFO - Saved batch data. Total records: 2086
+2025-05-11 05:55:49,600 - INFO - Processing batch 41/238 (50 links)
+2025-05-11 05:55:55,360 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:56:00,561 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:56:06,547 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:56:11,737 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:56:17,251 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:56:17,262 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:56:17,292 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2133 records
+2025-05-11 05:56:17,365 - INFO - Cache saved with 2170 URLs
+2025-05-11 05:56:17,365 - INFO - Saved batch data. Total records: 2133
+2025-05-11 05:56:17,365 - INFO - Processing batch 42/238 (50 links)
+2025-05-11 05:56:22,571 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:56:27,972 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:56:34,022 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:56:39,419 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:56:44,410 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:56:44,422 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:56:44,455 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2182 records
+2025-05-11 05:56:44,529 - INFO - Cache saved with 2220 URLs
+2025-05-11 05:56:44,529 - INFO - Saved batch data. Total records: 2182
+2025-05-11 05:56:44,529 - INFO - Processing batch 43/238 (50 links)
+2025-05-11 05:56:49,934 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:56:55,064 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:57:00,001 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:57:05,476 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:57:11,084 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:57:11,095 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:57:11,127 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2231 records
+2025-05-11 05:57:11,203 - INFO - Cache saved with 2270 URLs
+2025-05-11 05:57:11,203 - INFO - Saved batch data. Total records: 2231
+2025-05-11 05:57:11,203 - INFO - Processing batch 44/238 (50 links)
+2025-05-11 05:57:16,676 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:57:22,423 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:57:27,229 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:57:32,957 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:57:38,169 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:57:38,181 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:57:38,214 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2280 records
+2025-05-11 05:57:38,291 - INFO - Cache saved with 2320 URLs
+2025-05-11 05:57:38,291 - INFO - Saved batch data. Total records: 2280
+2025-05-11 05:57:38,291 - INFO - Processing batch 45/238 (50 links)
+2025-05-11 05:57:44,032 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:57:49,023 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:57:53,929 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:57:59,356 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:58:05,109 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:58:05,121 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:58:05,154 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2327 records
+2025-05-11 05:58:05,233 - INFO - Cache saved with 2370 URLs
+2025-05-11 05:58:05,233 - INFO - Saved batch data. Total records: 2327
+2025-05-11 05:58:05,233 - INFO - Processing batch 46/238 (50 links)
+2025-05-11 05:58:11,274 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:58:17,639 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:58:22,551 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:58:27,673 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:58:32,942 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:58:32,954 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:58:32,988 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2377 records
+2025-05-11 05:58:33,069 - INFO - Cache saved with 2420 URLs
+2025-05-11 05:58:33,069 - INFO - Saved batch data. Total records: 2377
+2025-05-11 05:58:33,069 - INFO - Processing batch 47/238 (50 links)
+2025-05-11 05:58:39,135 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:58:44,480 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:58:49,955 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:58:54,788 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:58:59,989 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:59:00,002 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:59:00,039 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2427 records
+2025-05-11 05:59:00,125 - INFO - Cache saved with 2470 URLs
+2025-05-11 05:59:00,125 - INFO - Saved batch data. Total records: 2427
+2025-05-11 05:59:00,125 - INFO - Processing batch 48/238 (50 links)
+2025-05-11 05:59:06,393 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:59:11,637 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:59:16,767 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:59:21,700 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:59:26,723 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:59:26,736 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:59:26,773 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2477 records
+2025-05-11 05:59:26,859 - INFO - Cache saved with 2520 URLs
+2025-05-11 05:59:26,859 - INFO - Saved batch data. Total records: 2477
+2025-05-11 05:59:26,859 - INFO - Processing batch 49/238 (50 links)
+2025-05-11 05:59:32,217 - INFO - Progress: 10/50 ads processed
+2025-05-11 05:59:38,129 - INFO - Progress: 20/50 ads processed
+2025-05-11 05:59:43,348 - INFO - Progress: 30/50 ads processed
+2025-05-11 05:59:48,829 - INFO - Progress: 40/50 ads processed
+2025-05-11 05:59:54,115 - INFO - Progress: 50/50 ads processed
+2025-05-11 05:59:54,128 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 05:59:54,165 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2527 records
+2025-05-11 05:59:54,250 - INFO - Cache saved with 2570 URLs
+2025-05-11 05:59:54,251 - INFO - Saved batch data. Total records: 2527
+2025-05-11 05:59:54,251 - INFO - Processing batch 50/238 (50 links)
+2025-05-11 05:59:59,870 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:00:05,381 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:00:12,023 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:00:17,427 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:00:22,361 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:00:22,373 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:00:22,411 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2574 records
+2025-05-11 06:00:22,500 - INFO - Cache saved with 2620 URLs
+2025-05-11 06:00:22,500 - INFO - Saved batch data. Total records: 2574
+2025-05-11 06:00:22,500 - INFO - Processing batch 51/238 (50 links)
+2025-05-11 06:00:28,224 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:00:33,251 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:00:38,374 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:00:43,596 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:00:49,315 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:00:49,328 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:00:49,365 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2624 records
+2025-05-11 06:00:49,454 - INFO - Cache saved with 2670 URLs
+2025-05-11 06:00:49,454 - INFO - Saved batch data. Total records: 2624
+2025-05-11 06:00:49,454 - INFO - Processing batch 52/238 (50 links)
+2025-05-11 06:00:54,709 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:01:00,955 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:01:06,426 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:01:11,512 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:01:16,557 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:01:16,570 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:01:16,609 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2674 records
+2025-05-11 06:01:16,701 - INFO - Cache saved with 2720 URLs
+2025-05-11 06:01:16,701 - INFO - Saved batch data. Total records: 2674
+2025-05-11 06:01:16,701 - INFO - Processing batch 53/238 (50 links)
+2025-05-11 06:01:22,044 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:01:27,594 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:01:32,571 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:01:37,912 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:01:43,131 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:01:43,146 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:01:43,187 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2724 records
+2025-05-11 06:01:43,279 - INFO - Cache saved with 2770 URLs
+2025-05-11 06:01:43,279 - INFO - Saved batch data. Total records: 2724
+2025-05-11 06:01:43,280 - INFO - Processing batch 54/238 (50 links)
+2025-05-11 06:01:48,939 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:01:54,494 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:01:59,532 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:02:04,534 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:02:10,844 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:02:10,858 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:02:10,898 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2774 records
+2025-05-11 06:02:10,992 - INFO - Cache saved with 2820 URLs
+2025-05-11 06:02:10,992 - INFO - Saved batch data. Total records: 2774
+2025-05-11 06:02:10,992 - INFO - Processing batch 55/238 (50 links)
+2025-05-11 06:02:16,411 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:02:21,687 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:02:27,161 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:02:32,836 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:02:37,843 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:02:37,857 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:02:37,899 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2823 records
+2025-05-11 06:02:37,994 - INFO - Cache saved with 2870 URLs
+2025-05-11 06:02:37,994 - INFO - Saved batch data. Total records: 2823
+2025-05-11 06:02:37,994 - INFO - Processing batch 56/238 (50 links)
+2025-05-11 06:02:44,167 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:02:49,288 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:02:54,649 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:02:59,794 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:03:05,050 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:03:05,064 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:03:05,106 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2870 records
+2025-05-11 06:03:05,206 - INFO - Cache saved with 2920 URLs
+2025-05-11 06:03:05,206 - INFO - Saved batch data. Total records: 2870
+2025-05-11 06:03:05,206 - INFO - Processing batch 57/238 (50 links)
+2025-05-11 06:03:11,170 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:03:16,606 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:03:21,727 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:03:26,640 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:03:31,931 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:03:31,947 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:03:31,990 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2920 records
+2025-05-11 06:03:32,089 - INFO - Cache saved with 2970 URLs
+2025-05-11 06:03:32,089 - INFO - Saved batch data. Total records: 2920
+2025-05-11 06:03:32,089 - INFO - Processing batch 58/238 (50 links)
+2025-05-11 06:03:38,260 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:03:43,738 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:03:49,068 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:03:54,253 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:03:59,418 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:03:59,433 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:03:59,476 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 2970 records
+2025-05-11 06:03:59,577 - INFO - Cache saved with 3020 URLs
+2025-05-11 06:03:59,577 - INFO - Saved batch data. Total records: 2970
+2025-05-11 06:03:59,577 - INFO - Processing batch 59/238 (50 links)
+2025-05-11 06:04:05,503 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:04:10,635 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:04:16,046 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:04:21,871 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:04:27,469 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:04:27,484 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:04:27,529 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3019 records
+2025-05-11 06:04:27,633 - INFO - Cache saved with 3070 URLs
+2025-05-11 06:04:27,633 - INFO - Saved batch data. Total records: 3019
+2025-05-11 06:04:27,633 - INFO - Processing batch 60/238 (50 links)
+2025-05-11 06:04:33,170 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:04:38,696 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:04:44,509 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:04:49,648 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:04:55,141 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:04:55,156 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:04:55,201 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3069 records
+2025-05-11 06:04:55,305 - INFO - Cache saved with 3120 URLs
+2025-05-11 06:04:55,305 - INFO - Saved batch data. Total records: 3069
+2025-05-11 06:04:55,305 - INFO - Processing batch 61/238 (50 links)
+2025-05-11 06:05:00,888 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:05:07,526 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:05:12,838 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:05:18,072 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:05:23,929 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:05:23,944 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:05:23,988 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3118 records
+2025-05-11 06:05:24,092 - INFO - Cache saved with 3170 URLs
+2025-05-11 06:05:24,092 - INFO - Saved batch data. Total records: 3118
+2025-05-11 06:05:24,092 - INFO - Processing batch 62/238 (50 links)
+2025-05-11 06:05:30,037 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:05:35,324 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:05:40,627 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:05:45,885 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:05:51,163 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:05:51,180 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:05:51,230 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3164 records
+2025-05-11 06:05:51,340 - INFO - Cache saved with 3220 URLs
+2025-05-11 06:05:51,341 - INFO - Saved batch data. Total records: 3164
+2025-05-11 06:05:51,341 - INFO - Processing batch 63/238 (50 links)
+2025-05-11 06:05:57,035 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:06:02,679 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:06:08,760 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:06:14,209 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:06:19,558 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:06:19,573 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:06:19,622 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3212 records
+2025-05-11 06:06:19,734 - INFO - Cache saved with 3270 URLs
+2025-05-11 06:06:19,734 - INFO - Saved batch data. Total records: 3212
+2025-05-11 06:06:19,734 - INFO - Processing batch 64/238 (50 links)
+2025-05-11 06:06:25,284 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:06:31,044 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:06:37,147 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:06:42,353 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:06:47,392 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:06:47,410 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:06:47,461 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3262 records
+2025-05-11 06:06:47,575 - INFO - Cache saved with 3320 URLs
+2025-05-11 06:06:47,575 - INFO - Saved batch data. Total records: 3262
+2025-05-11 06:06:47,575 - INFO - Processing batch 65/238 (50 links)
+2025-05-11 06:06:53,960 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:06:59,414 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:07:05,012 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:07:10,598 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:07:15,954 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:07:15,972 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:07:16,022 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3311 records
+2025-05-11 06:07:16,137 - INFO - Cache saved with 3370 URLs
+2025-05-11 06:07:16,137 - INFO - Saved batch data. Total records: 3311
+2025-05-11 06:07:16,137 - INFO - Processing batch 66/238 (50 links)
+2025-05-11 06:07:21,683 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:07:27,434 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:07:33,315 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:07:38,919 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:07:44,369 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:07:44,387 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:07:44,437 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3360 records
+2025-05-11 06:07:44,552 - INFO - Cache saved with 3420 URLs
+2025-05-11 06:07:44,553 - INFO - Saved batch data. Total records: 3360
+2025-05-11 06:07:44,553 - INFO - Processing batch 67/238 (50 links)
+2025-05-11 06:07:49,961 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:07:55,473 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:08:00,732 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:08:06,455 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:08:12,031 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:08:12,048 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:08:12,098 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3409 records
+2025-05-11 06:08:12,215 - INFO - Cache saved with 3470 URLs
+2025-05-11 06:08:12,215 - INFO - Saved batch data. Total records: 3409
+2025-05-11 06:08:12,215 - INFO - Processing batch 68/238 (50 links)
+2025-05-11 06:08:18,392 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:08:23,863 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:08:29,049 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:08:34,498 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:08:39,969 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:08:39,984 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:08:40,034 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3459 records
+2025-05-11 06:08:40,150 - INFO - Cache saved with 3520 URLs
+2025-05-11 06:08:40,150 - INFO - Saved batch data. Total records: 3459
+2025-05-11 06:08:40,150 - INFO - Processing batch 69/238 (50 links)
+2025-05-11 06:08:45,877 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:08:51,269 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:08:56,978 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:09:02,519 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:09:08,265 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:09:08,282 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:09:08,333 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3508 records
+2025-05-11 06:09:08,452 - INFO - Cache saved with 3570 URLs
+2025-05-11 06:09:08,452 - INFO - Saved batch data. Total records: 3508
+2025-05-11 06:09:08,452 - INFO - Processing batch 70/238 (50 links)
+2025-05-11 06:09:14,344 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:09:19,530 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:09:25,001 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:09:30,426 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:09:35,769 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:09:35,788 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:09:35,841 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3556 records
+2025-05-11 06:09:35,962 - INFO - Cache saved with 3620 URLs
+2025-05-11 06:09:35,963 - INFO - Saved batch data. Total records: 3556
+2025-05-11 06:09:35,963 - INFO - Processing batch 71/238 (50 links)
+2025-05-11 06:09:42,095 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:09:47,635 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:09:52,876 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:09:58,462 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:10:04,263 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:10:04,282 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:10:04,336 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3605 records
+2025-05-11 06:10:04,463 - INFO - Cache saved with 3670 URLs
+2025-05-11 06:10:04,463 - INFO - Saved batch data. Total records: 3605
+2025-05-11 06:10:04,463 - INFO - Processing batch 72/238 (50 links)
+2025-05-11 06:10:10,392 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:10:15,665 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:10:20,849 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:10:26,278 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:10:33,110 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:10:33,129 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:10:33,181 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3655 records
+2025-05-11 06:10:33,306 - INFO - Cache saved with 3720 URLs
+2025-05-11 06:10:33,306 - INFO - Saved batch data. Total records: 3655
+2025-05-11 06:10:33,306 - INFO - Processing batch 73/238 (50 links)
+2025-05-11 06:10:39,020 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:10:44,611 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:10:50,305 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:10:55,700 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:11:01,896 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:11:01,914 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:11:01,973 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3704 records
+2025-05-11 06:11:02,102 - INFO - Cache saved with 3770 URLs
+2025-05-11 06:11:02,102 - INFO - Saved batch data. Total records: 3704
+2025-05-11 06:11:02,102 - INFO - Processing batch 74/238 (50 links)
+2025-05-11 06:11:07,781 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:11:13,769 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:11:19,086 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:11:24,817 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:11:30,077 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:11:30,096 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:11:30,154 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3754 records
+2025-05-11 06:11:30,284 - INFO - Cache saved with 3820 URLs
+2025-05-11 06:11:30,284 - INFO - Saved batch data. Total records: 3754
+2025-05-11 06:11:30,284 - INFO - Processing batch 75/238 (50 links)
+2025-05-11 06:11:35,864 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:11:41,288 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:11:47,364 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:11:53,360 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:11:58,394 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:11:58,411 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:11:58,466 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3804 records
+2025-05-11 06:11:58,599 - INFO - Cache saved with 3870 URLs
+2025-05-11 06:11:58,599 - INFO - Saved batch data. Total records: 3804
+2025-05-11 06:11:58,599 - INFO - Processing batch 76/238 (50 links)
+2025-05-11 06:12:04,342 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:12:09,589 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:12:15,073 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:12:20,588 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:12:26,151 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:12:26,171 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:12:26,229 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3850 records
+2025-05-11 06:12:26,362 - INFO - Cache saved with 3920 URLs
+2025-05-11 06:12:26,362 - INFO - Saved batch data. Total records: 3850
+2025-05-11 06:12:26,362 - INFO - Processing batch 77/238 (50 links)
+2025-05-11 06:12:31,957 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:12:37,844 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:12:42,917 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:12:48,444 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:12:54,008 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:12:54,028 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:12:54,088 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3900 records
+2025-05-11 06:12:54,222 - INFO - Cache saved with 3970 URLs
+2025-05-11 06:12:54,222 - INFO - Saved batch data. Total records: 3900
+2025-05-11 06:12:54,222 - INFO - Processing batch 78/238 (50 links)
+2025-05-11 06:12:59,677 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:13:04,916 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:13:10,328 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:13:16,037 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:13:21,557 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:13:21,578 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:13:21,640 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3950 records
+2025-05-11 06:13:21,778 - INFO - Cache saved with 4020 URLs
+2025-05-11 06:13:21,778 - INFO - Saved batch data. Total records: 3950
+2025-05-11 06:13:21,778 - INFO - Processing batch 79/238 (50 links)
+2025-05-11 06:13:27,698 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:13:33,127 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:13:39,119 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:13:44,508 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:13:49,699 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:13:49,718 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:13:49,777 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 3999 records
+2025-05-11 06:13:49,915 - INFO - Cache saved with 4070 URLs
+2025-05-11 06:13:49,916 - INFO - Saved batch data. Total records: 3999
+2025-05-11 06:13:49,916 - INFO - Processing batch 80/238 (50 links)
+2025-05-11 06:13:55,557 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:14:00,924 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:14:06,211 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:14:11,564 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:14:17,038 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:14:17,057 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:14:17,116 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4048 records
+2025-05-11 06:14:17,254 - INFO - Cache saved with 4120 URLs
+2025-05-11 06:14:17,254 - INFO - Saved batch data. Total records: 4048
+2025-05-11 06:14:17,254 - INFO - Processing batch 81/238 (50 links)
+2025-05-11 06:14:22,684 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:14:28,758 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:14:33,913 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:14:39,462 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:14:45,008 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:14:45,029 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:14:45,091 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4097 records
+2025-05-11 06:14:45,234 - INFO - Cache saved with 4170 URLs
+2025-05-11 06:14:45,235 - INFO - Saved batch data. Total records: 4097
+2025-05-11 06:14:45,235 - INFO - Processing batch 82/238 (50 links)
+2025-05-11 06:14:50,799 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:14:56,841 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:15:02,505 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:15:08,015 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:15:13,546 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:15:13,567 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:15:13,629 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4147 records
+2025-05-11 06:15:13,772 - INFO - Cache saved with 4220 URLs
+2025-05-11 06:15:13,772 - INFO - Saved batch data. Total records: 4147
+2025-05-11 06:15:13,772 - INFO - Processing batch 83/238 (50 links)
+2025-05-11 06:15:20,518 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:15:25,536 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:15:31,239 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:15:36,369 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:15:42,574 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:15:42,595 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:15:42,656 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4194 records
+2025-05-11 06:15:42,801 - INFO - Cache saved with 4268 URLs
+2025-05-11 06:15:42,801 - INFO - Saved batch data. Total records: 4196
+2025-05-11 06:15:42,801 - INFO - Processing batch 84/238 (50 links)
+2025-05-11 06:15:48,409 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:15:54,301 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:15:59,190 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:16:04,756 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:16:10,619 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:16:10,640 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:16:10,701 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4244 records
+2025-05-11 06:16:10,847 - INFO - Cache saved with 4318 URLs
+2025-05-11 06:16:10,847 - INFO - Saved batch data. Total records: 4246
+2025-05-11 06:16:10,847 - INFO - Processing batch 85/238 (50 links)
+2025-05-11 06:16:16,558 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:16:21,774 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:16:27,083 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:16:32,585 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:16:38,230 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:16:38,253 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:16:38,318 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4294 records
+2025-05-11 06:16:38,467 - INFO - Cache saved with 4368 URLs
+2025-05-11 06:16:38,467 - INFO - Saved batch data. Total records: 4296
+2025-05-11 06:16:38,467 - INFO - Processing batch 86/238 (50 links)
+2025-05-11 06:16:44,112 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:16:49,730 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:16:54,750 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:17:00,676 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:17:05,887 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:17:05,909 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:17:05,972 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4342 records
+2025-05-11 06:17:06,123 - INFO - Cache saved with 4418 URLs
+2025-05-11 06:17:06,123 - INFO - Saved batch data. Total records: 4344
+2025-05-11 06:17:06,123 - INFO - Processing batch 87/238 (50 links)
+2025-05-11 06:17:12,417 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:17:18,131 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:17:23,596 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:17:28,593 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:17:33,839 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:17:33,861 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:17:33,927 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4391 records
+2025-05-11 06:17:34,083 - INFO - Cache saved with 4468 URLs
+2025-05-11 06:17:34,083 - INFO - Saved batch data. Total records: 4393
+2025-05-11 06:17:34,083 - INFO - Processing batch 88/238 (50 links)
+2025-05-11 06:17:40,329 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:17:45,806 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:17:51,102 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:17:57,091 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:18:02,602 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:18:02,624 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:18:02,687 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4441 records
+2025-05-11 06:18:02,839 - INFO - Cache saved with 4518 URLs
+2025-05-11 06:18:02,839 - INFO - Saved batch data. Total records: 4443
+2025-05-11 06:18:02,839 - INFO - Processing batch 89/238 (50 links)
+2025-05-11 06:18:08,404 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:18:14,125 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:18:19,370 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:18:24,926 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:18:30,301 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:18:30,325 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:18:30,393 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4490 records
+2025-05-11 06:18:30,548 - INFO - Cache saved with 4568 URLs
+2025-05-11 06:18:30,548 - INFO - Saved batch data. Total records: 4492
+2025-05-11 06:18:30,548 - INFO - Processing batch 90/238 (50 links)
+2025-05-11 06:18:35,947 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:18:41,757 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:18:47,378 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:18:52,579 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:18:57,998 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:18:58,020 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:18:58,091 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4540 records
+2025-05-11 06:18:58,248 - INFO - Cache saved with 4618 URLs
+2025-05-11 06:18:58,248 - INFO - Saved batch data. Total records: 4542
+2025-05-11 06:18:58,248 - INFO - Processing batch 91/238 (50 links)
+2025-05-11 06:19:04,068 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:19:09,824 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:19:15,305 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:19:20,672 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:19:26,037 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:19:26,059 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:19:26,127 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4589 records
+2025-05-11 06:19:26,287 - INFO - Cache saved with 4668 URLs
+2025-05-11 06:19:26,287 - INFO - Saved batch data. Total records: 4591
+2025-05-11 06:19:26,288 - INFO - Processing batch 92/238 (50 links)
+2025-05-11 06:19:31,979 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:19:37,656 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:19:42,838 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:19:48,180 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:19:53,542 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:19:53,568 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:19:53,644 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4638 records
+2025-05-11 06:19:53,803 - INFO - Cache saved with 4718 URLs
+2025-05-11 06:19:53,803 - INFO - Saved batch data. Total records: 4640
+2025-05-11 06:19:53,803 - INFO - Processing batch 93/238 (50 links)
+2025-05-11 06:19:59,583 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:20:05,875 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:20:12,030 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:20:17,270 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:20:22,627 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:20:22,652 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:20:22,727 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4687 records
+2025-05-11 06:20:22,890 - INFO - Cache saved with 4768 URLs
+2025-05-11 06:20:22,890 - INFO - Saved batch data. Total records: 4689
+2025-05-11 06:20:22,890 - INFO - Processing batch 94/238 (50 links)
+2025-05-11 06:20:28,537 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:20:34,491 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:20:39,391 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:20:44,559 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:20:49,982 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:20:50,007 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:20:50,082 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4737 records
+2025-05-11 06:20:50,247 - INFO - Cache saved with 4818 URLs
+2025-05-11 06:20:50,248 - INFO - Saved batch data. Total records: 4739
+2025-05-11 06:20:50,248 - INFO - Processing batch 95/238 (50 links)
+2025-05-11 06:20:55,921 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:21:01,552 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:21:07,350 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:21:13,002 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:21:18,346 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:21:18,371 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:21:18,447 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4783 records
+2025-05-11 06:21:18,613 - INFO - Cache saved with 4868 URLs
+2025-05-11 06:21:18,613 - INFO - Saved batch data. Total records: 4785
+2025-05-11 06:21:18,614 - INFO - Processing batch 96/238 (50 links)
+2025-05-11 06:21:24,329 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:21:29,872 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:21:35,510 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:21:40,866 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:21:46,994 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:21:47,018 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:21:47,090 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4832 records
+2025-05-11 06:21:47,257 - INFO - Cache saved with 4918 URLs
+2025-05-11 06:21:47,257 - INFO - Saved batch data. Total records: 4834
+2025-05-11 06:21:47,257 - INFO - Processing batch 97/238 (50 links)
+2025-05-11 06:21:53,619 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:21:58,764 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:22:04,726 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:22:10,264 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:22:15,645 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:22:15,669 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:22:15,740 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4882 records
+2025-05-11 06:22:15,915 - INFO - Cache saved with 4968 URLs
+2025-05-11 06:22:15,915 - INFO - Saved batch data. Total records: 4884
+2025-05-11 06:22:15,915 - INFO - Processing batch 98/238 (50 links)
+2025-05-11 06:22:21,332 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:22:27,507 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:22:32,867 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:22:37,943 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:22:43,880 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:22:43,906 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:22:43,982 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4931 records
+2025-05-11 06:22:44,154 - INFO - Cache saved with 5018 URLs
+2025-05-11 06:22:44,155 - INFO - Saved batch data. Total records: 4933
+2025-05-11 06:22:44,155 - INFO - Processing batch 99/238 (50 links)
+2025-05-11 06:22:50,022 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:22:55,500 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:23:01,788 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:23:07,146 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:23:12,728 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:23:12,755 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:23:12,830 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 4980 records
+2025-05-11 06:23:13,002 - INFO - Cache saved with 5068 URLs
+2025-05-11 06:23:13,002 - INFO - Saved batch data. Total records: 4982
+2025-05-11 06:23:13,002 - INFO - Processing batch 100/238 (50 links)
+2025-05-11 06:23:18,666 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:23:24,081 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:23:29,550 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:23:34,853 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:23:40,517 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:23:40,544 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:23:40,621 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5030 records
+2025-05-11 06:23:40,793 - INFO - Cache saved with 5118 URLs
+2025-05-11 06:23:40,793 - INFO - Saved batch data. Total records: 5032
+2025-05-11 06:23:40,793 - INFO - Processing batch 101/238 (50 links)
+2025-05-11 06:23:46,860 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:23:52,950 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:23:58,339 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:24:03,527 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:24:08,744 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:24:08,771 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:24:08,846 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5078 records
+2025-05-11 06:24:09,024 - INFO - Cache saved with 5168 URLs
+2025-05-11 06:24:09,024 - INFO - Saved batch data. Total records: 5080
+2025-05-11 06:24:09,024 - INFO - Processing batch 102/238 (50 links)
+2025-05-11 06:24:14,668 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:24:20,411 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:24:25,804 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:24:31,317 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:24:36,714 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:24:36,742 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:24:36,825 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5128 records
+2025-05-11 06:24:37,007 - INFO - Cache saved with 5218 URLs
+2025-05-11 06:24:37,007 - INFO - Saved batch data. Total records: 5130
+2025-05-11 06:24:37,007 - INFO - Processing batch 103/238 (50 links)
+2025-05-11 06:24:42,345 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:24:49,150 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:24:54,664 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:24:59,812 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:25:05,178 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:25:05,203 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:25:05,279 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5177 records
+2025-05-11 06:25:05,462 - INFO - Cache saved with 5268 URLs
+2025-05-11 06:25:05,462 - INFO - Saved batch data. Total records: 5179
+2025-05-11 06:25:05,462 - INFO - Processing batch 104/238 (50 links)
+2025-05-11 06:25:11,460 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:25:17,348 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:25:22,664 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:25:28,066 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:25:33,386 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:25:33,411 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:25:33,489 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5226 records
+2025-05-11 06:25:33,670 - INFO - Cache saved with 5318 URLs
+2025-05-11 06:25:33,670 - INFO - Saved batch data. Total records: 5228
+2025-05-11 06:25:33,670 - INFO - Processing batch 105/238 (50 links)
+2025-05-11 06:25:39,613 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:25:45,003 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:25:51,158 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:25:56,672 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:26:02,362 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:26:02,389 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:26:02,469 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5275 records
+2025-05-11 06:26:02,659 - INFO - Cache saved with 5368 URLs
+2025-05-11 06:26:02,659 - INFO - Saved batch data. Total records: 5277
+2025-05-11 06:26:02,659 - INFO - Processing batch 106/238 (50 links)
+2025-05-11 06:26:09,145 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:26:14,411 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:26:20,338 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:26:25,410 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:26:31,238 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:26:31,263 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:26:31,341 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5324 records
+2025-05-11 06:26:31,531 - INFO - Cache saved with 5418 URLs
+2025-05-11 06:26:31,531 - INFO - Saved batch data. Total records: 5326
+2025-05-11 06:26:31,531 - INFO - Processing batch 107/238 (50 links)
+2025-05-11 06:26:37,370 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:26:42,774 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:26:48,516 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:26:54,608 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:27:00,206 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:27:00,233 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:27:00,316 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5373 records
+2025-05-11 06:27:00,502 - INFO - Cache saved with 5468 URLs
+2025-05-11 06:27:00,502 - INFO - Saved batch data. Total records: 5375
+2025-05-11 06:27:00,502 - INFO - Processing batch 108/238 (50 links)
+2025-05-11 06:27:07,227 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:27:12,537 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:27:18,186 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:27:24,089 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:27:29,050 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:27:29,079 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:27:29,162 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5423 records
+2025-05-11 06:27:29,354 - INFO - Cache saved with 5518 URLs
+2025-05-11 06:27:29,354 - INFO - Saved batch data. Total records: 5425
+2025-05-11 06:27:29,354 - INFO - Processing batch 109/238 (50 links)
+2025-05-11 06:27:35,122 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:27:40,991 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:27:46,217 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:27:51,824 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:27:57,892 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:27:57,921 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:27:58,013 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5471 records
+2025-05-11 06:27:58,203 - INFO - Cache saved with 5568 URLs
+2025-05-11 06:27:58,203 - INFO - Saved batch data. Total records: 5473
+2025-05-11 06:27:58,203 - INFO - Processing batch 110/238 (50 links)
+2025-05-11 06:28:03,825 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:28:09,284 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:28:15,305 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:28:20,414 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:28:25,925 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:28:25,954 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:28:26,038 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5518 records
+2025-05-11 06:28:26,234 - INFO - Cache saved with 5618 URLs
+2025-05-11 06:28:26,234 - INFO - Saved batch data. Total records: 5520
+2025-05-11 06:28:26,234 - INFO - Processing batch 111/238 (50 links)
+2025-05-11 06:28:32,245 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:28:37,826 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:28:43,406 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:28:48,760 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:28:54,255 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:28:54,283 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:28:54,364 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5568 records
+2025-05-11 06:28:54,557 - INFO - Cache saved with 5668 URLs
+2025-05-11 06:28:54,557 - INFO - Saved batch data. Total records: 5570
+2025-05-11 06:28:54,557 - INFO - Processing batch 112/238 (50 links)
+2025-05-11 06:29:00,190 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:29:05,764 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:29:11,171 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:29:16,844 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:29:22,448 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:29:22,478 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:29:22,565 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5618 records
+2025-05-11 06:29:22,763 - INFO - Cache saved with 5718 URLs
+2025-05-11 06:29:22,763 - INFO - Saved batch data. Total records: 5620
+2025-05-11 06:29:22,763 - INFO - Processing batch 113/238 (50 links)
+2025-05-11 06:29:28,689 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:29:33,860 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:29:39,273 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:29:44,989 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:29:50,253 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:29:50,283 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:29:50,372 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5668 records
+2025-05-11 06:29:50,572 - INFO - Cache saved with 5768 URLs
+2025-05-11 06:29:50,572 - INFO - Saved batch data. Total records: 5670
+2025-05-11 06:29:50,572 - INFO - Processing batch 114/238 (50 links)
+2025-05-11 06:29:56,107 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:30:01,858 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:30:07,274 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:30:12,900 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:30:18,331 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:30:18,361 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:30:18,454 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5718 records
+2025-05-11 06:30:18,653 - INFO - Cache saved with 5818 URLs
+2025-05-11 06:30:18,653 - INFO - Saved batch data. Total records: 5720
+2025-05-11 06:30:18,653 - INFO - Processing batch 115/238 (50 links)
+2025-05-11 06:30:24,949 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:30:30,105 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:30:36,284 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:30:41,345 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:30:46,910 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:30:46,941 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:30:47,030 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5765 records
+2025-05-11 06:30:47,233 - INFO - Cache saved with 5868 URLs
+2025-05-11 06:30:47,233 - INFO - Saved batch data. Total records: 5767
+2025-05-11 06:30:47,233 - INFO - Processing batch 116/238 (50 links)
+2025-05-11 06:30:52,756 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:30:58,160 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:31:04,257 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:31:10,317 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:31:16,522 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:31:16,550 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:31:16,634 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5814 records
+2025-05-11 06:31:16,834 - INFO - Cache saved with 5918 URLs
+2025-05-11 06:31:16,834 - INFO - Saved batch data. Total records: 5816
+2025-05-11 06:31:16,834 - INFO - Processing batch 117/238 (50 links)
+2025-05-11 06:31:22,882 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:31:28,137 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:31:34,331 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:31:40,017 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:31:45,070 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:31:45,103 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:31:45,194 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5864 records
+2025-05-11 06:31:45,403 - INFO - Cache saved with 5968 URLs
+2025-05-11 06:31:45,403 - INFO - Saved batch data. Total records: 5866
+2025-05-11 06:31:45,403 - INFO - Processing batch 118/238 (50 links)
+2025-05-11 06:31:51,297 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:31:56,815 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:32:03,081 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:32:08,878 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:32:14,061 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:32:14,093 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:32:14,190 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5913 records
+2025-05-11 06:32:14,399 - INFO - Cache saved with 6018 URLs
+2025-05-11 06:32:14,399 - INFO - Saved batch data. Total records: 5915
+2025-05-11 06:32:14,399 - INFO - Processing batch 119/238 (50 links)
+2025-05-11 06:32:19,976 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:32:25,600 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:32:31,322 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:32:36,869 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:32:42,486 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:32:42,518 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:32:42,610 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 5960 records
+2025-05-11 06:32:42,823 - INFO - Cache saved with 6068 URLs
+2025-05-11 06:32:42,823 - INFO - Saved batch data. Total records: 5962
+2025-05-11 06:32:42,823 - INFO - Processing batch 120/238 (50 links)
+2025-05-11 06:32:48,869 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:32:54,604 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:33:00,027 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:33:05,904 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:33:11,701 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:33:11,733 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:33:11,835 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6010 records
+2025-05-11 06:33:12,047 - INFO - Cache saved with 6118 URLs
+2025-05-11 06:33:12,047 - INFO - Saved batch data. Total records: 6012
+2025-05-11 06:33:12,047 - INFO - Processing batch 121/238 (50 links)
+2025-05-11 06:33:18,403 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:33:23,819 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:33:29,914 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:33:35,234 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:33:41,288 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:33:41,317 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:33:41,410 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6059 records
+2025-05-11 06:33:41,617 - INFO - Cache saved with 6168 URLs
+2025-05-11 06:33:41,617 - INFO - Saved batch data. Total records: 6061
+2025-05-11 06:33:41,618 - INFO - Processing batch 122/238 (50 links)
+2025-05-11 06:33:47,459 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:33:52,947 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:33:58,664 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:34:04,426 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:34:09,433 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:34:09,465 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:34:09,562 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6109 records
+2025-05-11 06:34:09,774 - INFO - Cache saved with 6218 URLs
+2025-05-11 06:34:09,774 - INFO - Saved batch data. Total records: 6111
+2025-05-11 06:34:09,774 - INFO - Processing batch 123/238 (50 links)
+2025-05-11 06:34:15,822 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:34:21,067 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:34:26,383 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:34:31,933 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:34:37,662 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:34:37,695 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:34:37,792 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6159 records
+2025-05-11 06:34:38,007 - INFO - Cache saved with 6268 URLs
+2025-05-11 06:34:38,007 - INFO - Saved batch data. Total records: 6161
+2025-05-11 06:34:38,007 - INFO - Processing batch 124/238 (50 links)
+2025-05-11 06:34:43,763 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:34:49,160 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:34:54,374 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:35:00,193 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:35:05,959 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:35:05,989 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:35:06,085 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6209 records
+2025-05-11 06:35:06,309 - INFO - Cache saved with 6318 URLs
+2025-05-11 06:35:06,309 - INFO - Saved batch data. Total records: 6211
+2025-05-11 06:35:06,309 - INFO - Processing batch 125/238 (50 links)
+2025-05-11 06:35:11,857 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:35:17,512 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:35:22,941 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:35:28,449 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:35:33,620 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:35:33,652 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:35:33,749 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6259 records
+2025-05-11 06:35:33,966 - INFO - Cache saved with 6368 URLs
+2025-05-11 06:35:33,966 - INFO - Saved batch data. Total records: 6261
+2025-05-11 06:35:33,966 - INFO - Processing batch 126/238 (50 links)
+2025-05-11 06:35:39,715 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:35:45,194 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:35:51,034 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:35:56,340 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:36:01,346 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:36:01,379 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:36:01,479 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6306 records
+2025-05-11 06:36:01,704 - INFO - Cache saved with 6418 URLs
+2025-05-11 06:36:01,704 - INFO - Saved batch data. Total records: 6308
+2025-05-11 06:36:01,704 - INFO - Processing batch 127/238 (50 links)
+2025-05-11 06:36:07,249 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:36:13,362 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:36:18,807 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:36:24,238 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:36:29,945 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:36:29,977 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:36:30,084 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6355 records
+2025-05-11 06:36:30,313 - INFO - Cache saved with 6468 URLs
+2025-05-11 06:36:30,313 - INFO - Saved batch data. Total records: 6357
+2025-05-11 06:36:30,314 - INFO - Processing batch 128/238 (50 links)
+2025-05-11 06:36:36,747 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:36:42,683 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:36:48,044 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:36:53,573 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:36:59,086 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:36:59,119 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:36:59,226 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6405 records
+2025-05-11 06:36:59,456 - INFO - Cache saved with 6518 URLs
+2025-05-11 06:36:59,456 - INFO - Saved batch data. Total records: 6407
+2025-05-11 06:36:59,457 - INFO - Processing batch 129/238 (50 links)
+2025-05-11 06:37:05,151 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:37:10,761 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:37:16,071 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:37:21,361 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:37:27,096 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:37:27,127 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:37:27,225 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6455 records
+2025-05-11 06:37:27,449 - INFO - Cache saved with 6568 URLs
+2025-05-11 06:37:27,449 - INFO - Saved batch data. Total records: 6457
+2025-05-11 06:37:27,449 - INFO - Processing batch 130/238 (50 links)
+2025-05-11 06:37:33,020 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:37:38,790 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:37:44,905 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:37:50,114 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:37:55,664 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:37:55,695 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:37:55,792 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6505 records
+2025-05-11 06:37:56,021 - INFO - Cache saved with 6618 URLs
+2025-05-11 06:37:56,021 - INFO - Saved batch data. Total records: 6507
+2025-05-11 06:37:56,022 - INFO - Processing batch 131/238 (50 links)
+2025-05-11 06:38:02,268 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:38:08,031 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:38:13,614 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:38:19,024 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:38:24,787 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:38:24,821 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:38:24,921 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6554 records
+2025-05-11 06:38:25,156 - INFO - Cache saved with 6668 URLs
+2025-05-11 06:38:25,156 - INFO - Saved batch data. Total records: 6556
+2025-05-11 06:38:25,156 - INFO - Processing batch 132/238 (50 links)
+2025-05-11 06:38:31,313 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:38:36,452 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:38:41,771 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:38:47,346 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:38:52,744 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:38:52,777 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:38:52,880 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6604 records
+2025-05-11 06:38:53,112 - INFO - Cache saved with 6718 URLs
+2025-05-11 06:38:53,112 - INFO - Saved batch data. Total records: 6606
+2025-05-11 06:38:53,112 - INFO - Processing batch 133/238 (50 links)
+2025-05-11 06:38:58,686 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:39:04,235 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:39:09,845 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:39:15,010 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:39:20,972 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:39:21,004 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:39:21,103 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6654 records
+2025-05-11 06:39:21,343 - INFO - Cache saved with 6768 URLs
+2025-05-11 06:39:21,343 - INFO - Saved batch data. Total records: 6656
+2025-05-11 06:39:21,343 - INFO - Processing batch 134/238 (50 links)
+2025-05-11 06:39:27,312 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:39:32,334 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:39:37,730 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:39:43,596 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:39:49,080 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:39:49,115 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:39:49,223 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6702 records
+2025-05-11 06:39:49,452 - INFO - Cache saved with 6818 URLs
+2025-05-11 06:39:49,452 - INFO - Saved batch data. Total records: 6704
+2025-05-11 06:39:49,452 - INFO - Processing batch 135/238 (50 links)
+2025-05-11 06:39:55,275 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:40:01,024 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:40:06,282 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:40:11,751 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:40:18,658 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:40:18,693 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:40:18,797 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6752 records
+2025-05-11 06:40:19,028 - INFO - Cache saved with 6868 URLs
+2025-05-11 06:40:19,028 - INFO - Saved batch data. Total records: 6754
+2025-05-11 06:40:19,028 - INFO - Processing batch 136/238 (50 links)
+2025-05-11 06:40:24,539 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:40:30,581 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:40:36,072 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:40:41,861 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:40:47,467 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:40:47,500 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:40:47,604 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6799 records
+2025-05-11 06:40:47,842 - INFO - Cache saved with 6918 URLs
+2025-05-11 06:40:47,842 - INFO - Saved batch data. Total records: 6801
+2025-05-11 06:40:47,842 - INFO - Processing batch 137/238 (50 links)
+2025-05-11 06:40:54,071 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:40:59,009 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:41:04,584 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:41:10,270 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:41:15,912 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:41:15,947 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:41:16,052 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6849 records
+2025-05-11 06:41:16,289 - INFO - Cache saved with 6968 URLs
+2025-05-11 06:41:16,290 - INFO - Saved batch data. Total records: 6851
+2025-05-11 06:41:16,290 - INFO - Processing batch 138/238 (50 links)
+2025-05-11 06:41:21,994 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:41:27,948 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:41:33,211 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:41:38,659 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:41:44,022 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:41:44,058 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:41:44,169 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6899 records
+2025-05-11 06:41:44,411 - INFO - Cache saved with 7018 URLs
+2025-05-11 06:41:44,411 - INFO - Saved batch data. Total records: 6901
+2025-05-11 06:41:44,411 - INFO - Processing batch 139/238 (50 links)
+2025-05-11 06:41:50,634 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:41:55,793 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:42:00,610 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:42:06,393 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:42:11,786 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:42:11,820 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:42:11,933 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6948 records
+2025-05-11 06:42:12,179 - INFO - Cache saved with 7068 URLs
+2025-05-11 06:42:12,179 - INFO - Saved batch data. Total records: 6951
+2025-05-11 06:42:12,179 - INFO - Processing batch 140/238 (50 links)
+2025-05-11 06:42:17,774 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:42:23,191 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:42:28,851 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:42:35,036 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:42:40,341 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:42:40,377 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:42:40,492 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 6996 records
+2025-05-11 06:42:40,739 - INFO - Cache saved with 7118 URLs
+2025-05-11 06:42:40,739 - INFO - Saved batch data. Total records: 6999
+2025-05-11 06:42:40,739 - INFO - Processing batch 141/238 (50 links)
+2025-05-11 06:42:46,266 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:42:52,380 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:42:57,819 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:43:03,284 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:43:08,766 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:43:08,800 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:43:08,907 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7044 records
+2025-05-11 06:43:09,150 - INFO - Cache saved with 7168 URLs
+2025-05-11 06:43:09,150 - INFO - Saved batch data. Total records: 7047
+2025-05-11 06:43:09,150 - INFO - Processing batch 142/238 (50 links)
+2025-05-11 06:43:14,968 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:43:20,633 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:43:25,943 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:43:31,724 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:43:36,816 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:43:36,851 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:43:36,964 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7094 records
+2025-05-11 06:43:37,213 - INFO - Cache saved with 7218 URLs
+2025-05-11 06:43:37,213 - INFO - Saved batch data. Total records: 7097
+2025-05-11 06:43:37,213 - INFO - Processing batch 143/238 (50 links)
+2025-05-11 06:43:43,420 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:43:48,737 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:43:54,687 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:44:00,837 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:44:06,193 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:44:06,229 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:44:06,338 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7144 records
+2025-05-11 06:44:06,583 - INFO - Cache saved with 7268 URLs
+2025-05-11 06:44:06,583 - INFO - Saved batch data. Total records: 7147
+2025-05-11 06:44:06,583 - INFO - Processing batch 144/238 (50 links)
+2025-05-11 06:44:12,382 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:44:17,898 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:44:23,032 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:44:28,691 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:44:34,309 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:44:34,343 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:44:34,457 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7194 records
+2025-05-11 06:44:34,705 - INFO - Cache saved with 7318 URLs
+2025-05-11 06:44:34,705 - INFO - Saved batch data. Total records: 7197
+2025-05-11 06:44:34,705 - INFO - Processing batch 145/238 (50 links)
+2025-05-11 06:44:40,747 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:44:46,382 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:44:51,816 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:44:57,451 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:45:02,883 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:45:02,919 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:45:03,033 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7243 records
+2025-05-11 06:45:03,287 - INFO - Cache saved with 7368 URLs
+2025-05-11 06:45:03,287 - INFO - Saved batch data. Total records: 7246
+2025-05-11 06:45:03,287 - INFO - Processing batch 146/238 (50 links)
+2025-05-11 06:45:08,637 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:45:14,690 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:45:19,702 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:45:25,363 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:45:30,590 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:45:30,627 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:45:30,745 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7293 records
+2025-05-11 06:45:31,000 - INFO - Cache saved with 7418 URLs
+2025-05-11 06:45:31,000 - INFO - Saved batch data. Total records: 7296
+2025-05-11 06:45:31,000 - INFO - Processing batch 147/238 (50 links)
+2025-05-11 06:45:36,742 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:45:42,317 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:45:47,503 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:45:52,755 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:45:58,577 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:45:58,615 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:45:58,733 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7343 records
+2025-05-11 06:45:58,993 - INFO - Cache saved with 7468 URLs
+2025-05-11 06:45:58,993 - INFO - Saved batch data. Total records: 7346
+2025-05-11 06:45:58,993 - INFO - Processing batch 148/238 (50 links)
+2025-05-11 06:46:05,097 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:46:10,425 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:46:15,950 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:46:21,348 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:46:27,665 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:46:27,700 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:46:27,814 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7393 records
+2025-05-11 06:46:28,070 - INFO - Cache saved with 7518 URLs
+2025-05-11 06:46:28,070 - INFO - Saved batch data. Total records: 7396
+2025-05-11 06:46:28,070 - INFO - Processing batch 149/238 (50 links)
+2025-05-11 06:46:33,912 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:46:39,710 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:46:44,692 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:46:50,150 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:46:56,013 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:46:56,048 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:46:56,166 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7443 records
+2025-05-11 06:46:56,429 - INFO - Cache saved with 7568 URLs
+2025-05-11 06:46:56,429 - INFO - Saved batch data. Total records: 7446
+2025-05-11 06:46:56,429 - INFO - Processing batch 150/238 (50 links)
+2025-05-11 06:47:02,103 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:47:07,906 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:47:13,838 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:47:18,954 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:47:24,298 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:47:24,338 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:47:24,453 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7489 records
+2025-05-11 06:47:24,717 - INFO - Cache saved with 7618 URLs
+2025-05-11 06:47:24,717 - INFO - Saved batch data. Total records: 7492
+2025-05-11 06:47:24,717 - INFO - Processing batch 151/238 (50 links)
+2025-05-11 06:47:30,475 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:47:36,234 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:47:41,466 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:47:46,775 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:47:52,521 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:47:52,558 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:47:52,675 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7539 records
+2025-05-11 06:47:52,940 - INFO - Cache saved with 7668 URLs
+2025-05-11 06:47:52,940 - INFO - Saved batch data. Total records: 7542
+2025-05-11 06:47:52,940 - INFO - Processing batch 152/238 (50 links)
+2025-05-11 06:47:59,078 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:48:04,398 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:48:09,848 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:48:15,103 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:48:20,329 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:48:20,369 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:48:20,489 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7589 records
+2025-05-11 06:48:20,751 - INFO - Cache saved with 7718 URLs
+2025-05-11 06:48:20,751 - INFO - Saved batch data. Total records: 7592
+2025-05-11 06:48:20,751 - INFO - Processing batch 153/238 (50 links)
+2025-05-11 06:48:26,644 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:48:31,921 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:48:38,068 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:48:44,198 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:48:49,655 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:48:49,691 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:48:49,819 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7637 records
+2025-05-11 06:48:50,088 - INFO - Cache saved with 7768 URLs
+2025-05-11 06:48:50,088 - INFO - Saved batch data. Total records: 7640
+2025-05-11 06:48:50,088 - INFO - Processing batch 154/238 (50 links)
+2025-05-11 06:48:56,824 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:49:01,782 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:49:07,560 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:49:13,943 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:49:18,973 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:49:19,008 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:49:19,130 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7686 records
+2025-05-11 06:49:19,398 - INFO - Cache saved with 7818 URLs
+2025-05-11 06:49:19,398 - INFO - Saved batch data. Total records: 7689
+2025-05-11 06:49:19,398 - INFO - Processing batch 155/238 (50 links)
+2025-05-11 06:49:25,526 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:49:30,758 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:49:36,403 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:49:42,289 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:49:47,417 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:49:47,455 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:49:47,577 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7735 records
+2025-05-11 06:49:47,840 - INFO - Cache saved with 7868 URLs
+2025-05-11 06:49:47,840 - INFO - Saved batch data. Total records: 7738
+2025-05-11 06:49:47,840 - INFO - Processing batch 156/238 (50 links)
+2025-05-11 06:49:53,595 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:49:59,345 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:50:04,599 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:50:09,973 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:50:15,186 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:50:15,226 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:50:15,357 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7785 records
+2025-05-11 06:50:15,629 - INFO - Cache saved with 7918 URLs
+2025-05-11 06:50:15,629 - INFO - Saved batch data. Total records: 7788
+2025-05-11 06:50:15,629 - INFO - Processing batch 157/238 (50 links)
+2025-05-11 06:50:21,891 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:50:26,820 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:50:32,291 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:50:37,800 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:50:43,827 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:50:43,863 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:50:43,984 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7834 records
+2025-05-11 06:50:44,255 - INFO - Cache saved with 7968 URLs
+2025-05-11 06:50:44,255 - INFO - Saved batch data. Total records: 7837
+2025-05-11 06:50:44,256 - INFO - Processing batch 158/238 (50 links)
+2025-05-11 06:50:50,089 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:50:55,730 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:51:01,185 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:51:07,089 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:51:12,472 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:51:12,510 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:51:12,639 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7884 records
+2025-05-11 06:51:12,913 - INFO - Cache saved with 8018 URLs
+2025-05-11 06:51:12,913 - INFO - Saved batch data. Total records: 7887
+2025-05-11 06:51:12,913 - INFO - Processing batch 159/238 (50 links)
+2025-05-11 06:51:18,777 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:51:24,144 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:51:29,533 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:51:35,381 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:51:40,765 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:51:40,804 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:51:40,933 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7933 records
+2025-05-11 06:51:41,211 - INFO - Cache saved with 8068 URLs
+2025-05-11 06:51:41,211 - INFO - Saved batch data. Total records: 7936
+2025-05-11 06:51:41,211 - INFO - Processing batch 160/238 (50 links)
+2025-05-11 06:51:46,803 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:51:52,782 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:51:58,079 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:52:03,628 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:52:09,561 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:52:09,600 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:52:09,725 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 7982 records
+2025-05-11 06:52:09,999 - INFO - Cache saved with 8118 URLs
+2025-05-11 06:52:09,999 - INFO - Saved batch data. Total records: 7985
+2025-05-11 06:52:09,999 - INFO - Processing batch 161/238 (50 links)
+2025-05-11 06:52:15,937 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:52:21,249 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:52:28,253 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:52:33,879 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:52:39,094 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:52:39,136 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:52:39,269 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8031 records
+2025-05-11 06:52:39,555 - INFO - Cache saved with 8168 URLs
+2025-05-11 06:52:39,555 - INFO - Saved batch data. Total records: 8034
+2025-05-11 06:52:39,555 - INFO - Processing batch 162/238 (50 links)
+2025-05-11 06:52:45,132 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:52:51,344 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:52:57,629 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:53:03,010 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:53:08,053 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:53:08,092 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:53:08,221 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8077 records
+2025-05-11 06:53:08,499 - INFO - Cache saved with 8218 URLs
+2025-05-11 06:53:08,500 - INFO - Saved batch data. Total records: 8080
+2025-05-11 06:53:08,500 - INFO - Processing batch 163/238 (50 links)
+2025-05-11 06:53:14,229 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:53:19,697 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:53:25,446 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:53:31,596 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:53:37,092 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:53:37,134 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:53:37,263 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8127 records
+2025-05-11 06:53:37,549 - INFO - Cache saved with 8268 URLs
+2025-05-11 06:53:37,549 - INFO - Saved batch data. Total records: 8130
+2025-05-11 06:53:37,549 - INFO - Processing batch 164/238 (50 links)
+2025-05-11 06:53:43,354 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:53:49,142 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:53:54,391 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:53:59,790 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:54:05,572 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:54:05,612 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:54:05,739 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8174 records
+2025-05-11 06:54:06,024 - INFO - Cache saved with 8318 URLs
+2025-05-11 06:54:06,024 - INFO - Saved batch data. Total records: 8177
+2025-05-11 06:54:06,024 - INFO - Processing batch 165/238 (50 links)
+2025-05-11 06:54:11,730 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:54:17,316 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:54:22,892 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:54:28,679 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:54:33,989 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:54:34,029 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:54:34,163 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8224 records
+2025-05-11 06:54:34,451 - INFO - Cache saved with 8368 URLs
+2025-05-11 06:54:34,451 - INFO - Saved batch data. Total records: 8227
+2025-05-11 06:54:34,451 - INFO - Processing batch 166/238 (50 links)
+2025-05-11 06:54:39,988 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:54:46,077 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:54:51,382 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:54:56,649 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:55:01,943 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:55:01,985 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:55:02,118 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8274 records
+2025-05-11 06:55:02,411 - INFO - Cache saved with 8418 URLs
+2025-05-11 06:55:02,411 - INFO - Saved batch data. Total records: 8277
+2025-05-11 06:55:02,411 - INFO - Processing batch 167/238 (50 links)
+2025-05-11 06:55:07,751 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:55:13,973 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:55:19,129 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:55:24,660 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:55:30,342 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:55:30,383 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:55:30,515 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8324 records
+2025-05-11 06:55:30,803 - INFO - Cache saved with 8468 URLs
+2025-05-11 06:55:30,803 - INFO - Saved batch data. Total records: 8327
+2025-05-11 06:55:30,803 - INFO - Processing batch 168/238 (50 links)
+2025-05-11 06:55:36,648 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:55:41,946 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:55:47,671 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:55:52,931 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:55:58,446 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:55:58,489 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:55:58,625 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8374 records
+2025-05-11 06:55:58,914 - INFO - Cache saved with 8518 URLs
+2025-05-11 06:55:58,914 - INFO - Saved batch data. Total records: 8377
+2025-05-11 06:55:58,914 - INFO - Processing batch 169/238 (50 links)
+2025-05-11 06:56:04,646 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:56:09,845 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:56:15,824 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:56:21,952 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:56:27,449 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:56:27,492 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:56:27,634 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8423 records
+2025-05-11 06:56:27,930 - INFO - Cache saved with 8568 URLs
+2025-05-11 06:56:27,930 - INFO - Saved batch data. Total records: 8426
+2025-05-11 06:56:27,930 - INFO - Processing batch 170/238 (50 links)
+2025-05-11 06:56:33,528 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:56:38,971 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:56:44,612 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:56:50,501 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:56:55,636 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:56:55,678 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:56:55,810 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8472 records
+2025-05-11 06:56:56,107 - INFO - Cache saved with 8618 URLs
+2025-05-11 06:56:56,108 - INFO - Saved batch data. Total records: 8475
+2025-05-11 06:56:56,108 - INFO - Processing batch 171/238 (50 links)
+2025-05-11 06:57:01,719 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:57:07,116 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:57:13,240 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:57:18,986 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:57:24,712 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:57:24,754 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:57:24,888 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8522 records
+2025-05-11 06:57:25,188 - INFO - Cache saved with 8668 URLs
+2025-05-11 06:57:25,188 - INFO - Saved batch data. Total records: 8525
+2025-05-11 06:57:25,188 - INFO - Processing batch 172/238 (50 links)
+2025-05-11 06:57:31,076 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:57:36,729 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:57:41,597 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:57:47,298 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:57:53,233 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:57:53,276 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:57:53,411 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8572 records
+2025-05-11 06:57:53,711 - INFO - Cache saved with 8718 URLs
+2025-05-11 06:57:53,711 - INFO - Saved batch data. Total records: 8575
+2025-05-11 06:57:53,711 - INFO - Processing batch 173/238 (50 links)
+2025-05-11 06:57:59,983 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:58:05,722 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:58:11,169 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:58:16,471 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:58:22,813 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:58:22,856 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:58:22,994 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8621 records
+2025-05-11 06:58:23,301 - INFO - Cache saved with 8768 URLs
+2025-05-11 06:58:23,301 - INFO - Saved batch data. Total records: 8624
+2025-05-11 06:58:23,301 - INFO - Processing batch 174/238 (50 links)
+2025-05-11 06:58:29,046 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:58:34,906 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:58:40,471 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:58:45,839 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:58:51,134 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:58:51,180 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:58:51,320 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8670 records
+2025-05-11 06:58:51,625 - INFO - Cache saved with 8818 URLs
+2025-05-11 06:58:51,625 - INFO - Saved batch data. Total records: 8673
+2025-05-11 06:58:51,625 - INFO - Processing batch 175/238 (50 links)
+2025-05-11 06:58:57,432 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:59:02,944 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:59:08,309 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:59:14,580 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:59:19,601 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:59:19,647 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:59:19,791 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8720 records
+2025-05-11 06:59:20,102 - INFO - Cache saved with 8868 URLs
+2025-05-11 06:59:20,103 - INFO - Saved batch data. Total records: 8723
+2025-05-11 06:59:20,103 - INFO - Processing batch 176/238 (50 links)
+2025-05-11 06:59:25,654 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:59:31,114 - INFO - Progress: 20/50 ads processed
+2025-05-11 06:59:36,543 - INFO - Progress: 30/50 ads processed
+2025-05-11 06:59:42,063 - INFO - Progress: 40/50 ads processed
+2025-05-11 06:59:47,739 - INFO - Progress: 50/50 ads processed
+2025-05-11 06:59:47,781 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 06:59:47,919 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8769 records
+2025-05-11 06:59:48,227 - INFO - Cache saved with 8918 URLs
+2025-05-11 06:59:48,228 - INFO - Saved batch data. Total records: 8772
+2025-05-11 06:59:48,228 - INFO - Processing batch 177/238 (50 links)
+2025-05-11 06:59:53,983 - INFO - Progress: 10/50 ads processed
+2025-05-11 06:59:59,394 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:00:05,285 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:00:10,717 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:00:15,847 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:00:15,892 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:00:16,032 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8817 records
+2025-05-11 07:00:16,341 - INFO - Cache saved with 8968 URLs
+2025-05-11 07:00:16,341 - INFO - Saved batch data. Total records: 8820
+2025-05-11 07:00:16,341 - INFO - Processing batch 178/238 (50 links)
+2025-05-11 07:00:22,723 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:00:28,542 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:00:34,075 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:00:39,822 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:00:45,107 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:00:45,153 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:00:45,297 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8867 records
+2025-05-11 07:00:45,604 - INFO - Cache saved with 9018 URLs
+2025-05-11 07:00:45,604 - INFO - Saved batch data. Total records: 8870
+2025-05-11 07:00:45,604 - INFO - Processing batch 179/238 (50 links)
+2025-05-11 07:00:51,190 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:00:56,890 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:01:02,329 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:01:07,778 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:01:13,091 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:01:13,137 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:01:13,283 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8916 records
+2025-05-11 07:01:13,593 - INFO - Cache saved with 9068 URLs
+2025-05-11 07:01:13,593 - INFO - Saved batch data. Total records: 8919
+2025-05-11 07:01:13,593 - INFO - Processing batch 180/238 (50 links)
+2025-05-11 07:01:19,766 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:01:25,337 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:01:31,050 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:01:36,377 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:01:42,140 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:01:42,185 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:01:42,330 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 8966 records
+2025-05-11 07:01:42,644 - INFO - Cache saved with 9118 URLs
+2025-05-11 07:01:42,644 - INFO - Saved batch data. Total records: 8969
+2025-05-11 07:01:42,644 - INFO - Processing batch 181/238 (50 links)
+2025-05-11 07:01:48,488 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:01:54,391 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:02:00,005 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:02:05,707 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:02:11,294 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:02:11,339 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:02:11,484 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9016 records
+2025-05-11 07:02:11,799 - INFO - Cache saved with 9168 URLs
+2025-05-11 07:02:11,799 - INFO - Saved batch data. Total records: 9019
+2025-05-11 07:02:11,799 - INFO - Processing batch 182/238 (50 links)
+2025-05-11 07:02:17,807 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:02:23,144 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:02:28,278 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:02:33,954 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:02:39,918 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:02:39,963 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:02:40,109 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9064 records
+2025-05-11 07:02:40,425 - INFO - Cache saved with 9217 URLs
+2025-05-11 07:02:40,425 - INFO - Saved batch data. Total records: 9068
+2025-05-11 07:02:40,425 - INFO - Processing batch 183/238 (50 links)
+2025-05-11 07:02:46,017 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:02:51,928 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:02:57,626 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:03:03,468 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:03:09,024 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:03:09,070 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:03:09,219 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9114 records
+2025-05-11 07:03:09,544 - INFO - Cache saved with 9267 URLs
+2025-05-11 07:03:09,545 - INFO - Saved batch data. Total records: 9118
+2025-05-11 07:03:09,545 - INFO - Processing batch 184/238 (50 links)
+2025-05-11 07:03:15,708 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:03:21,493 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:03:26,732 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:03:32,233 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:03:37,921 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:03:37,967 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:03:38,114 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9162 records
+2025-05-11 07:03:38,440 - INFO - Cache saved with 9317 URLs
+2025-05-11 07:03:38,440 - INFO - Saved batch data. Total records: 9166
+2025-05-11 07:03:38,440 - INFO - Processing batch 185/238 (50 links)
+2025-05-11 07:03:44,629 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:03:50,289 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:03:56,543 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:04:01,414 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:04:07,110 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:04:07,154 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:04:07,304 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9211 records
+2025-05-11 07:04:07,630 - INFO - Cache saved with 9367 URLs
+2025-05-11 07:04:07,630 - INFO - Saved batch data. Total records: 9215
+2025-05-11 07:04:07,630 - INFO - Processing batch 186/238 (50 links)
+2025-05-11 07:04:13,311 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:04:18,756 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:04:24,109 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:04:29,922 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:04:35,444 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:04:35,491 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:04:35,644 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9261 records
+2025-05-11 07:04:35,965 - INFO - Cache saved with 9417 URLs
+2025-05-11 07:04:35,966 - INFO - Saved batch data. Total records: 9265
+2025-05-11 07:04:35,966 - INFO - Processing batch 187/238 (50 links)
+2025-05-11 07:04:41,980 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:04:47,451 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:04:53,068 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:04:59,387 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:05:05,434 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:05:05,480 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:05:05,633 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9310 records
+2025-05-11 07:05:05,958 - INFO - Cache saved with 9467 URLs
+2025-05-11 07:05:05,959 - INFO - Saved batch data. Total records: 9314
+2025-05-11 07:05:05,959 - INFO - Processing batch 188/238 (50 links)
+2025-05-11 07:05:11,578 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:05:17,666 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:05:22,753 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:05:28,924 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:05:34,600 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:05:34,652 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:05:34,817 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9359 records
+2025-05-11 07:05:35,148 - INFO - Cache saved with 9517 URLs
+2025-05-11 07:05:35,149 - INFO - Saved batch data. Total records: 9363
+2025-05-11 07:05:35,149 - INFO - Processing batch 189/238 (50 links)
+2025-05-11 07:05:41,308 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:05:46,810 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:05:52,533 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:05:57,732 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:06:03,463 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:06:03,511 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:06:03,670 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9409 records
+2025-05-11 07:06:04,003 - INFO - Cache saved with 9567 URLs
+2025-05-11 07:06:04,003 - INFO - Saved batch data. Total records: 9413
+2025-05-11 07:06:04,003 - INFO - Processing batch 190/238 (50 links)
+2025-05-11 07:06:09,898 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:06:15,705 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:06:21,647 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:06:27,094 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:06:32,574 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:06:32,627 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:06:32,798 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9458 records
+2025-05-11 07:06:33,135 - INFO - Cache saved with 9617 URLs
+2025-05-11 07:06:33,135 - INFO - Saved batch data. Total records: 9462
+2025-05-11 07:06:33,135 - INFO - Processing batch 191/238 (50 links)
+2025-05-11 07:06:38,873 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:06:44,928 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:06:51,045 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:06:56,901 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:07:01,200 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:07:01,250 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:07:01,417 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9506 records
+2025-05-11 07:07:01,755 - INFO - Cache saved with 9665 URLs
+2025-05-11 07:07:01,755 - INFO - Saved batch data. Total records: 9510
+2025-05-11 07:07:01,755 - INFO - Processing batch 192/238 (50 links)
+2025-05-11 07:07:08,094 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:07:13,737 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:07:19,350 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:07:24,761 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:07:30,162 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:07:30,211 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:07:30,368 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9556 records
+2025-05-11 07:07:30,703 - INFO - Cache saved with 9715 URLs
+2025-05-11 07:07:30,703 - INFO - Saved batch data. Total records: 9560
+2025-05-11 07:07:30,703 - INFO - Processing batch 193/238 (50 links)
+2025-05-11 07:07:36,682 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:07:42,480 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:07:48,261 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:07:54,345 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:08:00,697 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:08:00,747 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:08:00,900 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9606 records
+2025-05-11 07:08:01,238 - INFO - Cache saved with 9765 URLs
+2025-05-11 07:08:01,238 - INFO - Saved batch data. Total records: 9610
+2025-05-11 07:08:01,238 - INFO - Processing batch 194/238 (50 links)
+2025-05-11 07:08:07,259 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:08:12,725 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:08:18,531 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:08:23,866 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:08:29,646 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:08:29,695 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:08:29,856 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9656 records
+2025-05-11 07:08:30,197 - INFO - Cache saved with 9815 URLs
+2025-05-11 07:08:30,197 - INFO - Saved batch data. Total records: 9660
+2025-05-11 07:08:30,197 - INFO - Processing batch 195/238 (50 links)
+2025-05-11 07:08:35,995 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:08:41,665 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:08:47,729 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:08:53,809 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:08:59,693 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:08:59,743 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:08:59,897 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9704 records
+2025-05-11 07:09:00,243 - INFO - Cache saved with 9865 URLs
+2025-05-11 07:09:00,244 - INFO - Saved batch data. Total records: 9708
+2025-05-11 07:09:00,244 - INFO - Processing batch 196/238 (50 links)
+2025-05-11 07:09:06,243 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:09:11,741 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:09:17,517 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:09:23,807 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:09:29,426 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:09:29,477 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:09:29,640 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9753 records
+2025-05-11 07:09:29,987 - INFO - Cache saved with 9914 URLs
+2025-05-11 07:09:29,988 - INFO - Saved batch data. Total records: 9758
+2025-05-11 07:09:29,988 - INFO - Processing batch 197/238 (50 links)
+2025-05-11 07:09:35,800 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:09:41,628 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:09:47,414 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:09:52,872 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:09:58,446 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:09:58,494 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:09:58,653 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9801 records
+2025-05-11 07:09:58,991 - INFO - Cache saved with 9964 URLs
+2025-05-11 07:09:58,991 - INFO - Saved batch data. Total records: 9806
+2025-05-11 07:09:58,991 - INFO - Processing batch 198/238 (50 links)
+2025-05-11 07:10:04,753 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:10:10,350 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:10:15,938 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:10:21,564 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:10:26,937 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:10:26,986 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:10:27,150 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9849 records
+2025-05-11 07:10:27,499 - INFO - Cache saved with 10014 URLs
+2025-05-11 07:10:27,499 - INFO - Saved batch data. Total records: 9854
+2025-05-11 07:10:27,499 - INFO - Processing batch 199/238 (50 links)
+2025-05-11 07:10:33,451 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:10:38,771 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:10:43,997 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:10:50,082 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:10:55,406 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:10:55,458 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:10:55,622 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9899 records
+2025-05-11 07:10:55,968 - INFO - Cache saved with 10064 URLs
+2025-05-11 07:10:55,968 - INFO - Saved batch data. Total records: 9904
+2025-05-11 07:10:55,968 - INFO - Processing batch 200/238 (50 links)
+2025-05-11 07:11:01,946 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:11:07,532 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:11:13,543 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:11:19,052 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:11:24,739 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:11:24,791 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:11:24,950 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9948 records
+2025-05-11 07:11:25,299 - INFO - Cache saved with 10114 URLs
+2025-05-11 07:11:25,299 - INFO - Saved batch data. Total records: 9953
+2025-05-11 07:11:25,299 - INFO - Processing batch 201/238 (50 links)
+2025-05-11 07:11:31,087 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:11:36,834 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:11:42,688 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:11:48,380 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:11:54,060 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:11:54,110 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:11:54,273 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 9994 records
+2025-05-11 07:11:54,628 - INFO - Cache saved with 10163 URLs
+2025-05-11 07:11:54,629 - INFO - Saved batch data. Total records: 10000
+2025-05-11 07:11:54,629 - INFO - Processing batch 202/238 (50 links)
+2025-05-11 07:12:00,542 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:12:05,967 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:12:11,521 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:12:17,354 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:12:22,645 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:12:22,699 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:12:22,864 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10043 records
+2025-05-11 07:12:23,223 - INFO - Cache saved with 10213 URLs
+2025-05-11 07:12:23,224 - INFO - Saved batch data. Total records: 10049
+2025-05-11 07:12:23,224 - INFO - Processing batch 203/238 (50 links)
+2025-05-11 07:12:28,979 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:12:34,664 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:12:40,523 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:12:46,246 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:12:51,759 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:12:51,814 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:12:51,986 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10092 records
+2025-05-11 07:12:52,343 - INFO - Cache saved with 10263 URLs
+2025-05-11 07:12:52,343 - INFO - Saved batch data. Total records: 10098
+2025-05-11 07:12:52,343 - INFO - Processing batch 204/238 (50 links)
+2025-05-11 07:12:58,594 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:13:04,383 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:13:10,198 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:13:15,520 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:13:21,201 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:13:21,254 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:13:21,419 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10142 records
+2025-05-11 07:13:21,777 - INFO - Cache saved with 10313 URLs
+2025-05-11 07:13:21,777 - INFO - Saved batch data. Total records: 10148
+2025-05-11 07:13:21,777 - INFO - Processing batch 205/238 (50 links)
+2025-05-11 07:13:27,619 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:13:33,904 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:13:39,222 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:13:44,834 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:13:50,605 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:13:50,659 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:13:50,827 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10192 records
+2025-05-11 07:13:51,183 - INFO - Cache saved with 10363 URLs
+2025-05-11 07:13:51,183 - INFO - Saved batch data. Total records: 10198
+2025-05-11 07:13:51,183 - INFO - Processing batch 206/238 (50 links)
+2025-05-11 07:13:57,406 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:14:03,562 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:14:08,700 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:14:14,356 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:14:19,963 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:14:20,016 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:14:20,183 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10241 records
+2025-05-11 07:14:20,545 - INFO - Cache saved with 10413 URLs
+2025-05-11 07:14:20,545 - INFO - Saved batch data. Total records: 10247
+2025-05-11 07:14:20,545 - INFO - Processing batch 207/238 (50 links)
+2025-05-11 07:14:26,339 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:14:31,787 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:14:37,486 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:14:42,961 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:14:48,791 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:14:48,844 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:14:49,016 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10291 records
+2025-05-11 07:14:49,376 - INFO - Cache saved with 10463 URLs
+2025-05-11 07:14:49,376 - INFO - Saved batch data. Total records: 10297
+2025-05-11 07:14:49,376 - INFO - Processing batch 208/238 (50 links)
+2025-05-11 07:14:55,709 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:15:01,926 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:15:07,603 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:15:13,318 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:15:18,616 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:15:18,670 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:15:18,842 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10339 records
+2025-05-11 07:15:19,211 - INFO - Cache saved with 10513 URLs
+2025-05-11 07:15:19,211 - INFO - Saved batch data. Total records: 10345
+2025-05-11 07:15:19,211 - INFO - Processing batch 209/238 (50 links)
+2025-05-11 07:15:25,032 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:15:31,241 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:15:36,755 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:15:42,746 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:15:48,558 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:15:48,612 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:15:48,785 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10389 records
+2025-05-11 07:15:49,150 - INFO - Cache saved with 10563 URLs
+2025-05-11 07:15:49,150 - INFO - Saved batch data. Total records: 10395
+2025-05-11 07:15:49,150 - INFO - Processing batch 210/238 (50 links)
+2025-05-11 07:15:54,875 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:16:00,942 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:16:06,231 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:16:12,096 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:16:17,285 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:16:17,343 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:16:17,518 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10438 records
+2025-05-11 07:16:17,890 - INFO - Cache saved with 10613 URLs
+2025-05-11 07:16:17,890 - INFO - Saved batch data. Total records: 10444
+2025-05-11 07:16:17,890 - INFO - Processing batch 211/238 (50 links)
+2025-05-11 07:16:23,483 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:16:29,442 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:16:34,868 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:16:40,410 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:16:45,892 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:16:45,948 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:16:46,119 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10488 records
+2025-05-11 07:16:46,484 - INFO - Cache saved with 10663 URLs
+2025-05-11 07:16:46,484 - INFO - Saved batch data. Total records: 10494
+2025-05-11 07:16:46,484 - INFO - Processing batch 212/238 (50 links)
+2025-05-11 07:16:52,769 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:16:58,859 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:17:04,307 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:17:09,981 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:17:15,400 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:17:15,454 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:17:15,629 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10537 records
+2025-05-11 07:17:16,006 - INFO - Cache saved with 10713 URLs
+2025-05-11 07:17:16,006 - INFO - Saved batch data. Total records: 10543
+2025-05-11 07:17:16,006 - INFO - Processing batch 213/238 (50 links)
+2025-05-11 07:17:21,876 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:17:27,857 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:17:33,434 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:17:39,625 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:17:45,368 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:17:45,424 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:17:45,597 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10584 records
+2025-05-11 07:17:45,975 - INFO - Cache saved with 10763 URLs
+2025-05-11 07:17:45,976 - INFO - Saved batch data. Total records: 10590
+2025-05-11 07:17:45,976 - INFO - Processing batch 214/238 (50 links)
+2025-05-11 07:17:51,853 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:17:58,380 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:18:03,194 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:18:08,892 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:18:14,523 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:18:14,581 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:18:14,759 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10634 records
+2025-05-11 07:18:15,133 - INFO - Cache saved with 10813 URLs
+2025-05-11 07:18:15,133 - INFO - Saved batch data. Total records: 10640
+2025-05-11 07:18:15,133 - INFO - Processing batch 215/238 (50 links)
+2025-05-11 07:18:20,730 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:18:26,841 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:18:32,078 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:18:38,497 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:18:43,866 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:18:43,924 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:18:44,102 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10684 records
+2025-05-11 07:18:44,483 - INFO - Cache saved with 10863 URLs
+2025-05-11 07:18:44,483 - INFO - Saved batch data. Total records: 10690
+2025-05-11 07:18:44,483 - INFO - Processing batch 216/238 (50 links)
+2025-05-11 07:18:50,693 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:18:56,430 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:19:02,434 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:19:07,960 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:19:13,723 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:19:13,781 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:19:13,964 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10734 records
+2025-05-11 07:19:14,340 - INFO - Cache saved with 10913 URLs
+2025-05-11 07:19:14,340 - INFO - Saved batch data. Total records: 10740
+2025-05-11 07:19:14,340 - INFO - Processing batch 217/238 (50 links)
+2025-05-11 07:19:20,021 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:19:26,158 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:19:31,742 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:19:36,940 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:19:42,450 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:19:42,508 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:19:42,683 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10783 records
+2025-05-11 07:19:43,060 - INFO - Cache saved with 10963 URLs
+2025-05-11 07:19:43,060 - INFO - Saved batch data. Total records: 10789
+2025-05-11 07:19:43,060 - INFO - Processing batch 218/238 (50 links)
+2025-05-11 07:19:48,992 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:19:55,159 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:20:00,481 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:20:05,913 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:20:11,200 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:20:11,261 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:20:11,443 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10833 records
+2025-05-11 07:20:11,830 - INFO - Cache saved with 11013 URLs
+2025-05-11 07:20:11,830 - INFO - Saved batch data. Total records: 10839
+2025-05-11 07:20:11,830 - INFO - Processing batch 219/238 (50 links)
+2025-05-11 07:20:18,037 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:20:23,794 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:20:29,186 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:20:34,845 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:20:40,447 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:20:40,503 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:20:40,687 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10883 records
+2025-05-11 07:20:41,076 - INFO - Cache saved with 11063 URLs
+2025-05-11 07:20:41,076 - INFO - Saved batch data. Total records: 10889
+2025-05-11 07:20:41,077 - INFO - Processing batch 220/238 (50 links)
+2025-05-11 07:20:47,264 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:20:53,131 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:20:58,747 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:21:04,216 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:21:10,100 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:21:10,156 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:21:10,336 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10933 records
+2025-05-11 07:21:10,720 - INFO - Cache saved with 11113 URLs
+2025-05-11 07:21:10,720 - INFO - Saved batch data. Total records: 10939
+2025-05-11 07:21:10,720 - INFO - Processing batch 221/238 (50 links)
+2025-05-11 07:21:17,165 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:21:22,428 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:21:28,702 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:21:34,281 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:21:40,467 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:21:40,523 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:21:40,710 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 10981 records
+2025-05-11 07:21:41,097 - INFO - Cache saved with 11163 URLs
+2025-05-11 07:21:41,097 - INFO - Saved batch data. Total records: 10987
+2025-05-11 07:21:41,097 - INFO - Processing batch 222/238 (50 links)
+2025-05-11 07:21:47,163 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:21:52,766 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:21:58,329 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:22:03,826 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:22:09,296 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:22:09,358 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:22:09,548 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11030 records
+2025-05-11 07:22:09,948 - INFO - Cache saved with 11213 URLs
+2025-05-11 07:22:09,948 - INFO - Saved batch data. Total records: 11036
+2025-05-11 07:22:09,949 - INFO - Processing batch 223/238 (50 links)
+2025-05-11 07:22:16,285 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:22:21,776 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:22:27,185 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:22:32,988 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:22:38,542 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:22:38,600 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:22:38,781 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11080 records
+2025-05-11 07:22:39,172 - INFO - Cache saved with 11263 URLs
+2025-05-11 07:22:39,172 - INFO - Saved batch data. Total records: 11086
+2025-05-11 07:22:39,172 - INFO - Processing batch 224/238 (50 links)
+2025-05-11 07:22:45,600 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:22:51,136 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:22:56,730 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:23:02,521 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:23:07,818 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:23:07,872 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:23:08,054 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11130 records
+2025-05-11 07:23:08,443 - INFO - Cache saved with 11313 URLs
+2025-05-11 07:23:08,443 - INFO - Saved batch data. Total records: 11136
+2025-05-11 07:23:08,444 - INFO - Processing batch 225/238 (50 links)
+2025-05-11 07:23:14,370 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:23:20,320 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:23:26,038 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:23:31,572 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:23:37,403 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:23:37,464 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:23:37,645 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11178 records
+2025-05-11 07:23:38,048 - INFO - Cache saved with 11363 URLs
+2025-05-11 07:23:38,048 - INFO - Saved batch data. Total records: 11184
+2025-05-11 07:23:38,048 - INFO - Processing batch 226/238 (50 links)
+2025-05-11 07:23:44,442 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:23:49,952 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:23:55,524 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:24:01,268 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:24:06,638 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:24:06,699 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:24:06,890 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11228 records
+2025-05-11 07:24:07,317 - INFO - Cache saved with 11413 URLs
+2025-05-11 07:24:07,317 - INFO - Saved batch data. Total records: 11234
+2025-05-11 07:24:07,317 - INFO - Processing batch 227/238 (50 links)
+2025-05-11 07:24:13,355 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:24:19,105 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:24:24,749 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:24:30,372 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:24:36,433 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:24:36,489 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:24:36,680 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11277 records
+2025-05-11 07:24:37,087 - INFO - Cache saved with 11463 URLs
+2025-05-11 07:24:37,087 - INFO - Saved batch data. Total records: 11283
+2025-05-11 07:24:37,087 - INFO - Processing batch 228/238 (50 links)
+2025-05-11 07:24:43,170 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:24:48,762 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:24:54,166 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:24:59,828 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:25:05,712 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:25:05,773 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:25:05,956 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11326 records
+2025-05-11 07:25:06,362 - INFO - Cache saved with 11513 URLs
+2025-05-11 07:25:06,362 - INFO - Saved batch data. Total records: 11332
+2025-05-11 07:25:06,362 - INFO - Processing batch 229/238 (50 links)
+2025-05-11 07:25:12,305 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:25:17,984 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:25:23,586 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:25:29,348 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:25:34,884 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:25:34,942 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:25:35,133 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11374 records
+2025-05-11 07:25:35,545 - INFO - Cache saved with 11563 URLs
+2025-05-11 07:25:35,545 - INFO - Saved batch data. Total records: 11380
+2025-05-11 07:25:35,545 - INFO - Processing batch 230/238 (50 links)
+2025-05-11 07:25:42,309 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:25:47,801 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:25:53,433 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:25:58,698 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:26:03,601 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:26:03,658 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:26:03,837 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11422 records
+2025-05-11 07:26:04,233 - INFO - Cache saved with 11613 URLs
+2025-05-11 07:26:04,234 - INFO - Saved batch data. Total records: 11428
+2025-05-11 07:26:04,234 - INFO - Processing batch 231/238 (50 links)
+2025-05-11 07:26:10,111 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:26:15,890 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:26:21,808 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:26:27,673 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:26:33,587 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:26:33,645 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:26:33,837 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11471 records
+2025-05-11 07:26:34,238 - INFO - Cache saved with 11663 URLs
+2025-05-11 07:26:34,238 - INFO - Saved batch data. Total records: 11477
+2025-05-11 07:26:34,238 - INFO - Processing batch 232/238 (50 links)
+2025-05-11 07:26:40,447 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:26:46,143 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:26:51,835 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:26:57,534 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:27:03,324 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:27:03,382 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:27:03,575 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11521 records
+2025-05-11 07:27:03,980 - INFO - Cache saved with 11713 URLs
+2025-05-11 07:27:03,981 - INFO - Saved batch data. Total records: 11527
+2025-05-11 07:27:03,981 - INFO - Processing batch 233/238 (50 links)
+2025-05-11 07:27:10,092 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:27:15,680 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:27:21,277 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:27:26,919 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:27:32,632 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:27:32,691 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:27:32,883 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11569 records
+2025-05-11 07:27:33,285 - INFO - Cache saved with 11763 URLs
+2025-05-11 07:27:33,285 - INFO - Saved batch data. Total records: 11575
+2025-05-11 07:27:33,285 - INFO - Processing batch 234/238 (50 links)
+2025-05-11 07:27:40,219 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:27:45,871 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:27:51,727 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:27:57,009 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:28:02,161 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:28:02,223 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:28:02,419 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11619 records
+2025-05-11 07:28:02,830 - INFO - Cache saved with 11813 URLs
+2025-05-11 07:28:02,830 - INFO - Saved batch data. Total records: 11625
+2025-05-11 07:28:02,830 - INFO - Processing batch 235/238 (50 links)
+2025-05-11 07:28:08,731 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:28:15,143 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:28:20,878 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:28:27,094 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:28:32,389 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:28:32,449 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:28:32,643 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11667 records
+2025-05-11 07:28:33,056 - INFO - Cache saved with 11863 URLs
+2025-05-11 07:28:33,056 - INFO - Saved batch data. Total records: 11673
+2025-05-11 07:28:33,056 - INFO - Processing batch 236/238 (50 links)
+2025-05-11 07:28:39,279 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:28:44,741 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:28:50,326 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:28:56,259 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:29:02,462 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:29:02,520 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:29:02,718 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11717 records
+2025-05-11 07:29:03,143 - INFO - Cache saved with 11913 URLs
+2025-05-11 07:29:03,143 - INFO - Saved batch data. Total records: 11723
+2025-05-11 07:29:03,143 - INFO - Processing batch 237/238 (50 links)
+2025-05-11 07:29:09,026 - INFO - Progress: 10/50 ads processed
+2025-05-11 07:29:15,317 - INFO - Progress: 20/50 ads processed
+2025-05-11 07:29:20,518 - INFO - Progress: 30/50 ads processed
+2025-05-11 07:29:26,080 - INFO - Progress: 40/50 ads processed
+2025-05-11 07:29:31,700 - INFO - Progress: 50/50 ads processed
+2025-05-11 07:29:31,761 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:29:31,955 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11767 records
+2025-05-11 07:29:32,377 - INFO - Cache saved with 11963 URLs
+2025-05-11 07:29:32,378 - INFO - Saved batch data. Total records: 11773
+2025-05-11 07:29:32,378 - INFO - Processing batch 238/238 (34 links)
+2025-05-11 07:29:38,816 - INFO - Progress: 10/34 ads processed
+2025-05-11 07:29:44,320 - INFO - Progress: 20/34 ads processed
+2025-05-11 07:29:50,801 - INFO - Progress: 30/34 ads processed
+2025-05-11 07:29:52,646 - INFO - Progress: 34/34 ads processed
+2025-05-11 07:29:52,711 - INFO - Created backup of existing data file at unegui_data/unegui_sales_data.csv.bak
+2025-05-11 07:29:52,907 - INFO - Data saved to unegui_data/unegui_sales_data.csv: 11800 records
+2025-05-11 07:29:53,330 - INFO - Cache saved with 11997 URLs
+2025-05-11 07:29:53,330 - INFO - Saved batch data. Total records: 11806
+2025-05-11 07:29:53,330 - INFO - Scraping completed in 1:56:35.269170. Total ads collected: 11806
