@@ -10,15 +10,12 @@ on:
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
-    # Add concurrency to prevent overlapping runs
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: false
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Get full history
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
           
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -30,10 +27,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: Pull latest changes
-        run: |
-          git pull origin main
-          
       - name: Run scraper
         run: |
           python Scraper.py
@@ -44,9 +37,14 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Update data from scraper $(date +%Y-%m-%d)"
-            # Try to push, if it fails, pull and try again
-            git push origin main || (git pull --rebase origin main && git push origin main)
+            # Try to commit the changes
+            git commit -m "Update data from scraper"
+            
+            # Pull with rebase strategy to incorporate any remote changes
+            git pull --rebase origin main
+            
+            # Push the changes
+            git push origin main
           else
             echo "No changes to commit."
           fi
