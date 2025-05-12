@@ -5,7 +5,7 @@ on:
       - Scraper.py
       - requirements.txt
   schedule:
-    - cron: '0 6 * * *'  # Run at 6:00 UTC daily
+    - cron: '0 6 * * *'  # Run at 6:00 
   workflow_dispatch:
 jobs:
   run-scraper:
@@ -14,8 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Get full history
-          token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
+          fetch-depth: 0  
+          token: ${{ secrets.GITHUB_TOKEN }} 
           
       - name: Set up Python
         uses: actions/setup-python@v4
