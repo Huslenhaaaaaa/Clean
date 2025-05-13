@@ -6,7 +6,15 @@ import plotly.graph_objects as go
 from datetime import datetime, date
 import os
 import glob
-
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error, r2_score
+from statsmodels.tsa.arima.model import ARIMA
+import warnings
+warnings.filterwarnings('ignore')
 # Set page configuration
 st.set_page_config(
     page_title="Mongolia Real Estate Market Dashboard",
@@ -680,18 +688,7 @@ def main():
         )
         
         st.plotly_chart(fig_volume, use_container_width=True)
-    import streamlit as st
-import pandas as pd
-import numpy as np
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error, r2_score
-from statsmodels.tsa.arima.model import ARIMA
-import warnings
-warnings.filterwarnings('ignore')
+
 
 def add_prediction_section(df):
     """
