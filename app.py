@@ -552,7 +552,8 @@ def main():
             )
             st.plotly_chart(fig_locations, use_container_width=True)
     if 'Primary_District' in df.columns and 'Rooms' in df.columns and 'Үнэ' in df.columns:
-    st.markdown("#### Price Heatmap by District and Room Count")
+        st.markdown("#### Price Heatmap by District and Room Count")
+        
     
     # Group by district and room count, calculate average price
     heatmap_data = df.groupby(['Primary_District', 'Rooms'])['Үнэ'].mean().reset_index()
