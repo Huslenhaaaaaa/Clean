@@ -298,7 +298,7 @@ def main():
         return
     
     # Main dashboard layout with tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features", "Browse Listings"])
     
     with tab1:
         st.markdown('<div class="sub-header">Market Overview</div>', unsafe_allow_html=True)
@@ -551,7 +551,40 @@ def main():
                 coloraxis_showscale=False
             )
             st.plotly_chart(fig_locations, use_container_width=True)
+    if 'Primary_District' in df.columns and 'Rooms' in df.columns and 'Үнэ' in df.columns:
+    st.markdown("#### Price Heatmap by District and Room Count")
     
+    # Group by district and room count, calculate average price
+    heatmap_data = df.groupby(['Primary_District', 'Rooms'])['Үнэ'].mean().reset_index()
+    
+    # Filter to keep only districts with sufficient data
+    district_counts = df['Primary_District'].value_counts()
+    valid_districts = district_counts[district_counts > 5].index
+    heatmap_data = heatmap_data[heatmap_data['Primary_District'].isin(valid_districts)]
+    
+    # Filter to common room counts
+    heatmap_data = heatmap_data[heatmap_data['Rooms'].between(1, 6)]
+    
+    # Create pivot table for heatmap
+    pivot_data = heatmap_data.pivot(index='Primary_District', columns='Rooms', values='Үнэ')
+    
+    # Create heatmap
+    fig_heatmap = px.imshow(
+        pivot_data,
+        labels=dict(x="Number of Rooms", y="District", color="Average Price (₮)"),
+        color_continuous_scale="Viridis",
+        text_auto='.0f',  # Show the values on the heatmap cells
+        aspect="auto"
+    )
+    
+    fig_heatmap.update_layout(
+        title="Average Price by District and Room Count",
+        xaxis_title="Number of Rooms",
+        yaxis_title="District",
+        coloraxis_colorbar=dict(title="Avg Price (₮)")
+    )
+    
+    st.plotly_chart(fig_heatmap, use_container_width=True)
     with tab4:
         st.markdown('<div class="sub-header">Property Features</div>', unsafe_allow_html=True)
         
@@ -645,6 +678,8 @@ def main():
             'ad_id': 'count',
             'Price_per_m2': 'mean'
         }).reset_index()
+
+        
         
         # Plot price trends over time
         st.markdown("#### Price Trends")
@@ -688,7 +723,148 @@ def main():
         )
         
         st.plotly_chart(fig_volume, use_container_width=True)
-
+with tab5:
+    st.markdown('<div class="sub-header">Browse All Listings</div>', unsafe_allow_html=True)
+    
+    # Add filters specific to the browse view
+    browse_cols = st.columns([2, 1, 1])
+    
+    with browse_cols[0]:
+        search_term = st.text_input("Search by title or description", "")
+    
+    with browse_cols[1]:
+        sort_by = st.selectbox(
+            "Sort by",
+            ["Newest First", "Price: Low to High", "Price: High to Low", "Area: Largest First"]
+        )
+    
+    with browse_cols[2]:
+        records_per_page = st.selectbox("Items per page", [10, 20, 50, 100], index=1)
+    
+    # Create a copy of the filtered dataframe for display
+    browse_df = df.copy()
+    
+    # Apply search if provided
+    if search_term:
+        # Create a combined search field from multiple columns
+        browse_df['search_text'] = ''
+        
+        # Add title/description fields to search text if they exist
+        if 'Гарчиг' in browse_df.columns:
+            browse_df['search_text'] += browse_df['Гарчиг'].fillna('').astype(str) + ' '
+        if 'Тайлбар' in browse_df.columns:
+            browse_df['search_text'] += browse_df['Тайлбар'].fillna('').astype(str) + ' '
+        if 'Байршил' in browse_df.columns:
+            browse_df['search_text'] += browse_df['Байршил'].fillna('').astype(str)
+        
+        # Filter based on search term
+        browse_df = browse_df[browse_df['search_text'].str.contains(search_term, case=False, na=False)]
+    
+    # Apply sorting
+    if sort_by == "Newest First" and 'Fixed Posted Date' in browse_df.columns:
+        browse_df = browse_df.sort_values('Fixed Posted Date', ascending=False)
+    elif sort_by == "Price: Low to High":
+        browse_df = browse_df.sort_values('Үнэ', ascending=True)
+    elif sort_by == "Price: High to Low":
+        browse_df = browse_df.sort_values('Үнэ', ascending=False)
+    elif sort_by == "Area: Largest First" and 'Area_m2' in browse_df.columns:
+        browse_df = browse_df.sort_values('Area_m2', ascending=False)
+    
+    # Show count of listings after filtering
+    st.info(f"Found {len(browse_df)} listings matching your criteria")
+    
+    # Pagination
+    if len(browse_df) > 0:
+        total_pages = max(1, len(browse_df) // records_per_page + (1 if len(browse_df) % records_per_page > 0 else 0))
+        page_col1, page_col2 = st.columns([6, 1])
+        
+        with page_col2:
+            current_page = st.number_input("Page", min_value=1, max_value=total_pages, value=1)
+        
+        with page_col1:
+            st.markdown(f"Page {current_page} of {total_pages}")
+        
+        # Calculate slice indices for pagination
+        start_idx = (current_page - 1) * records_per_page
+        end_idx = min(start_idx + records_per_page, len(browse_df))
+        
+        # Get page of data
+        page_df = browse_df.iloc[start_idx:end_idx].copy()
+        
+        # Prepare data for display
+        display_df = pd.DataFrame()
+        
+        # Add columns to display
+        if 'Гарчиг' in page_df.columns:
+            display_df['Title'] = page_df['Гарчиг']
+        
+        if 'Үнэ' in page_df.columns:
+            display_df['Price (₮)'] = page_df['Үнэ'].apply(lambda x: f"{x:,.0f}" if pd.notna(x) else "N/A")
+        
+        if 'Байршил' in page_df.columns:
+            display_df['Location'] = page_df['Байршил']
+        
+        if 'ӨрөөнийТоо' in page_df.columns:
+            display_df['Rooms'] = page_df['ӨрөөнийТоо']
+        
+        if 'Area_m2' in page_df.columns:
+            display_df['Area (m²)'] = page_df['Area_m2'].apply(lambda x: f"{x:.1f}" if pd.notna(x) else "N/A")
+        
+        if 'Тайлбар' in page_df.columns:
+            # Truncate description to avoid very wide columns
+            display_df['Description'] = page_df['Тайлбар'].apply(
+                lambda x: str(x)[:100] + '...' if isinstance(x, str) and len(str(x)) > 100 else x
+            )
+        
+        if 'Fixed Posted Date' in page_df.columns:
+            display_df['Posted Date'] = page_df['Fixed Posted Date'].apply(
+                lambda x: x.strftime('%Y-%m-%d') if pd.notna(x) else "N/A"
+            )
+        
+        # Display as a table
+        st.dataframe(display_df, use_container_width=True)
+        
+        # Add clickable links if available
+        if 'Link' in page_df.columns or 'URL' in page_df.columns or 'url' in page_df.columns:
+            st.markdown("### Listing Details")
+            
+            # Determine which column has the URL
+            url_col = None
+            for col in ['Link', 'URL', 'url', 'link']:
+                if col in page_df.columns:
+                    url_col = col
+                    break
+            
+            # Display individual listing cards with links
+            for i, row in page_df.iterrows():
+                col1, col2 = st.columns([3, 1])
+                
+                with col1:
+                    title = row['Гарчиг'] if 'Гарчиг' in page_df.columns else f"Listing #{i}"
+                    st.markdown(f"**{title}**")
+                    
+                    if 'Байршил' in page_df.columns:
+                        st.markdown(f"📍 {row['Байршил']}")
+                    
+                    if 'Тайлбар' in page_df.columns and pd.notna(row['Тайлбар']):
+                        st.markdown(f"{row['Тайлбар']}")
+                
+                with col2:
+                    if 'Үнэ' in page_df.columns:
+                        st.markdown(f"**Price:** {row['Үнэ']:,.0f} ₮")
+                    
+                    if 'Area_m2' in page_df.columns and pd.notna(row['Area_m2']):
+                        st.markdown(f"**Area:** {row['Area_m2']:.1f} m²")
+                    
+                    if 'ӨрөөнийТоо' in page_df.columns:
+                        st.markdown(f"**Rooms:** {row['ӨрөөнийТоо']}")
+                    
+                    if url_col and pd.notna(row[url_col]):
+                        st.markdown(f"[View Original Listing]({row[url_col]})")
+                
+                st.markdown("---")
+    else:
+        st.warning("No listings found matching your criteria. Try adjusting your filters.")
 # Function to load ML models
 @st.cache_resource
 def load_prediction_models():
