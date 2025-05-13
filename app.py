@@ -723,7 +723,7 @@ def main():
         )
         
         st.plotly_chart(fig_volume, use_container_width=True)
-with tab5:
+    with tab5:
     st.markdown('<div class="sub-header">Browse All Listings</div>', unsafe_allow_html=True)
     
     # Add filters specific to the browse view
@@ -865,6 +865,9 @@ with tab5:
                 st.markdown("---")
     else:
         st.warning("No listings found matching your criteria. Try adjusting your filters.")
+
+
+    
 # Function to load ML models
 @st.cache_resource
 def load_prediction_models():
