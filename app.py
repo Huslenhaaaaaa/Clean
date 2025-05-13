@@ -725,7 +725,8 @@ def main():
         
         st.plotly_chart(fig_volume, use_container_width=True)
     with tab5:
-    st.markdown('<div class="sub-header">Browse All Listings</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sub-header">Browse All Listings</div>', unsafe_allow_html=True)
+    
     
     # Add filters specific to the browse view
     browse_cols = st.columns([2, 1, 1])
