@@ -689,709 +689,468 @@ def main():
         
         st.plotly_chart(fig_volume, use_container_width=True)
 
+# Function to load ML models
+@st.cache_resource
+def load_prediction_models():
+    """Load pre-trained ML models for price predictions."""
+    models = {}
+    
+    # Look for available model files in the models directory
+    model_files = glob.glob("models/*.pkl")
+    if not model_files:
+        st.warning("No ML models found in 'models/' directory.")
+        return None
+    
+    try:
+        # Load each model
+        for model_file in model_files:
+            model_name = os.path.basename(model_file).replace('.pkl', '')
+            with open(model_file, 'rb') as f:
+                models[model_name] = pickle.load(f)
+            st.success(f"Loaded model: {model_name}")
+    except Exception as e:
+        st.error(f"Error loading ML models: {e}")
+        return None
+    
+    return models
 
-def add_prediction_section(df):
+# Function to make predictions
+def predict_prices(df, models, prediction_period=12, freq='M'):
     """
-    Add a machine learning prediction section to the dashboard
+    Generate price predictions based on loaded models
+    
+    Args:
+        df: DataFrame with historical data
+        models: Dictionary of loaded ML models
+        prediction_period: Number of periods to predict
+        freq: Frequency for predictions ('M' for monthly, 'W' for weekly)
+    
+    Returns:
+        Dictionary of prediction DataFrames for different property types/districts
     """
-    st.markdown("---")
-    st.markdown('<div class="sub-header">Price Predictions</div>', unsafe_allow_html=True)
+    predictions = {}
     
-    # Check if we have enough time series data
-    if 'Scraped_date' not in df.columns or df['Scraped_date'].nunique() < 5:
-        st.warning("Not enough time series data available for predictions. Need at least 5 different dates.")
-        return
+    if not models:
+        return predictions
     
-    # Create tabs for different prediction types
-    pred_tab1, pred_tab2, pred_tab3 = st.tabs(["Time Series Forecast", "Price by Features", "District Comparison"])
+    # Get the latest date in our dataset
+    try:
+        last_date = df['Scraped_date'].max()
+    except:
+        st.error("Could not determine last date in dataset")
+        return predictions
     
-    # Tab 1: Time Series Forecasting
-    with pred_tab1:
-        st.markdown("#### Price Trend Forecast")
-        st.info("This forecast predicts future average prices based on historical trends")
-        
-        # Select forecast type
-        forecast_type = st.radio(
-            "Select property type to forecast:",
-            ["All Properties", "Rental Only", "Sales Only"],
-            horizontal=True
+    # Generate future dates for prediction
+    if freq == 'M':
+        future_dates = pd.date_range(
+            start=last_date + timedelta(days=1),
+            periods=prediction_period,
+            freq='MS'  # Month Start
         )
-        
-        # Filter data based on selection
-        forecast_df = df.copy()
-        if forecast_type == "Rental Only" and 'Type' in df.columns:
-            forecast_df = forecast_df[forecast_df['Type'] == 'Rent']
-        elif forecast_type == "Sales Only" and 'Type' in df.columns:
-            forecast_df = forecast_df[forecast_df['Type'] == 'Sale']
-        
-        # Check if we have enough data after filtering
-        if len(forecast_df) < 20:
-            st.warning("Not enough data for this property type to make reliable predictions.")
-            return
-        
-        # Create time series data
-        ts_data = forecast_df.groupby(forecast_df['Scraped_date'].dt.date).agg({
-            'Үнэ': 'mean',
-            'ad_id': 'count'
-        }).reset_index()
-        
-        # Only proceed if we have enough data points
-        if len(ts_data) >= 5:
-            # Number of days to forecast
-            forecast_days = st.slider("Number of days to forecast:", 7, 30, 14)
-            
-            # Choose forecasting model
-            model_type = st.selectbox(
-                "Select forecasting model:",
-                ["Simple Trend (Linear)", "ARIMA (Time Series)"]
-            )
-            
-            # Prepare data for forecasting
-            ts_data = ts_data.sort_values('Scraped_date')
-            ts_data['Days'] = range(len(ts_data))
-            max_date = ts_data['Scraped_date'].max()
-            
-            if model_type == "Simple Trend (Linear)":
-                # Simple linear trend model
-                X = ts_data['Days'].values.reshape(-1, 1)
-                y = ts_data['Үнэ'].values
-                
-                model = LinearRegression()
-                model.fit(X, y)
-                
-                # Create forecast dates and features
-                future_dates = [max_date + pd.Timedelta(days=i+1) for i in range(forecast_days)]
-                future_X = np.array(range(len(ts_data), len(ts_data) + forecast_days)).reshape(-1, 1)
-                
-                # Make predictions
-                future_y = model.predict(future_X)
-                
-                # Create forecast DataFrame
-                forecast_result = pd.DataFrame({
-                    'Scraped_date': future_dates,
-                    'Forecast': future_y,
-                    'Type': 'Forecast'
-                })
-                
-                # Add confidence intervals (simple approach)
-                train_pred = model.predict(X)
-                mae = mean_absolute_error(y, train_pred)
-                forecast_result['Upper'] = forecast_result['Forecast'] + mae * 1.96
-                forecast_result['Lower'] = forecast_result['Forecast'] - mae * 1.96
-                
-                # Plot results
-                fig = go.Figure()
-                
-                # Add historical data
-                fig.add_trace(go.Scatter(
-                    x=ts_data['Scraped_date'],
-                    y=ts_data['Үнэ'],
-                    mode='lines+markers',
-                    name='Historical Prices',
-                    line=dict(color='#2563EB', width=2)
-                ))
-                
-                # Add forecast
-                fig.add_trace(go.Scatter(
-                    x=forecast_result['Scraped_date'],
-                    y=forecast_result['Forecast'],
-                    mode='lines+markers',
-                    name='Price Forecast',
-                    line=dict(color='#EF4444', width=2, dash='dash')
-                ))
-                
-                # Add confidence interval
-                fig.add_trace(go.Scatter(
-                    x=forecast_result['Scraped_date'].tolist() + forecast_result['Scraped_date'].tolist()[::-1],
-                    y=forecast_result['Upper'].tolist() + forecast_result['Lower'].tolist()[::-1],
-                    fill='toself',
-                    fillcolor='rgba(231, 84, 128, 0.2)',
-                    line=dict(color='rgba(255, 255, 255, 0)'),
-                    name='95% Confidence Interval'
-                ))
-                
-                fig.update_layout(
-                    title=f"{forecast_type} Price Forecast ({forecast_days} days ahead)",
-                    xaxis_title="Date",
-                    yaxis_title="Average Price (₮)",
-                    legend=dict(
-                        orientation="h",
-                        yanchor="bottom",
-                        y=1.02,
-                        xanchor="right",
-                        x=1
-                    )
-                )
-                
-                st.plotly_chart(fig, use_container_width=True)
-                
-                # Display forecast stats
-                current_price = ts_data['Үнэ'].iloc[-1]
-                final_forecast = forecast_result['Forecast'].iloc[-1]
-                price_change = ((final_forecast - current_price) / current_price) * 100
-                
-                st.metric(
-                    label=f"Forecasted price in {forecast_days} days",
-                    value=f"{final_forecast:,.0f} ₮",
-                    delta=f"{price_change:.1f}%"
-                )
-                
-                # Model metrics
-                st.markdown("##### Model Performance")
-                r2 = r2_score(y, train_pred)
-                st.write(f"R² Score: {r2:.2f}")
-                st.write(f"Mean Absolute Error: {mae:,.0f} ₮")
-                
-            elif model_type == "ARIMA (Time Series)":
-                try:
-                    # ARIMA forecasting
-                    st.info("Training ARIMA model (this may take a moment)...")
-                    
-                    # Use a simple ARIMA model with fixed parameters for simplicity
-                    model = ARIMA(ts_data['Үнэ'].values, order=(1, 1, 1))
-                    model_fit = model.fit()
-                    
-                    # Make prediction
-                    forecast_result = model_fit.forecast(steps=forecast_days)
-                    
-                    # Create forecast DataFrame
-                    future_dates = [max_date + pd.Timedelta(days=i+1) for i in range(forecast_days)]
-                    forecast_df = pd.DataFrame({
-                        'Scraped_date': future_dates,
-                        'Forecast': forecast_result,
-                    })
-                    
-                    # Plot results
-                    fig = go.Figure()
-                    
-                    # Add historical data
-                    fig.add_trace(go.Scatter(
-                        x=ts_data['Scraped_date'],
-                        y=ts_data['Үнэ'],
-                        mode='lines+markers',
-                        name='Historical Prices',
-                        line=dict(color='#2563EB', width=2)
-                    ))
-                    
-                    # Add forecast line
-                    fig.add_trace(go.Scatter(
-                        x=forecast_df['Scraped_date'],
-                        y=forecast_df['Forecast'],
-                        mode='lines+markers',
-                        name='ARIMA Forecast',
-                        line=dict(color='#10B981', width=2, dash='dash')
-                    ))
-                    
-                    fig.update_layout(
-                        title=f"{forecast_type} ARIMA Price Forecast ({forecast_days} days ahead)",
-                        xaxis_title="Date",
-                        yaxis_title="Average Price (₮)",
-                        legend=dict(
-                            orientation="h",
-                            yanchor="bottom",
-                            y=1.02,
-                            xanchor="right",
-                            x=1
-                        )
-                    )
-                    
-                    st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Display forecast stats
-                    current_price = ts_data['Үнэ'].iloc[-1]
-                    final_forecast = forecast_df['Forecast'].iloc[-1]
-                    price_change = ((final_forecast - current_price) / current_price) * 100
-                    
-                    st.metric(
-                        label=f"Forecasted price in {forecast_days} days",
-                        value=f"{final_forecast:,.0f} ₮",
-                        delta=f"{price_change:.1f}%"
-                    )
-                    
-                    # Add model performance
-                    st.markdown("##### Model Performance")
-                    st.write("ARIMA Model Summary")
-                    st.text(str(model_fit.summary()))
-                    
-                except Exception as e:
-                    st.error(f"Error in ARIMA modeling: {e}")
-                    st.warning("Try using 'Simple Trend (Linear)' model instead.")
-        else:
-            st.warning("Not enough time series data points for forecasting.")
+    else:
+        future_dates = pd.date_range(
+            start=last_date + timedelta(days=1),
+            periods=prediction_period,
+            freq='W'  # Weekly
+        )
     
-    # Tab 2: Price by Features Prediction
-    with pred_tab2:
-        st.markdown("#### Price Prediction by Property Features")
-        st.info("Predict property prices based on features like size, rooms, and location")
-        
-        # Only run if we have necessary features
-        if all(col in df.columns for col in ['Rooms', 'Area_m2', 'Primary_District']):
+    # For each model, generate predictions
+    for model_name, model in models.items():
+        try:
+            # Parse model name to determine what it predicts
+            # Example format: "rental_BayangolDistrict_model" or "sales_all_districts_model"
+            parts = model_name.split('_')
+            property_type = parts[0]  # 'rental' or 'sales'
             
-            # Choose property type
-            prop_type = 'All'
-            if 'Type' in df.columns:
-                prop_type = st.radio(
-                    "Property type to model:",
-                    ["All", "Rent", "Sale"],
-                    horizontal=True
-                )
-                
-                if prop_type != 'All':
-                    model_df = df[df['Type'] == prop_type].copy()
-                else:
-                    model_df = df.copy()
-            else:
-                model_df = df.copy()
-            
-            # Ensure we have enough data
-            if len(model_df) < 50:
-                st.warning("Not enough data for this property type to build a reliable model.")
-                return
-            
-            # Select algorithm
-            algo = st.selectbox(
-                "Select prediction algorithm:",
-                ["Random Forest", "Linear Regression"]
-            )
-            
-            # Prepare data
-            model_df = model_df.dropna(subset=['Area_m2', 'Rooms', 'Primary_District', 'Үнэ'])
-            
-            # One-hot encode districts
-            district_dummies = pd.get_dummies(model_df['Primary_District'], prefix='district')
-            model_data = pd.concat([
-                model_df[['Area_m2', 'Rooms', 'Үнэ']],
-                district_dummies
-            ], axis=1)
-            
-            # Drop any remaining NaN
-            model_data = model_data.dropna()
-            
-            if len(model_data) < 50:
-                st.warning("Not enough clean data to build a reliable model after filtering.")
-                return
-            
-            # Split features and target
-            X = model_data.drop('Үнэ', axis=1)
-            y = model_data['Үнэ']
-            
-            # Train-test split
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-            
-            # Train model
-            if algo == "Random Forest":
-                model = RandomForestRegressor(n_estimators=100, random_state=42)
-            else:
-                model = LinearRegression()
-            
-            model.fit(X_train, y_train)
-            
-            # Evaluate model
-            train_preds = model.predict(X_train)
-            test_preds = model.predict(X_test)
-            
-            train_mae = mean_absolute_error(y_train, train_preds)
-            test_mae = mean_absolute_error(y_test, test_preds)
-            
-            train_r2 = r2_score(y_train, train_preds)
-            test_r2 = r2_score(y_test, test_preds)
-            
-            # Display model performance metrics
-            metric_col1, metric_col2 = st.columns(2)
-            
-            with metric_col1:
-                st.metric("Training R² Score", f"{train_r2:.2f}")
-                st.metric("Training MAE", f"{train_mae:,.0f} ₮")
-                
-            with metric_col2:
-                st.metric("Testing R² Score", f"{test_r2:.2f}")
-                st.metric("Testing MAE", f"{test_mae:,.0f} ₮")
-            
-            # Feature importance (for Random Forest)
-            if algo == "Random Forest":
-                st.markdown("##### Feature Importance")
-                importance = model.feature_importances_
-                feature_names = X.columns
-                
-                # Sort features by importance
-                indices = np.argsort(importance)[::-1]
-                
-                # Plot feature importance
-                fig = go.Figure(go.Bar(
-                    x=[importance[i] * 100 for i in indices[:10]],  # Show top 10 features
-                    y=[feature_names[i] for i in indices[:10]],
-                    orientation='h',
-                    marker_color='#3B82F6'
-                ))
-                
-                fig.update_layout(
-                    title="Top 10 Features by Importance",
-                    xaxis_title="Importance (%)",
-                    yaxis_title="Feature",
-                    height=400
-                )
-                
-                st.plotly_chart(fig, use_container_width=True)
-            
-            # Interactive prediction tool
-            st.markdown("### Predict Property Price")
-            st.markdown("Use the sliders below to predict property price based on features")
-            
-            # Get input features from user
-            pred_col1, pred_col2 = st.columns(2)
-            
-            with pred_col1:
-                pred_area = st.slider(
-                    "Property Area (m²):",
-                    min_value=int(model_df['Area_m2'].min()),
-                    max_value=int(model_df['Area_m2'].max()),
-                    value=int(model_df['Area_m2'].median()),
-                    step=1
-                )
-                
-            with pred_col2:
-                pred_rooms = st.slider(
-                    "Number of Rooms:",
-                    min_value=int(model_df['Rooms'].min()),
-                    max_value=int(model_df['Rooms'].max()),
-                    value=int(model_df['Rooms'].median()),
-                    step=1
-                )
-            
-            pred_district = st.selectbox(
-                "Select District:",
-                sorted(model_df['Primary_District'].unique())
-            )
-            
-            # Create prediction input
-            pred_input = pd.DataFrame({
-                'Area_m2': [pred_area],
-                'Rooms': [pred_rooms]
+            # Create prediction input features
+            # This would depend on what features your model expects
+            # Here's a simple example assuming time-based features only
+            X_future = pd.DataFrame({
+                'date_number': range(len(future_dates)),  # Numerical representation of date
+                'month': future_dates.month,  # Month as a feature
+                'year': future_dates.year,    # Year as a feature
             })
             
-            # One-hot encode the district
-            for district in district_dummies.columns:
-                if district == f'district_{pred_district}':
-                    pred_input[district] = 1
-                else:
-                    pred_input[district] = 0
+            # Some models might need additional features like:
+            # 'district_encoded', 'rooms', etc.
+            # You would need to prepare these based on your model's requirements
             
-            # Make prediction
-            prediction = model.predict(pred_input)[0]
+            # Make predictions
+            future_prices = model.predict(X_future)
             
-            # Display prediction result with styling
-            st.markdown(
-                f"""
-                <div class="card" style="background-color:#f0f9ff;padding:20px;border-radius:10px;text-align:center;">
-                    <div class="metric-label" style="font-size:1.2rem;color:#6B7280;">Predicted Property Price</div>
-                    <div class="metric-value" style="font-size:2.5rem;font-weight:700;color:#1E40AF;">{prediction:,.0f} ₮</div>
-                    <div style="font-size:0.9rem;color:#6B7280;">Based on {algo} model | Accuracy: {test_r2:.2f} R²</div>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+            # Create prediction dataframe
+            pred_df = pd.DataFrame({
+                'Date': future_dates,
+                'Predicted_Price': future_prices
+            })
             
-            # Price scatter plot
-            st.markdown("##### Actual vs. Predicted Prices")
+            predictions[model_name] = pred_df
             
-            # Create scatter plot of actuals vs. predicted (test set)
-            fig = go.Figure()
-            
-            fig.add_trace(go.Scatter(
-                x=y_test,
-                y=test_preds,
-                mode='markers',
-                marker=dict(
-                    size=8,
-                    color='#3B82F6',
-                    opacity=0.6
-                ),
-                name='Test Data'
-            ))
-            
-            # Add perfect prediction line
-            min_val = min(y_test.min(), test_preds.min())
-            max_val = max(y_test.max(), test_preds.max())
-            
-            fig.add_trace(go.Scatter(
-                x=[min_val, max_val],
-                y=[min_val, max_val],
-                mode='lines',
-                line=dict(color='red', dash='dash'),
-                name='Perfect Prediction'
-            ))
-            
-            fig.update_layout(
-                title="Model Performance: Actual vs. Predicted Prices",
-                xaxis_title="Actual Price (₮)",
-                yaxis_title="Predicted Price (₮)",
-                height=500
-            )
-            
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.warning("Required features (Rooms, Area_m2, Primary_District) not found in the dataset.")
+        except Exception as e:
+            st.error(f"Error making predictions with model {model_name}: {e}")
     
-    # Tab 3: District Price Comparison and Forecast
-    with pred_tab3:
-        st.markdown("#### District Price Comparison & Forecast")
-        st.info("Compare price trends across different districts")
-        
-        # Only proceed if we have districts and enough time series data
-        if 'Primary_District' in df.columns and df['Scraped_date'].nunique() >= 5:
-            # Get top districts by listing count
-            top_districts = df['Primary_District'].value_counts().nlargest(5).index.tolist()
+    return predictions
+
+# Function to display prediction graphs
+def display_prediction_graphs(df, predictions):
+    """Display interactive graphs of historical data and predictions"""
+    
+    if not predictions:
+        st.warning("No predictions available to display.")
+        return
+    
+    # For each prediction model, create a visualization
+    for model_name, pred_df in predictions.items():
+        try:
+            # Parse the model name to get property type and district
+            parts = model_name.split('_')
+            property_type = parts[0].capitalize()
             
-            # Let user select districts to compare
-            selected_districts = st.multiselect(
-                "Select districts to compare:",
-                options=sorted(df['Primary_District'].unique()),
-                default=top_districts[:3] if len(top_districts) >= 3 else top_districts
-            )
+            if 'district' in model_name.lower():
+                district = parts[1].replace('District', ' District')
+                title = f"{property_type} Price Predictions - {district}"
+            else:
+                title = f"{property_type} Price Predictions - All Areas"
             
-            if not selected_districts:
-                st.warning("Please select at least one district to analyze")
-                return
-            
-            # Filter data for selected districts
-            district_df = df[df['Primary_District'].isin(selected_districts)].copy()
-            
-            # Group by date and district
-            district_ts = district_df.groupby([
-                district_df['Scraped_date'].dt.date, 'Primary_District'
-            ]).agg({
-                'Үнэ': 'mean',
-                'ad_id': 'count'
-            }).reset_index()
-            
-            # Plot price trends by district
+            # Create a figure with historical + predicted data
             fig = go.Figure()
             
-            for district in selected_districts:
-                district_data = district_ts[district_ts['Primary_District'] == district]
-                if not district_data.empty:
-                    fig.add_trace(go.Scatter(
-                        x=district_data['Scraped_date'],
-                        y=district_data['Үнэ'],
-                        mode='lines+markers',
-                        name=district
-                    ))
+            # Get historical data for this property type/district
+            if 'Type' in df.columns:
+                historical_type = 'Rent' if property_type.lower() == 'rental' else 'Sale'
+                hist_data = df[df['Type'] == historical_type].copy()
+            else:
+                hist_data = df.copy()
             
+            # If district-specific model, filter historical data
+            if 'district' in model_name.lower() and 'Primary_District' in hist_data.columns:
+                district_name = parts[1]
+                # Clean up district name for matching
+                clean_district = district_name.replace('District', '').strip()
+                hist_data = hist_data[hist_data['Primary_District'].str.contains(clean_district, case=False, na=False)]
+            
+            # Group by date and get average price
+            if not hist_data.empty and 'Scraped_date' in hist_data.columns:
+                hist_data_agg = hist_data.groupby(hist_data['Scraped_date'].dt.date)['Үнэ'].mean().reset_index()
+                
+                # Add historical data trace
+                fig.add_trace(go.Scatter(
+                    x=hist_data_agg['Scraped_date'],
+                    y=hist_data_agg['Үнэ'],
+                    mode='lines+markers',
+                    name='Historical Data',
+                    line=dict(color='#3366CC', width=2)
+                ))
+            
+            # Add prediction trace
+            fig.add_trace(go.Scatter(
+                x=pred_df['Date'],
+                y=pred_df['Predicted_Price'],
+                mode='lines+markers',
+                name='Predictions',
+                line=dict(color='#FF9900', width=2, dash='dash')
+            ))
+            
+            # Add confidence interval if available
+            if 'Upper_Bound' in pred_df.columns and 'Lower_Bound' in pred_df.columns:
+                fig.add_trace(go.Scatter(
+                    x=pred_df['Date'].tolist() + pred_df['Date'].tolist()[::-1],
+                    y=pred_df['Upper_Bound'].tolist() + pred_df['Lower_Bound'].tolist()[::-1],
+                    fill='toself',
+                    fillcolor='rgba(255,153,0,0.2)',
+                    line=dict(color='rgba(255,153,0,0)'),
+                    name='95% Confidence Interval'
+                ))
+            
+            # Improve layout
             fig.update_layout(
-                title="Price Trends by District",
+                title=title,
                 xaxis_title="Date",
-                yaxis_title="Average Price (₮)",
+                yaxis_title="Price (₮)",
                 legend=dict(
-                    orientation="h",
-                    yanchor="bottom",
-                    y=1.02,
-                    xanchor="right",
-                    x=1
-                )
+                    yanchor="top",
+                    y=0.99,
+                    xanchor="left",
+                    x=0.01,
+                    bgcolor="rgba(255,255,255,0.8)"
+                ),
+                hovermode="x unified"
             )
             
             st.plotly_chart(fig, use_container_width=True)
             
-            # Add district forecast
-            st.markdown("#### District Price Forecast")
+            # Add insights about the prediction
+            if len(pred_df) > 0:
+                latest_price = hist_data_agg['Үнэ'].iloc[-1] if not hist_data_agg.empty else 0
+                future_price = pred_df['Predicted_Price'].iloc[-1]
+                percent_change = ((future_price - latest_price) / latest_price * 100) if latest_price > 0 else 0
+                
+                direction = "increase" if percent_change > 0 else "decrease"
+                
+                st.markdown(f"""
+                <div class="highlight">
+                    <strong>Forecast Insights:</strong><br>
+                    The model predicts a {abs(percent_change):.1f}% {direction} in {property_type.lower()} prices 
+                    by {pred_df['Date'].iloc[-1].strftime('%B %Y')}.
+                </div>
+                """, unsafe_allow_html=True)
+        
+        except Exception as e:
+            st.error(f"Error displaying predictions for {model_name}: {e}")
+
+# Function to add the ML prediction section to the dashboard
+def add_ml_prediction_section(df):
+    """Add ML prediction section to the dashboard"""
+    
+    st.markdown('<div class="main-header">Price Predictions</div>', unsafe_allow_html=True)
+    
+    # Load ML models
+    models = load_prediction_models()
+    
+    if not models:
+        st.warning("""
+        No machine learning models found. To enable predictions:
+        1. Create a 'models/' directory in your project
+        2. Add trained .pkl model files (e.g., 'rental_BayangolDistrict_model.pkl')
+        """)
+        return
+    
+    # Add prediction settings in sidebar
+    st.sidebar.markdown("### Prediction Settings")
+    prediction_period = st.sidebar.slider("Prediction Period (Months)", 3, 24, 12)
+    
+    # Generate predictions
+    predictions = predict_prices(df, models, prediction_period=prediction_period)
+    
+    # Create tabs for different prediction views
+    pred_tab1, pred_tab2 = st.tabs(["Price Predictions", "Prediction Insights"])
+    
+    with pred_tab1:
+        # Display prediction graphs
+        display_prediction_graphs(df, predictions)
+    
+    with pred_tab2:
+        # Add more detailed analysis of predictions
+        st.markdown("#### Price Trend Analysis")
+        
+        # Create a table comparing current prices to predicted future prices
+        if predictions:
+            comparison_data = []
             
-            # Select a district to forecast
-            forecast_district = st.selectbox(
-                "Select district to forecast:",
-                selected_districts
-            )
+            for model_name, pred_df in predictions.items():
+                try:
+                    # Parse model info
+                    parts = model_name.split('_')
+                    property_type = parts[0].capitalize()
+                    
+                    if len(parts) > 1:
+                        location = parts[1].replace('District', ' District')
+                    else:
+                        location = "All Areas"
+                    
+                    # Get current price (from historical data)
+                    if 'Type' in df.columns:
+                        historical_type = 'Rent' if property_type.lower() == 'rental' else 'Sale'
+                        hist_data = df[df['Type'] == historical_type].copy()
+                    else:
+                        hist_data = df.copy()
+                    
+                    # Filter by location if needed
+                    if location != "All Areas" and 'Primary_District' in hist_data.columns:
+                        clean_location = location.replace(' District', '').strip()
+                        hist_data = hist_data[hist_data['Primary_District'].str.contains(clean_location, case=False, na=False)]
+                    
+                    current_price = hist_data['Үнэ'].mean() if not hist_data.empty else 0
+                    
+                    # Get predicted future prices
+                    future_short = pred_df['Predicted_Price'].iloc[2] if len(pred_df) > 2 else None
+                    future_medium = pred_df['Predicted_Price'].iloc[5] if len(pred_df) > 5 else None
+                    future_long = pred_df['Predicted_Price'].iloc[-1] if not pred_df.empty else None
+                    
+                    # Calculate percent changes
+                    short_change = ((future_short - current_price) / current_price * 100) if current_price > 0 and future_short is not None else 0
+                    medium_change = ((future_medium - current_price) / current_price * 100) if current_price > 0 and future_medium is not None else 0
+                    long_change = ((future_long - current_price) / current_price * 100) if current_price > 0 and future_long is not None else 0
+                    
+                    # Add to comparison data
+                    comparison_data.append({
+                        "Property Type": property_type,
+                        "Location": location,
+                        "Current Avg Price": current_price,
+                        "3-Month Forecast": future_short,
+                        "3-Month Change %": short_change,
+                        "6-Month Forecast": future_medium,
+                        "6-Month Change %": medium_change,
+                        f"{prediction_period}-Month Forecast": future_long,
+                        f"{prediction_period}-Month Change %": long_change
+                    })
+                
+                except Exception as e:
+                    st.error(f"Error processing prediction data for {model_name}: {e}")
             
-            forecast_days = st.slider(
-                "Number of days to forecast:",
-                7, 30, 14,
-                key="district_forecast_days"
-            )
-            
-            # Get data for selected district
-            district_data = district_ts[district_ts['Primary_District'] == forecast_district].sort_values('Scraped_date')
-            
-            if len(district_data) >= 5:  # Need enough data points
-                # Simple linear trend model
-                district_data = district_data.sort_values('Scraped_date')
-                district_data['Days'] = range(len(district_data))
+            if comparison_data:
+                # Convert to DataFrame for display
+                comparison_df = pd.DataFrame(comparison_data)
                 
-                X = district_data['Days'].values.reshape(-1, 1)
-                y = district_data['Үнэ'].values
+                # Format for display
+                for col in ["Current Avg Price", "3-Month Forecast", "6-Month Forecast", f"{prediction_period}-Month Forecast"]:
+                    if col in comparison_df.columns:
+                        comparison_df[col] = comparison_df[col].apply(lambda x: f"{x:,.0f} ₮" if pd.notna(x) else "N/A")
                 
-                model = LinearRegression()
-                model.fit(X, y)
+                for col in ["3-Month Change %", "6-Month Change %", f"{prediction_period}-Month Change %"]:
+                    if col in comparison_df.columns:
+                        comparison_df[col] = comparison_df[col].apply(lambda x: f"{x:+.1f}%" if pd.notna(x) else "N/A")
                 
-                # Create forecast dates and features
-                max_date = district_data['Scraped_date'].max()
-                future_dates = [pd.to_datetime(max_date) + pd.Timedelta(days=i+1) for i in range(forecast_days)]
-                future_X = np.array(range(len(district_data), len(district_data) + forecast_days)).reshape(-1, 1)
+                # Display the comparison table
+                st.dataframe(comparison_df, use_container_width=True)
                 
-                # Make predictions
-                future_y = model.predict(future_X)
+                # Add investment recommendation section
+                st.markdown("#### Investment Recommendations")
                 
-                # Create forecast DataFrame
-                forecast_result = pd.DataFrame({
-                    'Scraped_date': future_dates,
-                    'Forecast': future_y,
-                    'Type': 'Forecast'
-                })
+                # Find areas with highest predicted growth
+                best_areas = sorted([d for d in comparison_data if pd.notna(d[f"{prediction_period}-Month Change %"])], 
+                                   key=lambda x: x[f"{prediction_period}-Month Change %"], 
+                                   reverse=True)[:3]
                 
-                # Plot results
-                fig = go.Figure()
+                if best_areas:
+                    st.markdown("**Top areas for potential investment:**")
+                    for i, area in enumerate(best_areas, 1):
+                        st.markdown(f"""
+                        {i}. **{area['Location']} ({area['Property Type']})** - 
+                        Predicted growth: {area[f"{prediction_period}-Month Change %"]:.1f}%
+                        """)
+        else:
+            st.info("No prediction data available to analyze.")
+
+# Add feature importance visualization if models expose that information
+def display_feature_importance(models):
+    """Display feature importance from the ML models if available"""
+    
+    if not models:
+        return
+    
+    st.markdown("#### Model Feature Importance")
+    st.write("What factors most influence property prices according to our models:")
+    
+    # Check if any model exposes feature importances
+    for model_name, model in models.items():
+        # For tree-based models like RandomForest, XGBoost
+        if hasattr(model, 'feature_importances_') and hasattr(model, 'feature_names_in_'):
+            try:
+                # Create feature importance DataFrame
+                feature_importance = pd.DataFrame({
+                    'Feature': model.feature_names_in_,
+                    'Importance': model.feature_importances_
+                }).sort_values('Importance', ascending=False)
                 
-                # Add historical data
-                fig.add_trace(go.Scatter(
-                    x=district_data['Scraped_date'],
-                    y=district_data['Үнэ'],
-                    mode='lines+markers',
-                    name='Historical Prices',
-                    line=dict(color='#2563EB', width=2)
-                ))
-                
-                # Add forecast
-                fig.add_trace(go.Scatter(
-                    x=forecast_result['Scraped_date'],
-                    y=forecast_result['Forecast'],
-                    mode='lines+markers',
-                    name='Price Forecast',
-                    line=dict(color='#EF4444', width=2, dash='dash')
-                ))
+                # Create bar chart of feature importance
+                fig = px.bar(
+                    feature_importance,
+                    x='Importance',
+                    y='Feature',
+                    orientation='h',
+                    title=f"Feature Importance - {model_name}",
+                    color='Importance',
+                    color_continuous_scale='Viridis'
+                )
                 
                 fig.update_layout(
-                    title=f"{forecast_district} District Price Forecast ({forecast_days} days ahead)",
-                    xaxis_title="Date",
-                    yaxis_title="Average Price (₮)",
-                    legend=dict(
-                        orientation="h",
-                        yanchor="bottom",
-                        y=1.02,
-                        xanchor="right",
-                        x=1
-                    )
+                    xaxis_title="Importance Score",
+                    yaxis_title="Feature"
                 )
                 
                 st.plotly_chart(fig, use_container_width=True)
-                
-                # Calculate and display growth rate
-                current_price = district_data['Үнэ'].iloc[-1]
-                final_forecast = forecast_result['Forecast'].iloc[-1]
-                price_change = ((final_forecast - current_price) / current_price) * 100
-                
-                # Display metrics
-                metric_col1, metric_col2, metric_col3 = st.columns(3)
-                
-                with metric_col1:
-                    st.metric(
-                        label="Current Average Price",
-                        value=f"{current_price:,.0f} ₮"
-                    )
-                
-                with metric_col2:
-                    st.metric(
-                        label=f"Forecasted Price ({forecast_days} days)",
-                        value=f"{final_forecast:,.0f} ₮"
-                    )
-                
-                with metric_col3:
-                    st.metric(
-                        label="Predicted Change",
-                        value=f"{price_change:.1f}%",
-                        delta=f"{price_change:.1f}%"
-                    )
-                
-                # District growth rate comparison
-                st.markdown("#### District Growth Rate Comparison")
-                
-                # Calculate growth rates for all selected districts
-                growth_rates = []
-                
-                for district in selected_districts:
-                    district_series = district_ts[district_ts['Primary_District'] == district].sort_values('Scraped_date')
-                    
-                    if len(district_series) >= 5:
-                        district_series['Days'] = range(len(district_series))
-                        
-                        X = district_series['Days'].values.reshape(-1, 1)
-                        y = district_series['Үнэ'].values
-                        
-                        # Fit linear model to estimate trend
-                        model = LinearRegression()
-                        model.fit(X, y)
-                        
-                        # Calculate monthly growth rate (30 days)
-                        daily_change = model.coef_[0]
-                        starting_price = district_series['Үнэ'].iloc[0]
-                        monthly_change_rate = (daily_change * 30) / starting_price * 100
-                        
-                        growth_rates.append({
-                            'District': district,
-                            'Monthly Growth Rate (%)': monthly_change_rate,
-                            'Average Price': district_series['Үнэ'].mean()
-                        })
-                
-                if growth_rates:
-                    growth_df = pd.DataFrame(growth_rates)
-                    
-                    # Sort by growth rate
-                    growth_df = growth_df.sort_values('Monthly Growth Rate (%)', ascending=False)
-                    
-                    # Plot growth rates
-                    fig = go.Figure()
-                    
-                    fig.add_trace(go.Bar(
-                        x=growth_df['District'],
-                        y=growth_df['Monthly Growth Rate (%)'],
-                        marker_color=['#10B981' if x > 0 else '#EF4444' for x in growth_df['Monthly Growth Rate (%)']]
-                    ))
-                    
-                    fig.update_layout(
-                        title="Estimated Monthly Price Growth Rate by District",
-                        xaxis_title="District",
-                        yaxis_title="Monthly Growth Rate (%)",
-                        height=400
-                    )
-                    
-                    st.plotly_chart(fig, use_container_width=True)
-                    
-                    # Display as a table too
-                    st.markdown("##### District Growth Rate Details")
-                    
-                    # Format the dataframe for display
-                    display_df = growth_df.copy()
-                    display_df['Average Price'] = display_df['Average Price'].map('{:,.0f} ₮'.format)
-                    display_df['Monthly Growth Rate (%)'] = display_df['Monthly Growth Rate (%)'].map('{:+.2f}%'.format)
-                    
-                    st.dataframe(
-                        display_df,
-                        column_config={
-                            "District": "District",
-                            "Monthly Growth Rate (%)": st.column_config.TextColumn("Monthly Growth Rate"),
-                            "Average Price": st.column_config.TextColumn("Average Price (₮)")
-                        },
-                        hide_index=True,
-                        use_container_width=True
-                    )
-                    
-                    # Investment recommendation based on growth rate
-                    st.markdown("##### Investment Insights")
-                    
-                    top_growing = growth_df.iloc[0]['District']
-                    top_growth_rate = growth_df.iloc[0]['Monthly Growth Rate (%)']
-                    
-                    if top_growth_rate > 0:
-                        st.success(f"**{top_growing}** shows the strongest growth potential at {top_growth_rate:.2f}% per month")
-                    else:
-                        st.warning("No districts showing positive growth in the analysis period")
-                
-            else:
-                st.warning(f"Not enough time series data for {forecast_district} district. Need at least 5 data points.")
-        else:
-            st.warning("Required data (district information with time series) not available for analysis.")
+                break
+            except Exception as e:
+                st.error(f"Error displaying feature importance: {e}")
 
-# Add this function to your main function
-# In the main() function, add this line at the end (before the footer):
-# add_prediction_section(df)
-    # Footer
+# Function to simulate predictions for demonstration purposes
+def generate_demo_predictions(df):
+    """Generate simulated predictions when no models are available"""
+    
+    st.info("⚠️ Using simulated predictions for demonstration. To use real ML predictions, add trained models to your project.")
+    
+    predictions = {}
+    
+    # Get the latest date in our dataset
+    try:
+        last_date = df['Scraped_date'].max()
+    except:
+        # If no date column, use today
+        last_date = datetime.now()
+    
+    # Generate future dates for prediction (12 months)
+    future_dates = pd.date_range(
+        start=last_date + timedelta(days=1),
+        periods=12,
+        freq='MS'  # Month Start
+    )
+    
+    # Get unique districts and property types
+    districts = []
+    if 'Primary_District' in df.columns:
+        districts = df['Primary_District'].dropna().unique()[:3]  # Take top 3 districts
+    
+    property_types = []
+    if 'Type' in df.columns:
+        property_types = df['Type'].unique()
+    else:
+        property_types = ['Sale', 'Rent']  # Default if not available
+    
+    # Create demo models for different combinations
+    for prop_type in property_types:
+        # Convert type to match expected model name format
+        type_key = 'rental' if prop_type == 'Rent' else 'sales'
+        
+        # Create all areas prediction
+        base_price = df[df['Type'] == prop_type]['Үнэ'].mean() if 'Type' in df.columns else df['Үнэ'].mean()
+        
+        # Generate a slightly increasing trend with some randomness
+        trend_factor = np.linspace(1.0, 1.15, len(future_dates))  # 15% increase over period
+        seasonal_factor = 1 + 0.03 * np.sin(np.pi * np.arange(len(future_dates)) / 6)  # Seasonal variation
+        random_factor = np.random.normal(1, 0.02, size=len(future_dates))  # Random noise
+        
+        predicted_prices = base_price * trend_factor * seasonal_factor * random_factor
+        
+        # Create prediction dataframe for all areas
+        all_areas_df = pd.DataFrame({
+            'Date': future_dates,
+            'Predicted_Price': predicted_prices,
+            'Lower_Bound': predicted_prices * 0.95,  # 5% lower bound
+            'Upper_Bound': predicted_prices * 1.05   # 5% upper bound
+        })
+        
+        predictions[f"{type_key}_all_areas_model"] = all_areas_df
+        
+        # Create district-specific predictions
+        for district in districts:
+            # Clean district name for key
+            district_key = district.replace(' ', '')
+            
+            # Filter data for this district
+            district_data = df[(df['Type'] == prop_type) & (df['Primary_District'] == district)] if 'Type' in df.columns else df[df['Primary_District'] == district]
+            
+            # Get base price for district
+            district_base_price = district_data['Үнэ'].mean() if not district_data.empty else base_price
+            
+            # Generate slightly different trend for this district
+            district_trend = np.linspace(1.0, 1.1 + np.random.uniform(-0.05, 0.15), len(future_dates))
+            district_seasonal = 1 + 0.04 * np.sin(np.pi * np.arange(len(future_dates)) / 6 + np.random.uniform(0, 2))
+            district_random = np.random.normal(1, 0.03, size=len(future_dates))
+            
+            district_prices = district_base_price * district_trend * district_seasonal * district_random
+            
+            district_df = pd.DataFrame({
+                'Date': future_dates,
+                'Predicted_Price': district_prices,
+                'Lower_Bound': district_prices * 0.93,  # 7% lower bound
+                'Upper_Bound': district_prices * 1.07   # 7% upper bound
+            })
+            
+            predictions[f"{type_key}_{district_key}District_model"] = district_df
+    
+    return predictions
+
     st.markdown("---")
     st.markdown(f"""
     <div style="text-align: center; color: #6B7280; padding: 1rem;">
