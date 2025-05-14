@@ -466,7 +466,8 @@ def main():
                 coloraxis_showscale=False
             )
             st.plotly_chart(fig_price_district, use_container_width=True)
-    
+
+
 with tab3:
         st.markdown('<div class="sub-header">Location Insights</div>', unsafe_allow_html=True)
         
@@ -592,7 +593,7 @@ with tab3:
             
             st.plotly_chart(fig_heatmap, use_container_width=True)
             
-    with tab4:
+  with tab4:
         st.markdown('<div class="sub-header">Property Features</div>', unsafe_allow_html=True)
         
         col1, col2 = st.columns(2)
