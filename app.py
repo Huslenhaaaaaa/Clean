@@ -555,41 +555,43 @@ def main():
                 coloraxis_showscale=False
             )
             st.plotly_chart(fig_locations, use_container_width=True)
-    if 'Primary_District' in df.columns and 'Rooms' in df.columns and 'Үнэ' in df.columns:
-        st.markdown("#### Price Heatmap by District and Room Count")
-        
-    
-    # Group by district and room count, calculate average price
-    heatmap_data = df.groupby(['Primary_District', 'Rooms'])['Үнэ'].mean().reset_index()
-    
-    # Filter to keep only districts with sufficient data
-    district_counts = df['Primary_District'].value_counts()
-    valid_districts = district_counts[district_counts > 5].index
-    heatmap_data = heatmap_data[heatmap_data['Primary_District'].isin(valid_districts)]
-    
-    # Filter to common room counts
-    heatmap_data = heatmap_data[heatmap_data['Rooms'].between(1, 6)]
-    
-    # Create pivot table for heatmap
-    pivot_data = heatmap_data.pivot(index='Primary_District', columns='Rooms', values='Үнэ')
-    
-    # Create heatmap
-    fig_heatmap = px.imshow(
-        pivot_data,
-        labels=dict(x="Number of Rooms", y="District", color="Average Price (₮)"),
-        color_continuous_scale="Viridis",
-        text_auto='.0f',  # Show the values on the heatmap cells
-        aspect="auto"
-    )
-    
-    fig_heatmap.update_layout(
-        title="Average Price by District and Room Count",
-        xaxis_title="Number of Rooms",
-        yaxis_title="District",
-        coloraxis_colorbar=dict(title="Avg Price (₮)")
-    )
-    
-    st.plotly_chart(fig_heatmap, use_container_width=True)
+            
+        # Price Heatmap by District and Room Count - MOVED INSIDE tab3
+        if 'Primary_District' in df.columns and 'Rooms' in df.columns and 'Үнэ' in df.columns:
+            st.markdown("#### Price Heatmap by District and Room Count")
+            
+            # Group by district and room count, calculate average price
+            heatmap_data = df.groupby(['Primary_District', 'Rooms'])['Үнэ'].mean().reset_index()
+            
+            # Filter to keep only districts with sufficient data
+            district_counts = df['Primary_District'].value_counts()
+            valid_districts = district_counts[district_counts > 5].index
+            heatmap_data = heatmap_data[heatmap_data['Primary_District'].isin(valid_districts)]
+            
+            # Filter to common room counts
+            heatmap_data = heatmap_data[heatmap_data['Rooms'].between(1, 6)]
+            
+            # Create pivot table for heatmap
+            pivot_data = heatmap_data.pivot(index='Primary_District', columns='Rooms', values='Үнэ')
+            
+            # Create heatmap
+            fig_heatmap = px.imshow(
+                pivot_data,
+                labels=dict(x="Number of Rooms", y="District", color="Average Price (₮)"),
+                color_continuous_scale="Viridis",
+                text_auto='.0f',  # Show the values on the heatmap cells
+                aspect="auto"
+            )
+            
+            fig_heatmap.update_layout(
+                title="Average Price by District and Room Count",
+                xaxis_title="Number of Rooms",
+                yaxis_title="District",
+                coloraxis_colorbar=dict(title="Avg Price (₮)")
+            )
+            
+            st.plotly_chart(fig_heatmap, use_container_width=True)
+            
     with tab4:
         st.markdown('<div class="sub-header">Property Features</div>', unsafe_allow_html=True)
         
