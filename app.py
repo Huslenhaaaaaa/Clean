@@ -871,9 +871,9 @@ def main():
                 st.markdown("---")
     else:
         st.warning("No listings found matching your criteria. Try adjusting your filters.")
+        with tab6:
 
 
-    with tab6:
     st.markdown('<div class="sub-header">Price Predictions</div>', unsafe_allow_html=True)
     
     # Helper function to load ML model
