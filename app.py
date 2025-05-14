@@ -874,7 +874,9 @@ def main():
         
 
     with tab6:
-    st.markdown('<div class="sub-header">Price Predictions</div>', unsafe_allow_html=True)
+        
+        st.markdown('<div class="sub-header">Price Predictions</div>', unsafe_allow_html=True)
+        
     
     # Helper function to load ML model
     @st.cache_resource
