@@ -302,7 +302,7 @@ def main():
         return
     
     # Main dashboard layout with tabs
-    tab1, tab2, tab3, tab4, tab5,  = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features", "Browse Listings", "Price Predictions"])
+    tab1, tab2, tab3, tab4, tab5  = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features", "Browse Listings"])
     
     with tab1:
         st.markdown('<div class="sub-header">Market Overview</div>', unsafe_allow_html=True)
