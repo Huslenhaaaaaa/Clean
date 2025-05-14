@@ -74,33 +74,53 @@ def load_data():
     sales_files = glob.glob("unegui_data/unegui_sales_data.csv")
 
     def load_and_process(files, label):
-        all_dfs = []
-        for file in files:
+        all_data = []
+        for f in files:
             try:
-                df = pd.read_csv(file)
+                df = pd.read_csv(f, encoding='utf-8-sig')
+                date_str = os.path.basename(f).split('_')[-1].split('.')[0]
+                df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
                 df['Type'] = label
-                # Add the file date to the dataframe
-                try:
-                    file_date = pd.to_datetime(file.split('_')[-1].split('.')[0], format='%Y%m%d')
-                    df['Scraped_date'] = file_date
-                except:
-                    df['Scraped_date'] = pd.NaT
-                
-                # Check for duplicates
-                if 'url' in df.columns:
-                    df = df.drop_duplicates(subset=['url'])
-                elif 'URL' in df.columns:
-                    df = df.drop_duplicates(subset=['URL'])
-                all_dfs.append(df)
+                all_data.append(df)
             except Exception as e:
-                st.warning(f"Error loading {file}: {e}")
+                st.warning(f"Error loading {f}: {e}")
         
+        if not all_data:
+            return pd.DataFrame()
+            
         # Combine all dataframes
-        if all_dfs:
-            combined_df = pd.concat(all_dfs, ignore_index=True)
-            return combined_df
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Check for and remove duplicates based on URL/link
+        if 'Link' in combined_df.columns:
+            url_col = 'Link'
+        elif 'URL' in combined_df.columns:
+            url_col = 'URL'
+        elif 'url' in combined_df.columns:
+            url_col = 'url'
+        elif 'link' in combined_df.columns:
+            url_col = 'link'
+        elif 'Зар' in combined_df.columns:  # This might be a link column in Mongolian
+            url_col = 'Зар'
         else:
-            return pd.DataFrame()  # Return empty dataframe if no files loaded
+            # If no URL column is found, try to use ad_id as a unique identifier
+            if 'ad_id' in combined_df.columns:
+                url_col = 'ad_id'
+            else:
+                st.warning("No URL or ad_id column found. Cannot check for duplicates.")
+                return combined_df
+        
+        # Count duplicates before removal
+        duplicate_count = combined_df.duplicated(subset=[url_col]).sum()
+        
+        # Remove duplicates
+        combined_df = combined_df.drop_duplicates(subset=[url_col], keep='first')
+        
+        # Log the number of duplicates removed
+        if duplicate_count > 0:
+            st.info(f"Removed {duplicate_count} duplicate listings based on {url_col}")
+            
+        return combined_df
 
     rental_df = load_and_process(rental_files, 'Rent')
     sales_df = load_and_process(sales_files, 'Sale')
@@ -124,42 +144,17 @@ def load_data():
     df['Price_per_m2'] = np.where(df['Area_m2'] > 0, df['Үнэ'] / df['Area_m2'], np.nan)
 
     # Clean posted date
-    # Clean posted date
-def fix_posted_date(text):
-    if pd.isna(text):
-        return pd.NaT
-    
-    try:
-        # Handle common date formats
-        if 'өнөөдөр' in text.lower():
-            return pd.Timestamp.now().normalize()
-        elif 'өчигдөр' in text.lower():
-            return pd.Timestamp.now().normalize() - pd.Timedelta(days=1)
-        
-        # Extract days/months ago
-        days_ago_match = re.search(r'(\d+)\s*өдрийн', text)
-        if days_ago_match:
-            days = int(days_ago_match.group(1))
-            return pd.Timestamp.now().normalize() - pd.Timedelta(days=days)
-        
-        months_ago_match = re.search(r'(\d+)\s*сарын', text)
-        if months_ago_match:
-            months = int(months_ago_match.group(1))
-            return pd.Timestamp.now().normalize() - pd.DateOffset(months=months)
-        
-        # Try to parse specific date format if present
-        date_match = re.search(r'(\d{4}-\d{2}-\d{2}|\d{2}-\d{2}-\d{4}|\d{2}\.\d{2}\.\d{4})', text)
-        if date_match:
-            date_str = date_match.group(1)
-            for fmt in ['%Y-%m-%d', '%d-%m-%Y', '%d.%m.%Y']:
-                try:
-                    return pd.to_datetime(date_str, format=fmt)
-                except:
-                    continue
-        
-        return pd.NaT
-    except:
-        return pd.NaT
+    def fix_posted_date(text):
+        today = pd.Timestamp.today().normalize()
+        if isinstance(text, str):
+            if "өнөөдөр" in text.lower():
+                return today
+            elif "өчигдөр" in text.lower():
+                return today - pd.Timedelta(days=1)
+        try:
+            return pd.to_datetime(text)
+        except:
+            return pd.NaT
 
     df['Fixed Posted Date'] = df['Нийтэлсэн'].apply(fix_posted_date)
 
@@ -307,8 +302,8 @@ def main():
         return
     
     # Main dashboard layout with tabs
-    def main():
-        tab1, tab2, tab3, tab4, tab5 = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features", "Browse Listings"])
+    tab1, tab2, tab3, tab4, tab5  = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features", "Browse Listings"])
+    
     with tab1:
         st.markdown('<div class="sub-header">Market Overview</div>', unsafe_allow_html=True)
         
@@ -471,7 +466,7 @@ def main():
                 coloraxis_showscale=False
             )
             st.plotly_chart(fig_price_district, use_container_width=True)
-
+    
     with tab3:
         st.markdown('<div class="sub-header">Location Insights</div>', unsafe_allow_html=True)
         
@@ -560,43 +555,41 @@ def main():
                 coloraxis_showscale=False
             )
             st.plotly_chart(fig_locations, use_container_width=True)
-            
-        # Price Heatmap - Moved inside tab3
-        if 'Primary_District' in df.columns and 'Rooms' in df.columns and 'Үнэ' in df.columns:
-            st.markdown("#### Price Heatmap by District and Room Count")
-            
-            # Group by district and room count, calculate average price
-            heatmap_data = df.groupby(['Primary_District', 'Rooms'])['Үнэ'].mean().reset_index()
-            
-            # Filter to keep only districts with sufficient data
-            district_counts = df['Primary_District'].value_counts()
-            valid_districts = district_counts[district_counts > 5].index
-            heatmap_data = heatmap_data[heatmap_data['Primary_District'].isin(valid_districts)]
-            
-            # Filter to common room counts
-            heatmap_data = heatmap_data[heatmap_data['Rooms'].between(1, 6)]
-            
-            # Create pivot table for heatmap
-            pivot_data = heatmap_data.pivot(index='Primary_District', columns='Rooms', values='Үнэ')
-            
-            # Create heatmap
-            fig_heatmap = px.imshow(
-                pivot_data,
-                labels=dict(x="Number of Rooms", y="District", color="Average Price (₮)"),
-                color_continuous_scale="Viridis",
-                text_auto='.0f',  # Show the values on the heatmap cells
-                aspect="auto"
-            )
-            
-            fig_heatmap.update_layout(
-                title="Average Price by District and Room Count",
-                xaxis_title="Number of Rooms",
-                yaxis_title="District",
-                coloraxis_colorbar=dict(title="Avg Price (₮)")
-            )
-            
-            st.plotly_chart(fig_heatmap, use_container_width=True)
-            
+    if 'Primary_District' in df.columns and 'Rooms' in df.columns and 'Үнэ' in df.columns:
+        st.markdown("#### Price Heatmap by District and Room Count")
+        
+    
+    # Group by district and room count, calculate average price
+    heatmap_data = df.groupby(['Primary_District', 'Rooms'])['Үнэ'].mean().reset_index()
+    
+    # Filter to keep only districts with sufficient data
+    district_counts = df['Primary_District'].value_counts()
+    valid_districts = district_counts[district_counts > 5].index
+    heatmap_data = heatmap_data[heatmap_data['Primary_District'].isin(valid_districts)]
+    
+    # Filter to common room counts
+    heatmap_data = heatmap_data[heatmap_data['Rooms'].between(1, 6)]
+    
+    # Create pivot table for heatmap
+    pivot_data = heatmap_data.pivot(index='Primary_District', columns='Rooms', values='Үнэ')
+    
+    # Create heatmap
+    fig_heatmap = px.imshow(
+        pivot_data,
+        labels=dict(x="Number of Rooms", y="District", color="Average Price (₮)"),
+        color_continuous_scale="Viridis",
+        text_auto='.0f',  # Show the values on the heatmap cells
+        aspect="auto"
+    )
+    
+    fig_heatmap.update_layout(
+        title="Average Price by District and Room Count",
+        xaxis_title="Number of Rooms",
+        yaxis_title="District",
+        coloraxis_colorbar=dict(title="Avg Price (₮)")
+    )
+    
+    st.plotly_chart(fig_heatmap, use_container_width=True)
     with tab4:
         st.markdown('<div class="sub-header">Property Features</div>', unsafe_allow_html=True)
         
@@ -617,6 +610,7 @@ def main():
                 st.plotly_chart(fig_balcony, use_container_width=True)
         
         with col2:
+            # Garage Distribution
             if 'HasGarage' in df.columns:
                 garage_counts = df['HasGarage'].value_counts()
                 
@@ -678,202 +672,207 @@ def main():
             )
             st.plotly_chart(fig_floor, use_container_width=True)
     
-        # Add data trends over time section if we have time-series data
-        if 'Scraped_date' in df.columns and df['Scraped_date'].nunique() > 1:
-            st.markdown("---")
-            st.markdown('<div class="sub-header">Data Trends Over Time</div>', unsafe_allow_html=True)
-            
-            # Group by date and calculate daily averages
-            time_data = df.groupby(df['Scraped_date'].dt.date).agg({
-                'Үнэ': 'mean',
-                'ad_id': 'count',
-                'Price_per_m2': 'mean'
-            }).reset_index()
-            
-            # Plot price trends over time
-            st.markdown("#### Price Trends")
-            
-            fig_trends = go.Figure()
-            
-            fig_trends.add_trace(go.Scatter(
-                x=time_data['Scraped_date'],
-                y=time_data['Үнэ'],
-                mode='lines+markers',
-                name='Average Price (₮)',
-                line=dict(color='#2563EB', width=2)
-            ))
-            
-            fig_trends.update_layout(
-                xaxis_title="Date",
-                yaxis_title="Average Price (₮)",
-                title="Average Price Trend Over Time"
-            )
-            
-            st.plotly_chart(fig_trends, use_container_width=True)
-            
-            # Plot listing volume over time
-            st.markdown("#### Listing Volume Trends")
-            
-            fig_volume = go.Figure()
-            
-            fig_volume.add_trace(go.Scatter(
-                x=time_data['Scraped_date'],
-                y=time_data['ad_id'],
-                mode='lines+markers',
-                name='Number of Listings',
-                line=dict(color='#10B981', width=2),
-                fill='tozeroy'
-            ))
-            
-            fig_volume.update_layout(
-                xaxis_title="Date",
-                yaxis_title="Number of Listings",
-                title="Daily Listing Volume"
-            )
-            
-            st.plotly_chart(fig_volume, use_container_width=True)
+    # Add data trends over time section if we have time-series data
+    if 'Scraped_date' in df.columns and df['Scraped_date'].nunique() > 1:
+        st.markdown("---")
+        st.markdown('<div class="sub-header">Data Trends Over Time</div>', unsafe_allow_html=True)
+        
+        # Group by date and calculate daily averages
+        time_data = df.groupby(df['Scraped_date'].dt.date).agg({
+            'Үнэ': 'mean',
+            'ad_id': 'count',
+            'Price_per_m2': 'mean'
+        }).reset_index()
+
+        
+        
+        # Plot price trends over time
+        st.markdown("#### Price Trends")
+        
+        fig_trends = go.Figure()
+        
+        fig_trends.add_trace(go.Scatter(
+            x=time_data['Scraped_date'],
+            y=time_data['Үнэ'],
+            mode='lines+markers',
+            name='Average Price (₮)',
+            line=dict(color='#2563EB', width=2)
+        ))
+        
+        fig_trends.update_layout(
+            xaxis_title="Date",
+            yaxis_title="Average Price (₮)",
+            title="Average Price Trend Over Time"
+        )
+        
+        st.plotly_chart(fig_trends, use_container_width=True)
+        
+        # Plot listing volume over time
+        st.markdown("#### Listing Volume Trends")
+        
+        fig_volume = go.Figure()
+        
+        fig_volume.add_trace(go.Scatter(
+            x=time_data['Scraped_date'],
+            y=time_data['ad_id'],
+            mode='lines+markers',
+            name='Number of Listings',
+            line=dict(color='#10B981', width=2),
+            fill='tozeroy'
+        ))
+        
+        fig_volume.update_layout(
+            xaxis_title="Date",
+            yaxis_title="Number of Listings",
+            title="Daily Listing Volume"
+        )
+        
+        st.plotly_chart(fig_volume, use_container_width=True)
         
     with tab5:
         st.markdown('<div class="sub-header">Browse All Listings</div>', unsafe_allow_html=True)
         browse_cols = st.columns([2, 1, 1])
         
-        with browse_cols[0]:
-            search_term = st.text_input("Search by title or description", "")
+
+    
+    with browse_cols[0]:
+        search_term = st.text_input("Search by title or description", "")
+    
+    with browse_cols[1]:
+        sort_by = st.selectbox(
+            "Sort by",
+            ["Newest First", "Price: Low to High", "Price: High to Low", "Area: Largest First"]
+        )
+    
+    with browse_cols[2]:
+        records_per_page = st.selectbox("Items per page", [10, 20, 50, 100], index=1)
+    
+    # Create a copy of the filtered dataframe for display
+    browse_df = df.copy()
+    
+    # Apply search if provided
+    if search_term:
+        # Create a combined search field from multiple columns
+        browse_df['search_text'] = ''
         
-        with browse_cols[1]:
-            sort_by = st.selectbox(
-                "Sort by",
-                ["Newest First", "Price: Low to High", "Price: High to Low", "Area: Largest First"]
+        # Add title/description fields to search text if they exist
+        if 'Гарчиг' in browse_df.columns:
+            browse_df['search_text'] += browse_df['Гарчиг'].fillna('').astype(str) + ' '
+        if 'Тайлбар' in browse_df.columns:
+            browse_df['search_text'] += browse_df['Тайлбар'].fillna('').astype(str) + ' '
+        if 'Байршил' in browse_df.columns:
+            browse_df['search_text'] += browse_df['Байршил'].fillna('').astype(str)
+        
+        # Filter based on search term
+        browse_df = browse_df[browse_df['search_text'].str.contains(search_term, case=False, na=False)]
+    
+    # Apply sorting
+    if sort_by == "Newest First" and 'Fixed Posted Date' in browse_df.columns:
+        browse_df = browse_df.sort_values('Fixed Posted Date', ascending=False)
+    elif sort_by == "Price: Low to High":
+        browse_df = browse_df.sort_values('Үнэ', ascending=True)
+    elif sort_by == "Price: High to Low":
+        browse_df = browse_df.sort_values('Үнэ', ascending=False)
+    elif sort_by == "Area: Largest First" and 'Area_m2' in browse_df.columns:
+        browse_df = browse_df.sort_values('Area_m2', ascending=False)
+    
+    # Show count of listings after filtering
+    st.info(f"Found {len(browse_df)} listings matching your criteria")
+    
+    # Pagination
+    if len(browse_df) > 0:
+        total_pages = max(1, len(browse_df) // records_per_page + (1 if len(browse_df) % records_per_page > 0 else 0))
+        page_col1, page_col2 = st.columns([6, 1])
+        
+        with page_col2:
+            current_page = st.number_input("Page", min_value=1, max_value=total_pages, value=1)
+        
+        with page_col1:
+            st.markdown(f"Page {current_page} of {total_pages}")
+        
+        # Calculate slice indices for pagination
+        start_idx = (current_page - 1) * records_per_page
+        end_idx = min(start_idx + records_per_page, len(browse_df))
+        
+        # Get page of data
+        page_df = browse_df.iloc[start_idx:end_idx].copy()
+        
+        # Prepare data for display
+        display_df = pd.DataFrame()
+        
+        # Add columns to display
+        if 'Гарчиг' in page_df.columns:
+            display_df['Title'] = page_df['Гарчиг']
+        
+        if 'Үнэ' in page_df.columns:
+            display_df['Price (₮)'] = page_df['Үнэ'].apply(lambda x: f"{x:,.0f}" if pd.notna(x) else "N/A")
+        
+        if 'Байршил' in page_df.columns:
+            display_df['Location'] = page_df['Байршил']
+        
+        if 'ӨрөөнийТоо' in page_df.columns:
+            display_df['Rooms'] = page_df['ӨрөөнийТоо']
+        
+        if 'Area_m2' in page_df.columns:
+            display_df['Area (m²)'] = page_df['Area_m2'].apply(lambda x: f"{x:.1f}" if pd.notna(x) else "N/A")
+        
+        if 'Тайлбар' in page_df.columns:
+            # Truncate description to avoid very wide columns
+            display_df['Description'] = page_df['Тайлбар'].apply(
+                lambda x: str(x)[:100] + '...' if isinstance(x, str) and len(str(x)) > 100 else x
             )
         
-        with browse_cols[2]:
-            records_per_page = st.selectbox("Items per page", [10, 20, 50, 100], index=1)
+        if 'Fixed Posted Date' in page_df.columns:
+            display_df['Posted Date'] = page_df['Fixed Posted Date'].apply(
+                lambda x: x.strftime('%Y-%m-%d') if pd.notna(x) else "N/A"
+            )
         
-        # Create a copy of the filtered dataframe for display
-        browse_df = df.copy()
+        # Display as a table
+        st.dataframe(display_df, use_container_width=True)
         
-        # Apply search if provided
-        if search_term:
-            # Create a combined search field from multiple columns
-            browse_df['search_text'] = ''
+        # Add clickable links if available
+        if 'Link' in page_df.columns or 'URL' in page_df.columns or 'url' in page_df.columns:
+            st.markdown("### Listing Details")
             
-            # Add title/description fields to search text if they exist
-            if 'Гарчиг' in browse_df.columns:
-                browse_df['search_text'] += browse_df['Гарчиг'].fillna('').astype(str) + ' '
-            if 'Тайлбар' in browse_df.columns:
-                browse_df['search_text'] += browse_df['Тайлбар'].fillna('').astype(str) + ' '
-            if 'Байршил' in browse_df.columns:
-                browse_df['search_text'] += browse_df['Байршил'].fillna('').astype(str)
+            # Determine which column has the URL
+            url_col = None
+            for col in ['Link', 'URL', 'url', 'link']:
+                if col in page_df.columns:
+                    url_col = col
+                    break
             
-            # Filter based on search term
-            browse_df = browse_df[browse_df['search_text'].str.contains(search_term, case=False, na=False)]
-        
-        # Apply sorting
-        if sort_by == "Newest First" and 'Fixed Posted Date' in browse_df.columns:
-            browse_df = browse_df.sort_values('Fixed Posted Date', ascending=False)
-        elif sort_by == "Price: Low to High":
-            browse_df = browse_df.sort_values('Үнэ', ascending=True)
-        elif sort_by == "Price: High to Low":
-            browse_df = browse_df.sort_values('Үнэ', ascending=False)
-        elif sort_by == "Area: Largest First" and 'Area_m2' in browse_df.columns:
-            browse_df = browse_df.sort_values('Area_m2', ascending=False)
-        
-        # Show count of listings after filtering
-        st.info(f"Found {len(browse_df)} listings matching your criteria")
-        
-        # Pagination
-        if len(browse_df) > 0:
-            total_pages = max(1, len(browse_df) // records_per_page + (1 if len(browse_df) % records_per_page > 0 else 0))
-            page_col1, page_col2 = st.columns([6, 1])
-            
-            with page_col2:
-                current_page = st.number_input("Page", min_value=1, max_value=total_pages, value=1)
-            
-            with page_col1:
-                st.markdown(f"Page {current_page} of {total_pages}")
-            
-            # Calculate slice indices for pagination
-            start_idx = (current_page - 1) * records_per_page
-            end_idx = min(start_idx + records_per_page, len(browse_df))
-            
-            # Get page of data
-            page_df = browse_df.iloc[start_idx:end_idx].copy()
-            
-            # Prepare data for display
-            display_df = pd.DataFrame()
-            
-            # Add columns to display
-            if 'Гарчиг' in page_df.columns:
-                display_df['Title'] = page_df['Гарчиг']
-            
-            if 'Үнэ' in page_df.columns:
-                display_df['Price (₮)'] = page_df['Үнэ'].apply(lambda x: f"{x:,.0f}" if pd.notna(x) else "N/A")
-            
-            if 'Байршил' in page_df.columns:
-                display_df['Location'] = page_df['Байршил']
-            
-            if 'ӨрөөнийТоо' in page_df.columns:
-                display_df['Rooms'] = page_df['ӨрөөнийТоо']
-            
-            if 'Area_m2' in page_df.columns:
-                display_df['Area (m²)'] = page_df['Area_m2'].apply(lambda x: f"{x:.1f}" if pd.notna(x) else "N/A")
-            
-            if 'Тайлбар' in page_df.columns:
-                # Truncate description to avoid very wide columns
-                display_df['Description'] = page_df['Тайлбар'].apply(
-                    lambda x: str(x)[:100] + '...' if isinstance(x, str) and len(str(x)) > 100 else x
-                )
-            
-            if 'Fixed Posted Date' in page_df.columns:
-                display_df['Posted Date'] = page_df['Fixed Posted Date'].apply(
-                    lambda x: x.strftime('%Y-%m-%d') if pd.notna(x) else "N/A"
-                )
-            
-            # Display as a table
-            st.dataframe(display_df, use_container_width=True)
-            
-            # Add clickable links if available
-            if 'Link' in page_df.columns or 'URL' in page_df.columns or 'url' in page_df.columns:
-                st.markdown("### Listing Details")
+            # Display individual listing cards with links
+            for i, row in page_df.iterrows():
+                col1, col2 = st.columns([3, 1])
                 
-                # Determine which column has the URL
-                url_col = None
-                for col in ['Link', 'URL', 'url', 'link']:
-                    if col in page_df.columns:
-                        url_col = col
-                        break
+                with col1:
+                    title = row['Гарчиг'] if 'Гарчиг' in page_df.columns else f"Listing #{i}"
+                    st.markdown(f"**{title}**")
+                    
+                    if 'Байршил' in page_df.columns:
+                        st.markdown(f"📍 {row['Байршил']}")
+                    
+                    if 'Тайлбар' in page_df.columns and pd.notna(row['Тайлбар']):
+                        st.markdown(f"{row['Тайлбар']}")
                 
-                # Display individual listing cards with links
-                for i, row in page_df.iterrows():
-                    col1, col2 = st.columns([3, 1])
+                with col2:
+                    if 'Үнэ' in page_df.columns:
+                        st.markdown(f"**Price:** {row['Үнэ']:,.0f} ₮")
                     
-                    with col1:
-                        title = row['Гарчиг'] if 'Гарчиг' in page_df.columns else f"Listing #{i}"
-                        st.markdown(f"**{title}**")
-                        
-                        if 'Байршил' in page_df.columns:
-                            st.markdown(f"📍 {row['Байршил']}")
-                        
-                        if 'Тайлбар' in page_df.columns and pd.notna(row['Тайлбар']):
-                            st.markdown(f"{row['Тайлбар']}")
+                    if 'Area_m2' in page_df.columns and pd.notna(row['Area_m2']):
+                        st.markdown(f"**Area:** {row['Area_m2']:.1f} m²")
                     
-                    with col2:
-                        if 'Үнэ' in page_df.columns:
-                            st.markdown(f"**Price:** {row['Үнэ']:,.0f} ₮")
-                        
-                        if 'Area_m2' in page_df.columns and pd.notna(row['Area_m2']):
-                            st.markdown(f"**Area:** {row['Area_m2']:.1f} m²")
-                        
-                        if 'ӨрөөнийТоо' in page_df.columns:
-                            st.markdown(f"**Rooms:** {row['ӨрөөнийТоо']}")
-                        
-                        if url_col and pd.notna(row[url_col]):
-                            st.markdown(f"[View Original Listing]({row[url_col]})")
+                    if 'ӨрөөнийТоо' in page_df.columns:
+                        st.markdown(f"**Rooms:** {row['ӨрөөнийТоо']}")
                     
-                    st.markdown("---")
-        else:
-            st.warning("No listings found matching your criteria. Try adjusting your filters.")
-    
+                    if url_col and pd.notna(row[url_col]):
+                        st.markdown(f"[View Original Listing]({row[url_col]})")
+                
+                st.markdown("---")
+    else:
+        st.warning("No listings found matching your criteria. Try adjusting your filters.")
+        
+
     st.markdown("---")
     st.markdown(f"""
     <div style="text-align: center; color: #6B7280; padding: 1rem;">
@@ -883,4 +882,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
