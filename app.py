@@ -74,53 +74,33 @@ def load_data():
     sales_files = glob.glob("unegui_data/unegui_sales_data.csv")
 
     def load_and_process(files, label):
-        all_data = []
-        for f in files:
+        all_dfs = []
+        for file in files:
             try:
-                df = pd.read_csv(f, encoding='utf-8-sig')
-                date_str = os.path.basename(f).split('_')[-1].split('.')[0]
-                df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                df = pd.read_csv(file)
                 df['Type'] = label
-                all_data.append(df)
+                # Add the file date to the dataframe
+                try:
+                    file_date = pd.to_datetime(file.split('_')[-1].split('.')[0], format='%Y%m%d')
+                    df['Scraped_date'] = file_date
+                except:
+                    df['Scraped_date'] = pd.NaT
+                
+                # Check for duplicates
+                if 'url' in df.columns:
+                    df = df.drop_duplicates(subset=['url'])
+                elif 'URL' in df.columns:
+                    df = df.drop_duplicates(subset=['URL'])
+                all_dfs.append(df)
             except Exception as e:
-                st.warning(f"Error loading {f}: {e}")
+                st.warning(f"Error loading {file}: {e}")
         
-        if not all_data:
-            return pd.DataFrame()
-            
         # Combine all dataframes
-        combined_df = pd.concat(all_data, ignore_index=True)
-        
-        # Check for and remove duplicates based on URL/link
-        if 'Link' in combined_df.columns:
-            url_col = 'Link'
-        elif 'URL' in combined_df.columns:
-            url_col = 'URL'
-        elif 'url' in combined_df.columns:
-            url_col = 'url'
-        elif 'link' in combined_df.columns:
-            url_col = 'link'
-        elif 'Зар' in combined_df.columns:  # This might be a link column in Mongolian
-            url_col = 'Зар'
+        if all_dfs:
+            combined_df = pd.concat(all_dfs, ignore_index=True)
+            return combined_df
         else:
-            # If no URL column is found, try to use ad_id as a unique identifier
-            if 'ad_id' in combined_df.columns:
-                url_col = 'ad_id'
-            else:
-                st.warning("No URL or ad_id column found. Cannot check for duplicates.")
-                return combined_df
-        
-        # Count duplicates before removal
-        duplicate_count = combined_df.duplicated(subset=[url_col]).sum()
-        
-        # Remove duplicates
-        combined_df = combined_df.drop_duplicates(subset=[url_col], keep='first')
-        
-        # Log the number of duplicates removed
-        if duplicate_count > 0:
-            st.info(f"Removed {duplicate_count} duplicate listings based on {url_col}")
-            
-        return combined_df
+            return pd.DataFrame()  # Return empty dataframe if no files loaded
 
     rental_df = load_and_process(rental_files, 'Rent')
     sales_df = load_and_process(sales_files, 'Sale')
@@ -144,17 +124,42 @@ def load_data():
     df['Price_per_m2'] = np.where(df['Area_m2'] > 0, df['Үнэ'] / df['Area_m2'], np.nan)
 
     # Clean posted date
-    def fix_posted_date(text):
-        today = pd.Timestamp.today().normalize()
-        if isinstance(text, str):
-            if "өнөөдөр" in text.lower():
-                return today
-            elif "өчигдөр" in text.lower():
-                return today - pd.Timedelta(days=1)
-        try:
-            return pd.to_datetime(text)
-        except:
-            return pd.NaT
+    # Clean posted date
+def fix_posted_date(text):
+    if pd.isna(text):
+        return pd.NaT
+    
+    try:
+        # Handle common date formats
+        if 'өнөөдөр' in text.lower():
+            return pd.Timestamp.now().normalize()
+        elif 'өчигдөр' in text.lower():
+            return pd.Timestamp.now().normalize() - pd.Timedelta(days=1)
+        
+        # Extract days/months ago
+        days_ago_match = re.search(r'(\d+)\s*өдрийн', text)
+        if days_ago_match:
+            days = int(days_ago_match.group(1))
+            return pd.Timestamp.now().normalize() - pd.Timedelta(days=days)
+        
+        months_ago_match = re.search(r'(\d+)\s*сарын', text)
+        if months_ago_match:
+            months = int(months_ago_match.group(1))
+            return pd.Timestamp.now().normalize() - pd.DateOffset(months=months)
+        
+        # Try to parse specific date format if present
+        date_match = re.search(r'(\d{4}-\d{2}-\d{2}|\d{2}-\d{2}-\d{4}|\d{2}\.\d{2}\.\d{4})', text)
+        if date_match:
+            date_str = date_match.group(1)
+            for fmt in ['%Y-%m-%d', '%d-%m-%Y', '%d.%m.%Y']:
+                try:
+                    return pd.to_datetime(date_str, format=fmt)
+                except:
+                    continue
+        
+        return pd.NaT
+    except:
+        return pd.NaT
 
     df['Fixed Posted Date'] = df['Нийтэлсэн'].apply(fix_posted_date)
 
@@ -593,27 +598,26 @@ with tab3:
             
             st.plotly_chart(fig_heatmap, use_container_width=True)
             
-  with tab4:
-        st.markdown('<div class="sub-header">Property Features</div>', unsafe_allow_html=True)
-        
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            # Balcony Distribution
-            if 'HasBalcony' in df.columns:
-                balcony_counts = df['HasBalcony'].value_counts()
-                
-                fig_balcony = px.pie(
-                    values=balcony_counts.values,
-                    names=balcony_counts.index,
-                    title="Properties with Balcony",
-                    color_discrete_sequence=px.colors.sequential.Blues
-                )
-                fig_balcony.update_traces(textposition='inside', textinfo='percent+label')
-                st.plotly_chart(fig_balcony, use_container_width=True)
-        
-        with col2:
-            # Garage Distribution
+with tab4:
+    st.markdown('<div class="sub-header">Property Features</div>', unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        # Balcony Distribution
+        if 'HasBalcony' in df.columns:
+            balcony_counts = df['HasBalcony'].value_counts()
+            
+            fig_balcony = px.pie(
+                values=balcony_counts.values,
+                names=balcony_counts.index,
+                title="Properties with Balcony",
+                color_discrete_sequence=px.colors.sequential.Blues
+            )
+            fig_balcony.update_traces(textposition='inside', textinfo='percent+label')
+            st.plotly_chart(fig_balcony, use_container_width=True)
+    
+    with col2:
             if 'HasGarage' in df.columns:
                 garage_counts = df['HasGarage'].value_counts()
                 
