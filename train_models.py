@@ -33,7 +33,7 @@ def train_prediction_models():
             try:
                 df = pd.read_csv(f, encoding='utf-8-sig')
                 date_str = os.path.basename(f).split('_')[-1].split('.')[0]
-                df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                df['Нийтэлсэн'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
                 df['Нийтэлсэн'] = pd.to_datetime(df['Нийтэлсэн'], errors='coerce')
 
                 df['Type'] = label
@@ -113,7 +113,7 @@ def train_prediction_models():
             print(f"Not enough data for {property_type} (only {len(daily_data)} days). Skipping.")
             continue
         
-        print(f"Data timespan: {daily_data['Scraped_date'].min()} to {daily_data['Scraped_date'].max()}")
+        print(f"Data timespan: {daily_data['Нийтэлсэн'].min()} to {daily_data['Нийтэлсэн'].max()}")
         
         # 3. Feature engineering for time series prediction
         # Create features from date
@@ -134,7 +134,7 @@ def train_prediction_models():
         daily_data = daily_data.dropna()
         
         # Create features and target variables
-        X = daily_data.drop(['Scraped_date', 'Үнэ', 'ad_id'], axis=1)
+        X = daily_data.drop(['Нийтэлсэн', 'Үнэ', 'ad_id'], axis=1)
         y = daily_data['Үнэ']
         
         # 4. Train-test split (chronological for time series)
