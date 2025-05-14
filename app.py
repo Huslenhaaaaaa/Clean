@@ -308,7 +308,6 @@ def main():
     
     # Main dashboard layout with tabs
     def main():
-        def main():
     # Main dashboard layout with tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["Market Overview", "Price Analysis", "Location Insights", "Property Features", "Browse Listings"])
     
@@ -886,5 +885,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
-    
