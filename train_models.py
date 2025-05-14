@@ -34,6 +34,8 @@ def train_prediction_models():
                 df = pd.read_csv(f, encoding='utf-8-sig')
                 date_str = os.path.basename(f).split('_')[-1].split('.')[0]
                 df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                df['Нийтэлсэн'] = pd.to_datetime(df['Нийтэлсэн'], errors='coerce')
+
                 df['Type'] = label
                 all_data.append(df)
             except Exception as e:
@@ -98,13 +100,13 @@ def train_prediction_models():
         type_df = df[df['Type'] == property_type].copy()
         
         # Group by date and calculate daily average prices
-        daily_data = type_df.groupby(type_df['Scraped_date'].dt.date).agg({
+        daily_data = type_df.groupby(type_df['Нийтэлсэн'].dt.date).agg({
             'Үнэ': 'mean',
             'ad_id': 'count'
         }).reset_index()
         
         # Sort by date
-        daily_data = daily_data.sort_values('Scraped_date')
+        daily_data = daily_data.sort_values('Нийтэлсэн')
         
         # Make sure there's enough data
         if len(daily_data) < 30:
@@ -115,10 +117,10 @@ def train_prediction_models():
         
         # 3. Feature engineering for time series prediction
         # Create features from date
-        daily_data['year'] = daily_data['Scraped_date'].dt.year
-        daily_data['month'] = daily_data['Scraped_date'].dt.month
-        daily_data['day'] = daily_data['Scraped_date'].dt.day
-        daily_data['dayofweek'] = daily_data['Scraped_date'].dt.dayofweek
+        daily_data['year'] = daily_data['Нийтэлсэн'].dt.year
+        daily_data['month'] = daily_data['Нийтэлсэн'].dt.month
+        daily_data['day'] = daily_data['Нийтэлсэн'].dt.day
+        daily_data['dayofweek'] = daily_data['Нийтэлсэн'].dt.dayofweek
         
         # Create lag features (previous days' prices)
         for i in range(1, 8):  # 1-week lag features
