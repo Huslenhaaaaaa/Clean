@@ -811,6 +811,11 @@ def main():
             
             if 'ӨрөөнийТоо' in page_df.columns:
                 display_df['Rooms'] = page_df['ӨрөөнийТоо']
+
+            if 'link' in page_df.columns:
+                display_df['link'] = page_df['link']
+
+
             
             if 'Area_m2' in page_df.columns:
                 display_df['Area (m²)'] = page_df['Area_m2'].apply(lambda x: f"{x:.1f}" if pd.notna(x) else "N/A")
