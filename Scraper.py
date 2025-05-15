@@ -266,12 +266,13 @@ class UneguiScraper:
                 'Барилгындавхар': 'Барилгын давхар:',
                 'Талбай': 'Талбай:',
                 'Хэдэндавхарт': 'Хэдэн давхарт:',
-                'Лизингээравахболомж': 'Лизингээр авах боломж:'
+                'Лизингээравахболомж': 'Лизингээр авах боломж:',
+                'Төлбөрийннөхцөл': 'Төлбөрийн нөхцөл:' # Added payment condition field
             }
             
             # Process text values
             for field, key in property_fields.items():
-                if "тоо" in key or "давхар" in key or "Талбай" in key:
+                if "тоо" in key or "давхар" in key or "Талбай" in key or "нөхцөл" in key:  # Updated condition to include payment condition
                     ad_data[field] = self._get_value_chars(soup, key)
                 else:
                     ad_data[field] = self._get_text_value(soup, key)
