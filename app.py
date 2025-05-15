@@ -800,8 +800,13 @@ def main():
             display_df = pd.DataFrame()
             
             # Add columns to display
-            if 'Гарчиг' in page_df.columns:
-                display_df['Title'] = page_df['Гарчиг']
+            if 'Зарыг гарчиг' in page_df.columns:
+                display_df['Зарыг гарчиг'] = page_df['Зарыг гарчиг']
+
+            
+            if 'Зарын тайлбар' in page_df.columns:
+                display_df['Зарын тайлбар'] = page_df['Зарын тайлбар'] 
+
             
             if 'Үнэ' in page_df.columns:
                 display_df['Price (₮)'] = page_df['Үнэ'].apply(lambda x: f"{x:,.0f}" if pd.notna(x) else "N/A")
@@ -812,8 +817,6 @@ def main():
             if 'ӨрөөнийТоо' in page_df.columns:
                 display_df['Rooms'] = page_df['ӨрөөнийТоо']
 
-            if 'link' in page_df.columns:
-                display_df['link'] = page_df['link']
 
 
             
@@ -825,7 +828,10 @@ def main():
                 display_df['Description'] = page_df['Тайлбар'].apply(
                     lambda x: str(x)[:100] + '...' if isinstance(x, str) and len(str(x)) > 100 else x
                 )
-            
+
+            if 'link' in page_df.columns:
+                display_df['link'] = page_df['link']
+                
             if 'Fixed Posted Date' in page_df.columns:
                 display_df['Posted Date'] = page_df['Fixed Posted Date'].apply(
                     lambda x: x.strftime('%Y-%m-%d') if pd.notna(x) else "N/A"
