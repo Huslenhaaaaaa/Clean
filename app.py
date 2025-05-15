@@ -79,7 +79,7 @@ def load_data():
             try:
                 df = pd.read_csv(f, encoding='utf-8-sig')
                 date_str = os.path.basename(f).split('_')[-1].split('.')[0]
-                df['Scraped_date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
+                df['Fixed Posted Date'] = pd.to_datetime(date_str, format='%Y%m%d', errors='coerce')
                 df['Type'] = label
                 all_data.append(df)
             except Exception as e:
@@ -197,9 +197,9 @@ def main():
     # Add data summary in expander
     with st.expander("Data Source Information"):
         st.info(f"Total listings loaded: {len(df)} (after removing duplicates)")
-        if 'Scraped_date' in df.columns:
+        if 'Fixed Posted Date' in df.columns:
             # Check if there are valid date values
-            valid_dates = df['Scraped_date'].dropna()
+            valid_dates = df['Fixed Posted Date'].dropna()
             if not valid_dates.empty:
                 st.write(f"Data date range: {valid_dates.min().date()} to {valid_dates.max().date()}")
             else:
@@ -214,9 +214,9 @@ def main():
     st.sidebar.title("Filters")
     
     # Add a date range filter if we have time-series data
-    if 'Scraped_date' in df.columns:
+    if 'Fixed Posted Date' in df.columns:
         # Get valid dates, ensure they're not NaT
-        valid_dates = df['Scraped_date'].dropna()
+        valid_dates = df['Fixed Posted Date'].dropna()
         
         if not valid_dates.empty:
             min_date = valid_dates.min().date()
@@ -232,8 +232,8 @@ def main():
                 )
                 if len(date_range) == 2:
                     start_date, end_date = date_range
-                    df = df[(df['Scraped_date'].dt.date >= start_date) & 
-                            (df['Scraped_date'].dt.date <= end_date)]
+                    df = df[(df['Fixed Posted Date'].dt.date >= start_date) & 
+                            (df['Fixed Posted Date'].dt.date <= end_date)]
     
     # Property Type Filter
     property_types = ['All']
@@ -676,12 +676,12 @@ def main():
     
     # Add data trends over time section if we have time-series data
     with tab4:  # Keep this within tab4
-        if 'Scraped_date' in df.columns and df['Scraped_date'].nunique() > 1:
+        if 'Fixed Posted Date' in df.columns and df['Fixed Posted Date'].nunique() > 1:
             st.markdown("---")
             st.markdown('<div class="sub-header">Data Trends Over Time</div>', unsafe_allow_html=True)
             
             # Group by date and calculate daily averages
-            time_data = df.groupby(df['Scraped_date'].dt.date).agg({
+            time_data = df.groupby(df['Fixed Posted Date'].dt.date).agg({
                 'Үнэ': 'mean',
                 'ad_id': 'count',
                 'Price_per_m2': 'mean'
@@ -693,7 +693,7 @@ def main():
             fig_trends = go.Figure()
             
             fig_trends.add_trace(go.Scatter(
-                x=time_data['Scraped_date'],
+                x=time_data['Fixed Posted Date'],
                 y=time_data['Үнэ'],
                 mode='lines+markers',
                 name='Average Price (₮)',
@@ -714,7 +714,7 @@ def main():
             fig_volume = go.Figure()
             
             fig_volume.add_trace(go.Scatter(
-                x=time_data['Scraped_date'],
+                x=time_data['Fixed Posted Date'],
                 y=time_data['ad_id'],
                 mode='lines+markers',
                 name='Number of Listings',
