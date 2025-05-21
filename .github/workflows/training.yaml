@@ -1,0 +1,56 @@
+name: Real Estate ML Model Training
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'unegui_data/**'
+      - 'train_prediction_models.py'
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    # Run weekly on Monday at 2AM UTC
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+    # Allows manual triggering from GitHub UI
+
+jobs:
+  train_models:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        else
+          pip install pandas numpy scikit-learn xgboost
+        fi
+        
+    - name: Train prediction models
+      run: |
+        python train_prediction_models.py
+        
+    - name: Upload trained models
+      uses: actions/upload-artifact@v3
+      with:
+        name: trained-models
+        path: models/
+        
+    - name: Commit and push if models changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add models/*.pkl
+        git diff --staged --quiet || git commit -m "Update trained models"
+        git push
+      continue-on-error: true
