@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
     paths:
       - 'unegui_data/**'
-      - 'train_prediction_models.py'
+      - 'train_models.py'
   pull_request:
     branches: [ main, master ]
   schedule:
