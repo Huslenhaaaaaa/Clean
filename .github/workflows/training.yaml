@@ -34,7 +34,7 @@ jobs:
         
     - name: Train prediction models
       run: |
-        python train_models.py
+        python train_models.py --rental_data unegui_data/unegui_rental_data.csv --sales_data unegui_data/unegui_sales_data.csv --output_dir models
         
     - name: Ensure models directory exists
       run: |
